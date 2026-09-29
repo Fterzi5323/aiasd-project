@@ -175,6 +175,12 @@ deactivate
 
 > **✅ Tip:** The VS Code terminal (Ctrl+`) picks up the active virtual environment automatically, so you do not need to activate it again there.
 
+> **ℹ️ Signing in with GitHub:** On first start VS Code offers to sign in with GitHub (for
+> Settings Sync or Copilot). It is optional — the course works from the terminal. If you
+> accept, sign in with **the same GitHub account as your course repository**: VS Code then
+> also handles `git push` for you, without asking for a password or token. Signing in with
+> a different account is how pushes end up in the wrong place.
+
 # 6. The Tools You Will Use
 
 You do not need to install any of these now. Each one arrives in the week that uses it, alongside that week's assignment. The purpose here is that you recognise the toolkit before the term starts: what each tool is for, and where in your project it will appear.

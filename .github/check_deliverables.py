@@ -363,18 +363,30 @@ def week2() -> None:
             items = data.get("requirements", data) if isinstance(data, dict) else data
             if not isinstance(items, list):
                 items = []
-            items = [i for i in items if isinstance(i, dict)]
+            items = [i for i in items if isinstance(i, dict) and not i.get("dropped")]
             real = [i for i in items if str(i.get("description", "")).strip() not in ("", "…")]
-            check(2, "requirements.json has ≥5 entries", len(real) >= 5, f"{len(real)} filled in")
-            ids = [str(i.get("id", "")) for i in real]
+            check(2, "requirements.json has ≥8 entries", len(real) >= 8, f"{len(real)} filled in")
+            ids = [str(i.get("id", "")).strip() for i in real]
             bad = [i for i in ids if not re.fullmatch(r"REQ-\d{3}", i)]
-            check(2, "IDs follow REQ-NNN", not bad and bool(ids), f"bad IDs: {bad[:3]}")
+            dup = sorted({i for i in ids if ids.count(i) > 1})
+            check(2, "IDs follow REQ-NNN, no duplicates", not bad and not dup and bool(ids),
+                  f"bad: {bad[:3]} duplicated: {dup[:3]}")
             f = sum(1 for i in real if i.get("functional") is True)
             nf = sum(1 for i in real if i.get("functional") is False)
-            check(2, "≥3 functional and ≥2 non-functional", f >= 3 and nf >= 2, f"{f} functional, {nf} non-functional")
+            check(2, "≥5 functional and ≥3 non-functional", f >= 5 and nf >= 3, f"{f} functional, {nf} non-functional")
             phone = any(re.search(r"phone|mobile|390", str(i.get("description", "")), re.I)
                         for i in real if i.get("functional") is False)
             check(2, "the phone-screen requirement is kept", phone, "no non-functional requirement mentions the phone screen")
+            # By Saturday: every requirement prioritised and testable.
+            prio = [str(i.get("priority", "")).strip().lower() for i in real]
+            badp = [i.get("id") for i, pr in zip(real, prio) if pr not in ("must", "should", "could")]
+            check(2, "every requirement has priority must/should/could", len(real) >= 8 and not badp,
+                  f"missing or wrong: {badp[:4]}", DEADLINE)
+            check(2, "not every requirement is a must", len(real) >= 8 and any(pr in ("should", "could") for pr in prio),
+                  "all of them are 'must' — decide what could be cut", DEADLINE)
+            thin = [i.get("id") for i in real if len(str(i.get("acceptance", "")).strip().strip("…")) < 25]
+            check(2, "every requirement has an acceptance criterion", len(real) >= 8 and not thin,
+                  f"missing or too short: {thin[:4]}", DEADLINE)
 
     # By Saturday: the rest of Part A, the SRS, the log.
     check_proposal(2, range(5, 8), DEADLINE)
