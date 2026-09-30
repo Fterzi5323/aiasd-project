@@ -304,9 +304,9 @@ def check_proposal(week: int, numbers: range, slot: str) -> None:
         if sec["chars"] < floor:
             check(week, f"{label} filled in", False, f"{sec['chars']} characters — still the scaffold", slot)
         else:
-            over = sec["chars"] > sec["limit"] * 1.2
-            check(week, f"{label} within ~{sec['limit']} characters", not over,
-                  f"{sec['chars']} characters, limit {sec['limit']} (+20%)", slot)
+            # The length in the heading is an ideal, not a limit (decision of 30 Sep):
+            # a longer section passes.
+            check(week, f"{label} filled in", True, "", slot)
 
 
 def contributors(week: int) -> list[dict] | None:

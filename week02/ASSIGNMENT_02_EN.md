@@ -35,8 +35,8 @@ same, see the setup card.)
 
 ### 1. `PROPOSAL.md` — Part A, §1–§4
 
-Title, one-paragraph summary, problem, solution. The scaffold gives each section a
-character limit; stay near it. The comments are invisible on GitHub and not counted, so
+Title, one-paragraph summary, problem, solution. Each heading gives an ideal length; it is
+a guide, not a limit — write more if your idea needs it. The comments are invisible on GitHub and not counted, so
 you may leave them in place while you write. Write §3 first, then §4; leave the §2 summary
 and the §1 title for last — you can only summarise what you have already written. Two things the lecture will show you side by side and
 that the checker cannot see but I can: a problem written as a concrete situation beats
@@ -151,7 +151,7 @@ Saturday night costs the commit-discipline point.
 ## Deliverables checklist
 
 **In the lab**
-- [ ] `PROPOSAL.md` §1–§4 filled, headings untouched, within their character limits
+- [ ] `PROPOSAL.md` §1–§4 filled, headings untouched
 - [ ] `week02/contributors_02.json` — two stakeholders, numbers and one sentence each
 - [ ] `week02/requirements.json` — ≥8 entries, `REQ-NNN` ids, ≥5 functional, ≥3 non-functional
 

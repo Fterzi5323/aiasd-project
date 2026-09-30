@@ -36,8 +36,8 @@ template/main -- week02 PROPOSAL.md` aynı işi yapar, bkz. kurulum kartı.)
 
 ### 1. `PROPOSAL.md` — Bölüm A, §1–§4
 
-Başlık, tek paragraf özet, problem, çözüm. İskelet her bölüme bir karakter sınırı
-veriyor; ona yakın kalın. Yorumlar GitHub'da görünmez ve sayılmaz; yazarken yerinde
+Başlık, tek paragraf özet, problem, çözüm. Her başlık ideal bir uzunluk veriyor; bu bir
+sınır değil, yol gösterici — fikriniz gerektiriyorsa daha uzun yazın. Yorumlar GitHub'da görünmez ve sayılmaz; yazarken yerinde
 bırakabilirsiniz. Önce §3'ü, sonra §4'ü yazın; §2 özeti ve §1 başlığı en sona bırakın —
 ancak yazdığınızı özetleyebilirsiniz. Derste yan yana göstereceğim, denetleyicinin göremediği ama
 benim gördüğüm iki şey: somut bir durum olarak yazılmış problem üç genel iddiadan
@@ -150,7 +150,7 @@ disiplini puanına mal olur.
 ## Teslim listesi
 
 **Laboratuvarda**
-- [ ] `PROPOSAL.md` §1–§4 dolu, başlıklar değişmemiş, karakter sınırları içinde
+- [ ] `PROPOSAL.md` §1–§4 dolu, başlıklar değişmemiş
 - [ ] `week02/contributors_02.json` — iki paydaş, numaraları ve her biri için bir cümle
 - [ ] `week02/requirements.json` — ≥8 kayıt, `REQ-NNN` kimlikleri, ≥5 işlevsel, ≥3 işlevsel olmayan
 

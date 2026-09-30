@@ -38,11 +38,12 @@ them, so you may leave them in place.
 
 RULES
 - Keep every heading exactly as written; the checker finds sections by heading.
-- Each heading carries an approximate character limit in parentheses. It counts the text
-  under the heading, spaces included, not the heading and not the comments. Under the limit
-  is fine; 20% over is tolerated; more than that fails the check. For scale: this paragraph
-  of RULES is about 450 characters.
-- Whole document: at most 6,000 characters. Diagram code does not count.
+- Each heading carries an IDEAL length in parentheses ("about 600 characters"). It is a
+  guide, not a limit: it tells you how much a good answer usually needs. Longer is allowed
+  and is never marked down by the checker — but say more only if it adds something; a
+  reader values the short, specific version. The count is the text under the heading,
+  spaces included, not the heading and not the comments. For scale: this paragraph is about
+  450 characters.
 - DIAGRAMS: every diagram in this course is written in Mermaid, inside a mermaid fenced
   block, in the markdown file itself. No images, no links to external tools. GitHub renders
   Mermaid on the page and the checker parses it; a diagram that does not parse is shown as
