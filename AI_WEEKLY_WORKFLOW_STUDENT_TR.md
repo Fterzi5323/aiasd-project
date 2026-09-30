@@ -111,6 +111,11 @@ git push
 
 "update", "fix" ya da "asdf" gibi mesajlar commit disiplini puanına mal olur.
 
+**10:00'da, 11:00'de ve 11:50'de push edin** — her derste üç push, iş hangi durumda
+olursa olsun. 10:00 ve 11:00'de sınıf tablosuna bakıp herkesin nerede olduğunu
+görüyorum; dersin puanını 11:50'deki push belirliyor. Push etmek hiçbir şeye mal olmaz;
+push edilmiş yarım bir bölüm, push edilmemiş bitmiş bir bölümden değerlidir.
+
 ### Kontrolleri kendiniz çalıştırın
 
 Aynı komut, istediğiniz kadar:
@@ -124,7 +129,7 @@ listeler. Bir not değil, yapılacaklar listesidir ve çalıştırmanın maliyet
 
 ### Ders bitmeden bir kez daha push edin
 
-Dersin sonunda her depoyu olduğu gibi dondurup kontrolleri çalıştırıyorum. Push
+Son push 11:50'de. Hemen ardından her depoyu olduğu gibi dondurup kontrolleri çalıştırıyorum. Push
 etmediğiniz iş görünmezdir — bilgisayarınızda durur ve sayılmaz.
 
 Sonuç anonimleştirilmiş bir tablo olarak yansıtılır; satırınızı `student.json`

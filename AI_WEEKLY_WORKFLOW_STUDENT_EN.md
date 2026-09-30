@@ -110,6 +110,11 @@ git push
 
 Messages like "update", "fix" or "asdf" cost you the commit-hygiene point.
 
+**Push at 10:00, at 11:00 and at 11:50** — three pushes in every lecture, whatever state
+the work is in. At 10:00 and 11:00 I look at the class board to see where everyone is;
+the 11:50 push is the one that counts for the lecture's points. A push costs nothing,
+and a half-finished section that is pushed is worth more than a finished one that is not.
+
 ### Run the checks yourself
 
 The same command, as often as you like:
@@ -123,7 +128,7 @@ a time. It is not a grade; it is a to-do list, and running it costs nothing.
 
 ### Push once more before the lecture ends
 
-At the end of the lecture I freeze every repository as it stands and run the checks.
+The last push is at 11:50. Right after it I freeze every repository as it stands and run the checks.
 Work you have not pushed is invisible — it sits on your laptop and does not count.
 
 The result is projected as an anonymised table; find your row by the nickname in your
