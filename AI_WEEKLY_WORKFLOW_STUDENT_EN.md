@@ -26,7 +26,7 @@ Come back here when you are stuck.
 |------|-------------|--------|
 | Before the lecture | Read `weekNN/ASSIGNMENT_NN_EN.md` | — |
 | During the lecture (3 h) | Work, and push often | — |
-| End of the lecture | One last push — I freeze the state | 5 |
+| End of the lecture | One last push — I freeze the state | 5 (checker 3 + progress 2) |
 | After the lecture | Finish the rest, write `ai_log_NN.md` | — |
 | By Saturday 23:59 | **Push again.** I freeze the state a second time | 5 |
 
@@ -132,7 +132,18 @@ The last push is at 11:50. Right after it I freeze every repository as it stands
 Work you have not pushed is invisible — it sits on your laptop and does not count.
 
 The result is projected as an anonymised table; find your row by the nickname in your
-`student.json`. That table is worth **5 points — half the week**.
+`student.json`. That table is worth **5 points — half the week**, in two parts:
+
+- **Checker — 3 points.** What the checks say about your repository as it stands at 13:00.
+- **Progress — 2 points.** How the work grew during the lecture, read from your pushes:
+  **2** if it grew in at least three separate pushes (ten or more minutes apart), at least
+  two of them adding real content, and something you had pushed earlier was revised
+  later; **1** for two content pushes, or three pushes with nothing revised; **0** for a
+  single push, or pushes that add nothing. Pasting a finished text in one go is a single
+  push however many files it touches. The reason for your mark is written next to it.
+
+One student, one computer, one GitHub account. Work done on a classmate's machine or
+under a classmate's GitHub session earns nothing for the lecture.
 
 ### Attendance, and what happens if you are not here
 

@@ -39,7 +39,7 @@ Tools: Python 3.12, Git/GitHub, VS Code, Streamlit, Ollama with an open-weight m
 
 | Item | Points | Explanation |
 |---|---|---|
-| Weekly Projects | 60 | 12 weeks × 10 points, scaled to 60. Each week: 5 points read from the repository at the end of the lecture, 5 at Saturday 23:59 (Week 1: 5 points, all on Saturday). Automatic checks plus the instructor's marks for the AI log and commit discipline. No make-up for a missed lecture. |
+| Weekly Projects | 60 | 12 weeks × 10 points, scaled to 60. Each week: 5 points read from the repository at the end of the lecture, 5 at Saturday 23:59 (Week 1: 5 points, all on Saturday). Automatic checks (3 at the lecture, 2 on Saturday) plus the instructor's marks for progress during the lecture (2), the AI log (2) and commit discipline (1). No make-up for a missed lecture. |
 | Bonus-Store | 15 | Bonus for publishing: the store track S0–S6 (store chosen, developer account, app record, test-track build, testers, submission, live) is graded step by step in the week each step is due, and the classmates who help each week (contributors) earn a share of the student's mark. |
 | Presentation | 15 | Project defence in Weeks 13–14: the student installs the app from the store in front of the examiner and answers questions about the decisions in the code and the documents. Run from the store build, not from a development machine. |
 | Final Exam | 40 | Written final exam in the university's exam period, covering the SDLC documents, the AI-log practice and the technical material of the twelve weeks. |
