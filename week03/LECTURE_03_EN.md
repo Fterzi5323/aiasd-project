@@ -5,7 +5,7 @@
 
 <!-- Instructor: zoom the browser to 150 % and collapse the GitHub header (press "." for
 the editor view if you prefer a cleaner page). Timings in the notes. Total ≈ 3 h:
-10 min intro · 50 min review round · 10 min after the round · work until 12:00 · 13:00 freeze. -->
+10 min intro · 50 min review round · 10 min after the round · work until 11:50 · freeze right after the 11:50 push. -->
 
 ---
 
@@ -141,7 +141,7 @@ goes next to them, and you earn the contributors' bonus for them.
 
 ---
 
-## After the round — before 13:00
+## After the round — by 11:50
 
 **`week03/contributors_03.json`** — your three reviewers, role `reviewer`, student
 numbers, and for each **the most useful sentence they wrote, quoted**. Then
@@ -154,6 +154,20 @@ gets **one dated line in the Change log** at the end of the file:
 `2026-10-06 — §4: dropped group chat; two reviewers said nobody would use it next to WhatsApp.`
 
 A proposal may change. It may not change silently.
+
+---
+
+## This group stays — every week, one hour online
+
+From **Week 4**: the four of you meet **online, one hour, between the lecture and
+Saturday**. Teams, Meet, Discord — your choice.
+
+Each of you: what changed in your project this week. The other three: what they think.
+
+Your **three contributors every week** are these three people — their sentences, quoted,
+and what you did about them, in `weekNN/contributors_NN.json`.
+
+Nobody can write that for someone who was not there. First meeting: this week, if you like.
 
 ---
 
@@ -179,8 +193,8 @@ git commit -m "week03: pitch, review, proposal revised"
 git push
 ```
 
-Push after the round, and again before **13:00**. The checker reads your repository as it
-stands at 13:00. What is not pushed does not exist.
+Push after the round, and at the last push of the lecture, **11:50**. Right after it I
+freeze every repository. What is not pushed does not exist.
 
 Push times this term: **10:00, 11:00, 11:50** — and whenever you finish something.
 
@@ -219,7 +233,7 @@ skill.
 
 | | Points | What |
 |---|---|---|
-| End of lecture, 13:00 | 5 | pitch complete, three reviewers with real sentences, change log started |
+| End of lecture, 11:50 push | 5 | pitch complete, three reviewers with real sentences, change log started |
 | Saturday checker | 2 | §8–§12 filled, store named, ai_log with three objections |
 | Human involvement | 2 | the ai_log and its evidence; reviews with real decisions behind them |
 | Commit discipline | 1 | **awarded at the Week 5 review** of your whole push history |
@@ -246,4 +260,4 @@ Groups are on the screen. Laptops open, `PITCH_03.md` in the preview.
 **First presenter in each group: start.**
 
 <!-- Start the clock. Walk around. After the round: slide "After the round" stays on the
-projector until 12:00; "Push" from 12:00. Freeze at 13:00: push.md block 3. -->
+projector until 11:40; "Push" from 11:40. Freeze right after 11:50: push.md block 3. -->

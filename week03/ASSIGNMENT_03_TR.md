@@ -1,6 +1,6 @@
 # 3. Hafta Ödevi — Sunum, Akran İncelemesi, Teklif Bölüm B
 
-**Teslim:** ders içi bölüm 13:00'ten önce push · kalanı Cumartesi 23:59 · Proje reponuza commit edin
+**Teslim:** ders içi bölüm dersin son push'una kadar (11:50) · kalanı Cumartesi 23:59 · Proje reponuza commit edin
 
 > **Dersten önce:** `PITCH_03.md` dosyanız yazılmış ve push edilmiş olmalı. Dersin ilk
 > saati onu sunmakla geçer — o sırada yazacak zaman yok. Bilgisayarınızı şarjı dolu
@@ -59,7 +59,7 @@ olduğu son hafta bu.
 
 ---
 
-## Derste — 13:00'ten önce push
+## Derste — 11:50'ye kadar push
 
 ### 1. İnceleme turu — dörtlü gruplar, ilk saat
 
@@ -68,6 +68,14 @@ diğer üçü dinler, sonra 7. slayttaki üç sorunun her biri için birer cüml
 kâğıda ya da bir metin dosyasına — ve sunana verir. Dört tur, yaklaşık 45 dakika. Ne
 düşünüyorsanız söyleyin; nazik bir "iyi olmuş" kimseye yardım etmez, kimseye puan
 getirmez.
+
+**Bu grup, dönemin geri kalanında sizin grubunuzdur.** 4. Hafta'dan itibaren dördünüz
+**her hafta, ders ile Cumartesi arasında, bir saatlik bir çevrimiçi toplantı** yaparsınız
+— Teams, Meet, Discord, ne isterseniz — ve her biriniz o hafta projesinde neyin değiştiğini
+anlatır; diğer üçü ne düşündüğünü söyler. O andan sonra `weekNN/contributors_NN.json`
+içindeki üç kayıt bu toplantıdan gelir: kim ne dedi, alıntıyla, ve siz ne yaptınız.
+Toplantıda olmayan biri için kimse o üç kaydı yazamaz; toplantıyı kaçırmak kendiliğinden
+görünür. İlkini bu hafta yapabilirsiniz.
 
 ### 2. `week03/contributors_03.json` — üç değerlendiren
 
@@ -97,7 +105,7 @@ git commit -m "week03: pitch, review, proposal revised"
 git push
 ```
 
-İnceleme turundan sonra ve 13:00'ten önce bir kez daha push edin. Push edilmeyen yoktur.
+İnceleme turundan sonra ve dersin son push'unda, **11:50**'de bir kez daha push edin — her zamanki 10:00 / 11:00 / 11:50. Hemen ardından her repoyu donduruyorum. Push edilmeyen yoktur.
 
 ---
 
@@ -137,7 +145,7 @@ her şey aşağıda.
 **Dersten önce**
 - [ ] `week03/PITCH_03.md` — altı slayt dolu, sizin yazdığınız, push edilmiş
 
-**Derste, 13:00'ten önce**
+**Derste, 11:50'ye kadar**
 - [ ] `week03/contributors_03.json` — üç değerlendiren, her birinden alıntı bir cümle, accepted/why
 - [ ] `PROPOSAL.md` §1–§7 incelemenin değiştirdiği yerlerde gözden geçirilmiş
 - [ ] `PROPOSAL.md` Değişiklik günlüğü — en az bir tarihli satır
@@ -160,14 +168,14 @@ açmayın; §12'de mağazayı adlandırmak yeter.
 ## Bu hafta nasıl notlanıyor
 
 **Ders sonu — 5 puan.** Sunum push edilmiş ve tam, üç değerlendiren gerçek cümlelerle,
-Değişiklik günlüğü başlamış — 13:00'teki reponuzdan okunur.
+Değişiklik günlüğü başlamış — 11:50 push'undaki reponuzdan okunur.
 
 **Cumartesi 23:59 — 5 puan.** Son durumda kontroller yeşil: **2**. İnsan katkısı: **2** —
 kanıtıyla `ai_log_03.md` ve arkasında gerçek cümleler, gerçek kararlar olan incelemeler.
 Commit disiplini: **1** (5. haftadaki toplu değerlendirmede verilir).
 
 **Katkı bonusu.** Adını yazdığınız her değerlendiren haftalık notunuzun %10'unu kazanır;
-siz de verdiğiniz incelemeler için aynısını kazanırsınız. Her hafta yeni isimler.
+siz de verdiğiniz incelemeler için aynısını kazanırsınız. 4. Hafta'dan itibaren isimler grubunuzdur.
 
 **Bir öğrenci, bir bilgisayar, bir GitHub hesabı.** Arkadaşınızın bilgisayarında ya da
 onun oturumunda yapılan iş ders için puan getirmez.

@@ -416,7 +416,7 @@ def week2() -> None:
 
 def week3() -> None:
     """Pitch and review in the lab; Part B of the proposal and the hostile-reviewer log
-    by Saturday. The pitch is read at 13:00 as it was pushed before the lecture."""
+    by Saturday. The pitch is read at the end of the lecture (11:50 push) as it was pushed before it."""
     # --- the pitch: six slides, each with the student's own words -----------------
     pitch = read("week03/PITCH_03.md")
     if pitch is None:

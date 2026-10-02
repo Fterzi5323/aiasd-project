@@ -1,6 +1,6 @@
 # Week 3 Assignment — Pitch, Review, Proposal Part B
 
-**Due:** lab part pushed before 13:00 · the rest Saturday 23:59 · Commit to your project repository
+**Due:** lab part pushed by the last push of the lecture (11:50) · the rest Saturday 23:59 · Commit to your project repository
 
 > **Before the lecture:** your `PITCH_03.md` must be written and pushed. The first hour
 > of the lecture is spent presenting it — there is no time to write it then. Bring your
@@ -57,7 +57,7 @@ cheap week to do it.
 
 ---
 
-## In the lab — pushed before 13:00
+## In the lab — pushed by 11:50
 
 ### 1. Review round — groups of four, first hour
 
@@ -66,6 +66,15 @@ laptop; the other three listen, then **write** one sentence for each of the thre
 questions on slide 7 — on paper or in a text file, handed to the presenter. Four rounds,
 about 45 minutes. Say what you think; a polite "it is good" helps nobody and earns nobody
 anything.
+
+**This group is your group for the rest of the term.** From Week 4 the four of you meet
+**online for one hour every week, between the lecture and Saturday** — Teams, Meet,
+Discord, whatever you like — and each of you presents what changed in your project that
+week; the other three say what they think. The three entries in your
+`weekNN/contributors_NN.json` come from that meeting from then on: who said what, quoted,
+and what you did about it. Nobody can write those three entries for someone who was not
+there, so missing the meeting shows by itself. You may hold the first one this week
+already.
 
 ### 2. `week03/contributors_03.json` — three reviewers
 
@@ -94,7 +103,7 @@ git commit -m "week03: pitch, review, proposal revised"
 git push
 ```
 
-Push after the review round, and again before 13:00. What is not pushed does not exist.
+Push after the review round, and again at the last push of the lecture, **11:50** — the usual 10:00 / 11:00 / 11:50. Right after it I freeze every repository. What is not pushed does not exist.
 
 ---
 
@@ -134,7 +143,7 @@ asks for is listed below.
 **Before the lecture**
 - [ ] `week03/PITCH_03.md` — six slides filled, written by you, pushed
 
-**In the lab, before 13:00**
+**In the lab, by 11:50**
 - [ ] `week03/contributors_03.json` — three reviewers, a quoted sentence each, accepted/why
 - [ ] `PROPOSAL.md` §1–§7 revised where the review changed them
 - [ ] `PROPOSAL.md` Change log — at least one dated line
@@ -157,7 +166,7 @@ account; naming the store in §12 is enough.
 ## How this week is graded
 
 **End of the lecture — 5 points.** Pitch pushed and complete, three reviewers with real
-sentences, Change log started — read from your repository as it stands at 13:00.
+sentences, Change log started — read from your repository as it stands at the 11:50 push.
 
 **Saturday 23:59 — 5 points.** Checks green on your final state: **2**. Human
 involvement: **2** — your `ai_log_03.md` with its evidence, and reviews with real
@@ -165,7 +174,7 @@ sentences and real decisions behind them. Commit discipline: **1** (awarded at t
 Week 5 review of your whole history).
 
 **Contributors' bonus.** Each reviewer you name earns 10% of your week's mark; you earn
-the same for the reviews you give. New names every week.
+the same for the reviews you give. From Week 4 the names are your group.
 
 **One student, one computer, one GitHub account.** Work done on a classmate's machine or
 under a classmate's session earns nothing for the lecture.

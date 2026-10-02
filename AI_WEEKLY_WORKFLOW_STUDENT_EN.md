@@ -221,9 +221,17 @@ in `weekNN/contributors_NN.json` with one sentence each on what they did, plus e
 them is a list, not evidence. The burden of proof is yours; without it neither these two
 points nor your contributors' bonus is paid.
 
+**From Week 4 your contributors are your group.** In Week 3 you are put in a group of
+four, and that group stays for the term. Every week, between the lecture and Saturday,
+the four of you meet **online for one hour**: each presents what changed in their project
+that week, the other three say what they think. Your three entries in
+`weekNN/contributors_NN.json` are those three people — what each said, quoted, and what
+you did about it. Nobody can write those entries for someone who was not there.
+
 **Contributors earn a bonus.** A classmate who helps you earns 10% of your mark for that
-week, for at most two contributions a week; the same for you when you help them. The
-names rotate: at least one new person every week. Week 1 has no contributors.
+week, for at most three contributions a week; the same for you when you help them. In
+Week 2 the names are your choice; from Week 3 they are your group. Week 1 has no
+contributors.
 
 An LLM can produce every file an assignment asks for. What it cannot do is make those
 files agree with the ten weeks around them, or notice its own mistakes on your behalf.

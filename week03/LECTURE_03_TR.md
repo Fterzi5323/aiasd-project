@@ -4,7 +4,7 @@
 *Bu sayfadan sunulur. Bölüm bölüm kaydırın; her `---` bir slayttır.*
 
 <!-- Hoca: tarayıcıyı %150 yakınlaştır. Süreler notlarda. Toplam ≈ 3 s:
-10 dk giriş · 50 dk inceleme turu · turdan sonra 10 dk · 12:00'ye kadar çalışma · 13:00 dondurma. -->
+10 dk giriş · 50 dk inceleme turu · turdan sonra 10 dk · 11:50'ye kadar çalışma · 11:50 push'unun hemen ardından dondurma. -->
 
 ---
 
@@ -139,7 +139,7 @@ ve onlar için katkı bonusu kazanırsınız.
 
 ---
 
-## Turdan sonra — 13:00'ten önce
+## Turdan sonra — 11:50'ye kadar
 
 **`week03/contributors_03.json`** — üç değerlendireniniz, rol `reviewer`, öğrenci
 numaraları ve her biri için **yazdığı en yararlı cümle, alıntı olarak**. Sonra
@@ -152,6 +152,20 @@ sonundaki Değişiklik günlüğüne **tarihli bir satır**:
 `2026-10-07 — §4: grup sohbeti çıkarıldı; iki değerlendiren WhatsApp'ın yanında kimsenin kullanmayacağını söyledi.`
 
 Teklif değişebilir. Sessizce değişemez.
+
+---
+
+## Bu grup kalıyor — her hafta bir saat çevrimiçi
+
+**4. Hafta'dan** itibaren dördünüz **ders ile Cumartesi arasında, çevrimiçi, bir saat**
+buluşuyorsunuz. Teams, Meet, Discord — siz seçin.
+
+Her biriniz: bu hafta projende ne değişti. Diğer üçü: ne düşünüyor.
+
+**Her haftaki üç katkıcınız** bu üç kişi — cümleleri alıntıyla, ve siz ne yaptınız,
+`weekNN/contributors_NN.json` içinde.
+
+Orada olmayan biri için bunu kimse yazamaz. İlk toplantı: isterseniz bu hafta.
 
 ---
 
@@ -177,8 +191,8 @@ git commit -m "week03: pitch, review, proposal revised"
 git push
 ```
 
-Turdan sonra ve **13:00**'ten önce bir kez daha push. Denetleyici reponuzu 13:00'teki
-hâliyle okur. Push edilmeyen yoktur.
+Turdan sonra ve dersin son push'unda, **11:50**'de bir kez daha push. Hemen ardından her
+repoyu donduruyorum. Push edilmeyen yoktur.
 
 Bu dönem push saatleri: **10:00, 11:00, 11:50** — ve bir şeyi her bitirdiğinizde.
 
@@ -216,7 +230,7 @@ Bu hafta asistan, **hayır** demek isteyen yatırımcıyı oynar.
 
 | | Puan | Ne |
 |---|---|---|
-| Ders sonu, 13:00 | 5 | sunum tam, üç değerlendiren gerçek cümlelerle, değişiklik günlüğü başlamış |
+| Ders sonu, 11:50 push'u | 5 | sunum tam, üç değerlendiren gerçek cümlelerle, değişiklik günlüğü başlamış |
 | Cumartesi denetleyici | 2 | §8–§12 dolu, mağaza adlandırılmış, üç itirazlı ai_log |
 | İnsan katkısı | 2 | ai_log ve kanıtı; arkasında gerçek kararlar olan incelemeler |
 | Commit disiplini | 1 | **5. haftadaki toplu değerlendirmede**, tüm push geçmişinize bakılarak |
@@ -243,4 +257,4 @@ Gruplar ekranda. Bilgisayarlar açık, `PITCH_03.md` önizlemede.
 **Her grupta ilk sunan: başlayın.**
 
 <!-- Saati başlat. Dolaş. Turdan sonra "Turdan sonra" slaydı 12:00'ye kadar projeksiyonda
-kalsın; 12:00'den sonra "Push". 13:00'te dondur: push.md blok 3. -->
+kalsın; 11:40'tan sonra "Push". 11:50'nin hemen ardından dondur: push.md blok 3. -->

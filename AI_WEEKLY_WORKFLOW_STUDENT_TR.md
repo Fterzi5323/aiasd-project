@@ -223,9 +223,17 @@ günlüğünüzde tarihli bir paragraf) kaydedersiniz. Arkasında hiçbir şey o
 liste demektir, kanıt değil. İspat yükü sizindir; onsuz ne bu iki puan ne de
 katkıcılarınızın bonusu ödenir.
 
+**4. Hafta'dan itibaren katkıcılarınız grubunuzdur.** 3. Hafta'da dört kişilik bir gruba
+alınırsınız ve o grup dönem boyunca kalır. Her hafta, ders ile Cumartesi arasında,
+dördünüz **bir saat çevrimiçi** buluşursunuz: her biriniz o hafta projesinde neyin
+değiştiğini anlatır, diğer üçü ne düşündüğünü söyler. `weekNN/contributors_NN.json`
+içindeki üç kaydınız bu üç kişidir — her birinin söylediği, alıntıyla, ve sizin ne
+yaptığınız. Orada olmayan biri için o kayıtları kimse yazamaz.
+
 **Katkıcılar bonus kazanır.** Size yardım eden bir sınıf arkadaşı o haftaki notunuzun
-%10'unu kazanır; haftada en fazla iki katkı. Siz onlara yardım ettiğinizde de aynısı.
-İsimler döner: her hafta en az bir yeni kişi. 1. Hafta'da katkıcı yoktur.
+%10'unu kazanır; haftada en fazla üç katkı. Siz onlara yardım ettiğinizde de aynısı.
+2. Hafta'da isimler sizin seçiminizdir; 3. Hafta'dan itibaren grubunuzdur. 1. Hafta'da
+katkıcı yoktur.
 
 Bir LLM bir ödevin istediği her dosyayı üretebilir. Yapamadığı, o dosyaları çevresindeki
 on haftayla tutarlı kılmak ya da kendi hatalarını sizin yerinize fark etmektir.
