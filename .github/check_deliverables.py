@@ -138,6 +138,8 @@ def ai_log_section(week: int) -> str:
     # template's own prompt, not an answer.
     body = re.sub(r"^\s*\*\*[^*]+\*\*:?\s*$", "", body, flags=re.MULTILINE)
     body = re.sub(r"^\s*>.*$", "", body, flags=re.MULTILINE)
+    # A line that is only a [bracketed hint] is the scaffold's, not the student's.
+    body = re.sub(r"^\s*(\d+\.\s*)?\[[^\]]*\]\s*$", "", body, flags=re.MULTILINE)
     return body.strip()
 
 
@@ -413,56 +415,81 @@ def week2() -> None:
 
 
 def week3() -> None:
-    for mod in ("llm_client", "embedder", "chatbot"):
-        check(
-            3,
-            f"week03/{mod}.py parses",
-            parses(f"week03/{mod}.py"),
-            "missing or syntax error",
-        )
-
-    emb = read("week03/embedder.py") or ""
-    if emb:
+    """Pitch and review in the lab; Part B of the proposal and the hostile-reviewer log
+    by Saturday. The pitch is read at 13:00 as it was pushed before the lecture."""
+    # --- the pitch: six slides, each with the student's own words -----------------
+    pitch = read("week03/PITCH_03.md")
+    if pitch is None:
+        check(3, "week03/PITCH_03.md present", False, "file missing — run the checker to fetch it, then write it")
+    else:
+        body = re.sub(r"<!--.*?-->", "", pitch, flags=re.DOTALL)
+        slides = [x.strip() for x in re.split(r"^---\s*$", body, flags=re.M) if x.strip()]
+        slides = [x for x in slides if not re.match(r"^marp:", x)]  # the front matter
+        check(3, "PITCH_03.md has 7 slides", len(slides) == 7, f"{len(slides)} slides found (6 yours + the fixed reviewers' slide)")
+        holes = sum(len(re.findall(r"\[[^\]\n]{1,80}\]", re.sub(r"```.*?```", "", x, flags=re.DOTALL))) for x in slides[:6])  # not inside a drawing
+        check(3, "PITCH_03.md placeholders replaced", holes == 0, f"{holes} [bracketed] placeholders still there")
+        def slide(n):  # 1-based, after the title slide
+            return slides[n] if len(slides) > n else ""
+        check(3, "slide 2 — the last time it happened to you", len(re.sub(r"\*\*[^*]+\*\*", "", slide(1)).strip()) > 120 and "[" not in slide(1),
+              "when / where / what you did instead / what it cost — write it")
+        people = len([r for r in re.findall(r"^\|\s*\d\s*\|([^|\n]{3,})\|([^|\n]{3,})\|", slide(2), re.M) if "[" not in r[0] + r[1]])
+        check(3, "slide 3 — five named testers", people >= 5, f"{people} rows filled in the table")
+        # slide 4: three requirements, the same id AND description as requirements.json
+        reqs = {}
         try:
-            names = {n.name for n in ast.walk(ast.parse(emb)) if isinstance(n, ast.FunctionDef)}
-        except SyntaxError:
-            names = set()
-        check(3, "embedder defines encode()", "encode" in names, "function not found")
-        check(
-            3,
-            "embedder defines cosine_similarity()",
-            "cosine_similarity" in names,
-            "not found",
-        )
-
-    bot = read("week03/chatbot.py") or ""
-    check(3, "chatbot imports streamlit", "streamlit" in bot, "not imported")
-    check(
-        3,
-        "chatbot keeps history in session_state",
-        "session_state" in bot,
-        "history not persisted",
-    )
-
-    prompts = read("week03/prompts.md") or ""
-    n = len(re.findall(r"^##\s+\S", prompts, re.MULTILINE))
-    check(3, "prompts.md has ≥5 prompts", n >= 5, f"{n} sections found")
-
-    notes = read("week03/model_notes.md") or ""
-    check(
-        3,
-        "model_notes.md ≥400 chars",
-        len(notes.strip()) >= 400,
-        f"{len(notes.strip())} chars",
-        DEADLINE,
-    )
-    check(
-        3,
-        "model_notes.md shows the raw HTTP call",
-        "11434" in notes or "api/generate" in notes,
-        "paste the curl command and what came back",
-        DEADLINE,
-    )
+            rj = json.loads((read("week02/requirements.json") or "[]").lstrip("\ufeff"))
+            for it in (rj.get("requirements", rj) if isinstance(rj, dict) else rj):
+                if isinstance(it, dict) and it.get("id"):
+                    reqs[str(it["id"]).strip()] = " ".join(str(it.get("description", "")).split()).lower()
+        except json.JSONDecodeError:
+            pass
+        cited = re.findall(r"^\s*\d\.\s*(REQ-\d{3})\s*[—–-]+\s*(.+)$", slide(3), re.M)
+        same = [rid for rid, desc in cited if rid in reqs and reqs[rid] and (
+            " ".join(desc.split()).lower().rstrip(".") == reqs[rid].rstrip(".") or reqs[rid].rstrip(".") in " ".join(desc.split()).lower())]
+        check(3, "slide 4 — three requirements, as in requirements.json", len(set(same)) >= 3,
+              f"{len(set(same))} of {len(cited)} match an id + description in week02/requirements.json — copy them, do not paraphrase")
+        dn = re.search(r"(does not|yapmaz)\s*:?\**\s*(.+)$", slide(3), re.I | re.M)
+        check(3, "slide 4 — says what it does not do", bool(dn and len(dn.group(2).strip()) > 15 and "[" not in dn.group(2)), "the one sentence from §4")
+        has_img = re.search(r"!\[[^\]]*\]\((week03/[^)]+)\)", slide(4))
+        img_ok = bool(has_img and read(has_img.group(1)) is not None)
+        boxes = len(re.findall(r"^\+[-+]+\+$", slide(4), re.M)) >= 2
+        check(3, "slide 5 — the main screen, drawn", img_ok or boxes, "no image in week03/ and no text boxes")
+        check(3, "slide 6 — one honest doubt", len(slide(5).strip()) > 60 and "[" not in slide(5), "the question and two lines on why")
+    # --- the review: three reviewers, quoted sentences, a decision each -----------
+    items = contributors(3) or []
+    if not items:
+        check(3, "week03/contributors_03.json valid JSON", False, "missing or does not parse")
+    else:
+        ids = [str(i.get("student_id", "")).strip() for i in items if isinstance(i, dict)]
+        good = [i for i in ids if re.fullmatch(r"\d{9}(-\d+)?", i)]
+        check(3, "contributors_03.json names three reviewers", len(good) == 3 and len(set(good)) == 3,
+              f"{len(good)} valid numbers — need three, different")
+        me = ""
+        try:
+            me = str(json.loads(read("student.json") or "{}").get("student_id", "")).strip()
+        except json.JSONDecodeError:
+            pass
+        check(3, "contributors_03.json does not list yourself", me == "" or me.split("-")[0] not in [g.split("-")[0] for g in good], "your own number is in it")
+        check(3, "contributors_03.json role is 'reviewer'", all(str(i.get("role", "")).strip() == "reviewer" for i in items if isinstance(i, dict)), "wrong or empty role")
+        thin = [i for i in items if isinstance(i, dict) and len(str(i.get("what", "")).strip()) < 25]
+        check(3, "contributors_03.json quotes what each reviewer wrote", not thin, f"{len(thin)} entries without a real sentence")
+        undecided = [i for i in items if isinstance(i, dict) and (i.get("accepted") not in (True, False) or len(str(i.get("why", "")).strip()) < 15)]
+        check(3, "contributors_03.json accepted/why decided for each", not undecided, f"{len(undecided)} entries without a decision and a reason")
+    # --- Part A revised: the change log has started --------------------------------
+    text = read("PROPOSAL.md") or ""
+    m = re.search(r"^## Change log.*?$", text, re.M)
+    log = re.sub(r"<!--.*?-->", "", text[m.end():], flags=re.DOTALL) if m else ""
+    dated = re.findall(r"20\d\d-\d\d-\d\d", log)
+    check(3, "PROPOSAL.md change log has a dated line", len(dated) >= 1, "no '2026-10-07 — §N: …' line after the review")
+    # --- Saturday: Part B, the store, the log ---------------------------------------
+    check_proposal(3, range(8, 13), DEADLINE)
+    s12 = (proposal_sections().get(12) or {}).get("text", "").lower()
+    check(3, "PROPOSAL.md §12 names the store", any(k in s12 for k in ("google play", "app store", "appgallery", "galaxy store", "testflight", "play store")),
+          "which store (S0), its fee and its review time", DEADLINE)
+    log3 = read("week03/ai_log_03.md") or ""
+    prose = re.sub(r"<!--.*?-->|```.*?```", "", log3, flags=re.DOTALL)
+    objections = len([m for m in re.findall(r"^\s*[123]\.\s+(\S.{2,})$", prose, re.M) if not m.startswith("[")])
+    check(3, "ai_log_03.md lists three objections", objections >= 3, f"{objections} numbered objections", DEADLINE)
     check_ai_log(3)
 
 
