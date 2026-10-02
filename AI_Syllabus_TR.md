@@ -39,7 +39,7 @@ Araçlar: Python 3.12, Git/GitHub, VS Code, Streamlit, açık ağırlıklı bir 
 
 | Kalem | Puan | Açıklama |
 |---|---|---|
-| Haftalık Projeler | 60 | 12 hafta × 10 puan, 60'a ölçeklenir. Her hafta: 5 puan dersin sonunda, 5 puan Cumartesi 23:59'da repodan okunur (1. Hafta: 5 puan, tamamı Cumartesi). Otomatik kontroller (derste 3, Cumartesi 2) artı öğretim üyesinin ders içi ilerleme (2), yapay zekâ günlüğü (2) ve commit disiplini (1) puanları. Kaçırılan ders için telafi yoktur. |
+| Haftalık Projeler | 60 | 12 hafta × 10 puan, 60'a ölçeklenir. Her hafta: 5 puan dersin sonunda, 5 puan Cumartesi 23:59'da repodan okunur (1. Hafta: 5 puan, tamamı Cumartesi). Otomatik kontroller (derste 5, Cumartesi 2) artı öğretim üyesinin yapay zekâ günlüğü (2) ve commit disiplini (1; 5. hafta, 10. hafta ve dönem sonunda tüm push geçmişine bakılarak verilir) puanları. Kaçırılan ders için telafi yoktur. |
 | Mağaza Bonusu | 15 | Yayın bonusu: mağaza izi S0–S6 (mağaza seçimi, geliştirici hesabı, uygulama kaydı, test kanalı build'i, testçiler, gönderim, canlı) her adımın teslim haftasında adım adım notlandırılır; her hafta yardım eden sınıf arkadaşları (katkıcılar) öğrencinin notundan pay kazanır. |
 | Sunum | 15 | 13–14. Haftalarda proje savunması: öğrenci, uygulamayı sınav yapanın önünde mağazadan yükler ve koddaki ve belgelerdeki kararlar hakkında soruları yanıtlar. Geliştirme makinesinden değil, mağaza build'inden çalıştırılır. |
 | Final Sınavı | 40 | Üniversitenin sınav döneminde yazılı final sınavı; SDLC belgelerini, yapay zekâ günlüğü pratiğini ve on iki haftanın teknik içeriğini kapsar. |

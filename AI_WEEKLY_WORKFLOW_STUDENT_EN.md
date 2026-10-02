@@ -26,7 +26,7 @@ Come back here when you are stuck.
 |------|-------------|--------|
 | Before the lecture | Read `weekNN/ASSIGNMENT_NN_EN.md` | — |
 | During the lecture (3 h) | Work, and push often | — |
-| End of the lecture | One last push — I freeze the state | 5 (checker 3 + progress 2) |
+| End of the lecture | One last push — I freeze the state | 5 |
 | After the lecture | Finish the rest, write `ai_log_NN.md` | — |
 | By Saturday 23:59 | **Push again.** I freeze the state a second time | 5 |
 
@@ -132,18 +132,18 @@ The last push is at 11:50. Right after it I freeze every repository as it stands
 Work you have not pushed is invisible — it sits on your laptop and does not count.
 
 The result is projected as an anonymised table; find your row by the nickname in your
-`student.json`. That table is worth **5 points — half the week**, in two parts:
-
-- **Checker — 3 points.** What the checks say about your repository as it stands at 13:00.
-- **Progress — 2 points.** How the work grew during the lecture, read from your pushes:
-  **2** if it grew in at least three separate pushes (ten or more minutes apart), at least
-  two of them adding real content, and something you had pushed earlier was revised
-  later; **1** for two content pushes, or three pushes with nothing revised; **0** for a
-  single push, or pushes that add nothing. Pasting a finished text in one go is a single
-  push however many files it touches. The reason for your mark is written next to it.
+`student.json`. That table is worth **5 points — half the week**.
 
 One student, one computer, one GitHub account. Work done on a classmate's machine or
 under a classmate's GitHub session earns nothing for the lecture.
+
+**Commit discipline (1 point a week) is not judged week by week.** At Week 5, Week 10
+and the end of term I look at your whole push history and award those points in one go:
+did the work grow over time, is there real progress from one push to the next, was the
+text worked on or pasted in finished? A single push at the end of each lecture, or text
+that arrives in one piece, scores nothing there however many weeks it repeats. I may
+also ask you a two-minute question about your project in any lecture. Push as you work,
+every week, and this takes care of itself.
 
 ### Attendance, and what happens if you are not here
 

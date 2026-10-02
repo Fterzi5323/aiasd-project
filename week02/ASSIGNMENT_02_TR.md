@@ -176,9 +176,7 @@ için var.
 ## Bu hafta nasıl notlanıyor
 
 **Ders sonu — 5 puan.** §1–§4, iki paydaş, ilk gereksinim listesi — ders bittiği anda
-reponuzdan okunur ve sınıf panosunda gösterilir. Checker **3**; ders içi ilerleme **2**
-(aralıklı birkaç push, gerçek içerik eklenmiş ve önceki metin düzeltilmiş — haftalık
-akış belgesine bakın).
+reponuzdan okunur ve sınıf panosunda gösterilir.
 
 **Cumartesi 23:59 — 5 puan.** Son durumda kontroller yeşil: **2**. İnsan katkısı: **2**
 — kanıtıyla kendi `ai_log_02.md` dosyanız ve her ismin arkasında gerçek bir cümle olan

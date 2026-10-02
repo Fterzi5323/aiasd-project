@@ -178,8 +178,7 @@ design, and the change log exists for exactly that.
 
 **End of the lecture — 5 points.** §1–§4, the two stakeholders, the first requirement
 list — read from your repository as it stands when the lecture ends, and shown on the
-class board. Checker **3**; progress during the lecture **2** (several pushes, spaced
-out, with real content added and earlier text revised — see the weekly workflow).
+class board.
 
 **Saturday 23:59 — 5 points.** Checks green on your final state: **2**. Human
 involvement: **2** — your own `ai_log_02.md` with its evidence, and the two stakeholders

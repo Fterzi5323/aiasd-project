@@ -25,7 +25,7 @@ Takıldığınızda buraya dönün.
 |------|-------------|--------|
 | Dersten önce | `weekNN/ASSIGNMENT_NN_TR.md` dosyasını okuyun | — |
 | Ders sırasında (3 saat) | Çalışın ve sık push edin | — |
-| Ders sonunda | Son bir push | 5 (checker 3 + ilerleme 2) |
+| Ders sonunda | Son bir push | 5 |
 | Dersten sonra | Kalanı bitirin, `ai_log_NN.md` yazın | — |
 | Cumartesi 23:59'a kadar | **Yeniden push edin.** | 5 |
 
@@ -133,18 +133,18 @@ Son push 11:50'de. Hemen ardından her depoyu olduğu gibi dondurup kontrolleri 
 etmediğiniz iş görünmezdir — bilgisayarınızda durur ve sayılmaz.
 
 Sonuç anonimleştirilmiş bir tablo olarak yansıtılır; satırınızı `student.json`
-içindeki takma adınızla bulun. O tablo **5 puan — haftanın yarısı** değerindedir ve iki parçadır:
-
-- **Checker — 3 puan.** Saat 13:00'teki reponuz için kontrollerin söylediği.
-- **İlerleme — 2 puan.** Ders boyunca işin nasıl büyüdüğü, push'larınızdan okunur:
-  en az üç ayrı push (aralarında en az on dakika), bunların en az ikisi gerçek içerik
-  eklemiş ve daha önce push ettiğiniz bir şey sonradan düzeltilmişse **2**; iki içerik
-  push'u ya da hiç düzeltme olmadan üç push için **1**; tek push ya da içerik eklemeyen
-  push'lar için **0**. Bitmiş bir metni tek seferde yapıştırmak, kaç dosyaya dokunursa
-  dokunsun tek push'tur. Notunuzun gerekçesi yanında yazılır.
+içindeki takma adınızla bulun. O tablo **5 puan — haftanın yarısı** değerindedir.
 
 Bir öğrenci, bir bilgisayar, bir GitHub hesabı. Bir arkadaşınızın bilgisayarında ya da
 onun GitHub oturumunda yapılan iş ders için puan getirmez.
+
+**Commit disiplini (haftada 1 puan) hafta hafta değerlendirilmez.** 5. haftada, 10.
+haftada ve dönem sonunda tüm push geçmişinize bakar ve o puanları tek seferde veririm:
+iş zamana yayılarak mı büyümüş, push'lar arasında gerçek ilerleme var mı, metin üzerinde
+çalışılmış mı yoksa bitmiş hâlde mi yapıştırılmış? Her dersin sonunda tek push ya da tek
+parça hâlinde gelen metin, kaç hafta tekrarlanırsa tekrarlansın orada puan getirmez.
+Ayrıca herhangi bir derste size projeniz hakkında iki dakikalık bir soru sorabilirim.
+Her hafta çalıştıkça push edin; gerisi kendiliğinden hallolur.
 
 ### Devam, ve burada olmazsanız ne olur
 
