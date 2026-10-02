@@ -29,19 +29,21 @@ Delete this comment when you are done.                           Bitince bu yoru
 
 ---
 
-## 1. The last time it happened to me
+## 1. The last time it happened — to me, or in front of me
 
-<!-- A real moment, not a category. Date, place, what you were trying to do,
-     what you did instead, how long it cost you. If you cannot name the last
-     time, it is not your problem — change the project.
-     Gerçek bir an, bir kategori değil. Tarih, yer, ne yapmaya çalışıyordunuz,
-     onun yerine ne yaptınız, size neye mal oldu. Son seferi söyleyemiyorsanız
-     bu sizin sorununuz değildir — projeyi değiştirin. -->
+<!-- A real moment, not a category. Yours, a friend's at the university, or
+     someone's in your social circle — but one you saw. Date, place, who, what
+     they were trying to do, what they did instead, what it cost. If you cannot
+     name the last time, it is not your problem — change the project.
+     Gerçek bir an, bir kategori değil. Sizin, üniversitedeki bir arkadaşınızın
+     ya da sosyal çevrenizden birinin — ama gördüğünüz bir an. Tarih, yer, kim,
+     ne yapmaya çalışıyordu, onun yerine ne yaptı, neye mal oldu. Son seferi
+     söyleyemiyorsanız bu sizin sorununuz değildir — projeyi değiştirin. -->
 
 - **When:** [date, roughly]
-- **Where / doing what:** [...]
-- **What I did instead:** [...]
-- **What it cost me:** [minutes, money, a missed thing]
+- **Who / where / doing what:** [...]
+- **What they did instead:** [...]
+- **What it cost:** [minutes, money, a missed thing]
 
 ---
 

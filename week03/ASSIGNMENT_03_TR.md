@@ -37,7 +37,7 @@ olmadan VS Code'un normal Markdown önizlemesi de sunum için yeterlidir.
 Altı slayt, her birinin yönergesi dosyanın içinde:
 
 1. ürün tek cümleyle;
-2. **sorunu en son ne zaman yaşadınız** — tarih, yer, onun yerine ne yaptınız;
+2. **sorun en son ne zaman oldu** — size ya da gözünüzün önünde — tarih, yer, kim, onun yerine ne yaptı;
 3. **9. haftada test edecek beş gerçek kişi** — ad, nereden tanıdığınız;
 4. yaptığı üç şey, yapmadığı bir şey;
 5. ana ekran, **elle çizilmiş** (fotoğraf `week03/` içinde) ya da metinle;
@@ -50,10 +50,11 @@ Altı slayt, her birinin yönergesi dosyanın içinde:
 da derste herhangi bir slaytı sorabilirim. Haftanın geri kalanı farklı: orada yapay zekâ
 her zamanki gibi bir araçtır ve `ai_log_03.md` onu kullanmanızı ister.
 
-2. ve 3. slaytların arkasında iki kural var ve dönem boyunca geçerli: **proje sizin
-yaşadığınız bir sorunu çözer** ve **çevrenizdeki gerçek kişiler tarafından
-kullanılabilir** — Atlas'ta, ailenizde, bir kulüpte — çünkü 9. haftada o kişiler test
-edecek. Sorunu en son ne zaman yaşadığınızı ya da ürünü kullanacak beş kişiyi
+2. ve 3. slaytların arkasında iki kural var ve dönem boyunca geçerli: **proje sizin bir
+sorununuzu çözer — kendinizin, üniversitedeki arkadaşlarınızın ya da sosyal çevrenizin**
+ve **çevrenizdeki gerçek kişiler tarafından kullanılabilir** — Atlas'ta, ailenizde, bir
+kulüpte — çünkü 9. haftada o kişiler test edecek ve onlara ihtiyacınız olacak. Sorunun en
+son ne zaman olduğunu ya da ürünü kullanacak beş kişiyi
 söyleyemiyorsanız sorun slaytta değil projededir: projeyi şimdi değiştirin, bunun ucuz
 olduğu son hafta bu.
 

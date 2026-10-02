@@ -35,7 +35,7 @@ extension, VS Code's normal Markdown preview is enough to present from.
 The six slides, each with its own instructions inside the file:
 
 1. the product in one sentence;
-2. **the last time the problem happened to you** — date, place, what you did instead;
+2. **the last time the problem happened** — to you, or in front of you — date, place, who, what they did instead;
 3. **five real people who will test it in Week 9** — name, how you know them;
 4. three things it does, one thing it does not;
 5. the main screen, **drawn by hand** (photo in `week03/`) or in text;
@@ -49,8 +49,9 @@ will ask about any slide, in the group or in class. The rest of the week's work 
 different: AI is a tool there, as before, and `ai_log_03.md` asks you to use it.
 
 Two rules behind slides 2 and 3, and they stay for the whole term: **the project solves
-a problem you yourself have**, and **it is usable by real people around you** — at
-Atlas, in your family, in a club — because in Week 9 those people test it. If you cannot
+a problem of yours — your own, your friends' at the university, or your social
+circle's**, and **it is usable by real people around you** — at Atlas, in your family, in
+a club — because in Week 9 those people test it, and you will need them. If you cannot
 name the last time the problem happened, or five people who would use the product, the
 problem is with the project, not the slide: change the project now, this is the last
 cheap week to do it.

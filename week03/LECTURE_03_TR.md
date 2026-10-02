@@ -38,9 +38,10 @@ Notla ilgili sorular oraya, yorum olarak — e-postayla değil.
 
 ## Dönem boyunca kalacak iki kural
 
-**1. Proje *sizin* yaşadığınız bir sorunu çözer.**
-"Öğrenciler X'te zorlanıyor" değil. En son ne zaman yaşadınız: tarih, yer, onun yerine ne
-yaptınız.
+**1. Proje *sizin* bir sorununuzu çözer — kendinizin, üniversitedeki arkadaşlarınızın
+ya da sosyal çevrenizin.**
+"Öğrenciler X'te zorlanıyor" değil. En son ne zaman oldu — size ya da gözünüzün önünde:
+tarih, yer, kim, onun yerine ne yaptı.
 
 **2. Çevrenizdeki gerçek kişiler kullanabilir.**
 Atlas'ta, ailenizde, bir kulüpte. 9. haftada beşi test edecek — Kullanıcı Kabul Testi.
@@ -83,7 +84,7 @@ yarısı. Aralık'taki savunma küçük bir jüri.
 ## Altı slaydınız — `week03/PITCH_03.md`
 
 1. Ürün tek cümleyle
-2. **Sorunu en son ne zaman yaşadınız**
+2. **Sorun en son ne zaman oldu — size ya da gözünüzün önünde**
 3. **9. haftada test edecek beş kişi** — ad, nereden tanıdığınız, neden
 4. Üç gereksinim — *`requirements.json` ile aynı id ve aynı metin* — ve bir "yapmaz"
 5. Ana ekran, **elle çizilmiş**

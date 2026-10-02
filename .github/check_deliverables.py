@@ -430,7 +430,7 @@ def week3() -> None:
         check(3, "PITCH_03.md placeholders replaced", holes == 0, f"{holes} [bracketed] placeholders still there")
         def slide(n):  # 1-based, after the title slide
             return slides[n] if len(slides) > n else ""
-        check(3, "slide 2 — the last time it happened to you", len(re.sub(r"\*\*[^*]+\*\*", "", slide(1)).strip()) > 120 and "[" not in slide(1),
+        check(3, "slide 2 — the last time it happened, to you or in front of you", len(re.sub(r"\*\*[^*]+\*\*", "", slide(1)).strip()) > 120 and "[" not in slide(1),
               "when / where / what you did instead / what it cost — write it")
         people = len([r for r in re.findall(r"^\|\s*\d\s*\|([^|\n]{3,})\|([^|\n]{3,})\|", slide(2), re.M) if "[" not in r[0] + r[1]])
         check(3, "slide 3 — five named testers", people >= 5, f"{people} rows filled in the table")

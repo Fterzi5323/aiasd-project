@@ -39,9 +39,10 @@ Sunday. Questions about a mark go there, as a comment — not by e-mail.
 
 ## Two rules that stay for the whole term
 
-**1. The project solves a problem *you* have.**
-Not "students struggle with X". The last time it happened to you: date, place, what you
-did instead.
+**1. The project solves a problem of *yours* — your own, your friends' at the
+university, or your social circle's.**
+Not "students struggle with X". The last time it happened — to you, or in front of you:
+date, place, who, what they did instead.
 
 **2. Real people around you can use it.**
 At Atlas, in your family, in a club. In Week 9 five of them test it — the User
@@ -84,7 +85,7 @@ Saturday, is the second half. The December defence is a small jury.
 ## Your six slides — `week03/PITCH_03.md`
 
 1. The product in one sentence
-2. **The last time it happened to you**
+2. **The last time it happened — to you, or in front of you**
 3. **Five people who will test it in Week 9** — name, how you know them, why
 4. Three requirements — *the same id and text as `requirements.json`* — and one "does not"
 5. The main screen, **drawn by hand**
