@@ -19,6 +19,12 @@ waiting for it to happen. Each week's assignment names the technique it expects;
 table in §10 shows the whole term. You may use any of them any week — one of them is
 compulsory.
 
+The techniques live inside the week you already know: the checker before every push, the
+10:00 / 11:00 / 11:50 pushes and the freeze, Saturday 23:59, your `requirements.json` ids,
+the Change log at the end of `PROPOSAL.md`, your group of four and its one-hour online
+meeting between the lecture and Saturday, and `weekNN/contributors_NN.json`. None of them
+asks for a new file or a new habit — they say what to put in the files you already push.
+
 ---
 
 ## 1. Acceptance criteria first
@@ -41,6 +47,11 @@ user has many reservations. Fixed by hand; final model in `docs/data_model.md`."
 
 **In the log.** The criteria you wrote first, the answer against them, what failed.
 
+**In this course.** Your criteria already exist: the ids in `requirements.json`, frozen
+since Week 3. Paste the REQ lines that the design or the code must satisfy into the prompt.
+An answer that breaks a REQ is the error of the week; an answer that needs a REQ you do
+not have is a dated line in the Change log, not a silent addition.
+
 ---
 
 ## 2. Verify by running, not by reading
@@ -59,6 +70,11 @@ returned a new code instead of refusing. The spec (REQ-006) says one code per mi
 Traceback and the two responses pasted below. Fixed with a timestamp check; test added."*
 
 **In the log.** The command you ran, the output (pasted, trimmed), the fix.
+
+**In this course.** The first run is always `python .github/check_deliverables.py` — before
+the 10:00, 11:00 and 11:50 pushes and before Saturday 23:59. A red check is evidence: paste
+it. The second run is on your own phone — the app narrowed to a phone width is a
+requirement every week, not a Week 10 task.
 
 ---
 
@@ -84,6 +100,15 @@ desk, 2026-10-07). Kept the project; wrote the check into §9."*
 **In the log.** The three objections verbatim, which you answered where, which you
 refuted with what evidence.
 
+**In this course.** You have two hostile reviewers every week, and they go in different
+files. The three people in your group of four hear you in the weekly online meeting;
+their sentences, quoted, with your `accepted: true/false` and `why`, go in
+`weekNN/contributors_NN.json`. The assistant's objections go in `ai_log_NN.md`. Put them
+side by side: where the assistant and your group disagree, the people are usually right
+about *your* users, and the assistant about the market or the technology — say which, and
+why, in `why`. In Week 3 the reviewers were the room (slide 7); in Week 11 the role is the
+store reviewer, with the store's own rejection reasons from `AI_PLATFORMS_AND_STORES`.
+
 ---
 
 ## 4. Cross-examination — two assistants, one prompt
@@ -102,6 +127,11 @@ with real evidence. This is the Week 2 technique; it stays useful all term.
 all afternoon by people who left — 15 min, made it REQ-004 with my own acceptance test."*
 
 **In the log.** The prompt once, the two answers side by side (trimmed), the decision.
+
+**In this course.** This was Week 2: the same §3–§4 to two assistants, eight requirements
+each, one wrong one found. It returns whenever two answers are cheap and the truth is in
+your own documents — the data model in Week 4, the test plan in Week 9. The two assistants
+must be two of the ones you set up in Week 1 (`AI_SETUP_CARD`); the free tiers are enough.
 
 ---
 
@@ -124,6 +154,12 @@ did not have a current figure — the better answer."*
 
 **In the log.** The claim, the source it gave, what the source actually says.
 
+**In this course.** Two places. In Week 6 your own chatbot answers questions about your
+project over your own documents; it must return the chunk it used, and the Week 7 tests
+check that — a chatbot that cannot cite is the same failure as an assistant that cannot.
+In Weeks 3 and 10, every number in `PROPOSAL.md` §8–§12 and in the UAT report — store
+fees, review times, market sizes — carries the page or the person it came from, dated.
+
 ---
 
 ## 6. Small diffs — one change at a time, and read it
@@ -143,6 +179,12 @@ length from 6 to 4 digits — not requested, not mentioned. Rejected that hunk, 
 imports. `ruff` confirms; commit `e41c…` is the imports only."*
 
 **In the log.** The change you asked for, the change you got, what you refused.
+
+**In this course.** This is what the Week 5, Week 10 and end-of-term reviews of your whole
+push history look for: commits spread over the week, each one a change you can name in its
+message (`week05: OTP expiry check, test added`), no single Saturday-night dump that could
+have been pasted whole. `ruff check .` before every commit; a key in a commit is minus ten
+points and a revoked key, see the workflow document.
 
 ---
 
@@ -166,6 +208,11 @@ It found `checked_in` vs `checkedIn` — real, fixed. It missed that the server 
 
 **In the log.** What it found, what you verified, what it missed and how you found it.
 
+**In this course.** Week 8 is the week the project's own core feature runs on all three
+tiers — server, web, mobile — and the end-of-session check reads all three. Bring the
+mismatch you found to the group meeting: the other three have the same three tiers and
+usually the same class of mistake.
+
 ---
 
 ## 8. Predicted versus observed
@@ -186,6 +233,13 @@ mine on the map' — was in nobody's prediction. Table in `docs/test_report.md`.
 
 **In the log.** The prediction (dated, before the test), the observed list, the overlap.
 
+**In this course.** Your testers are the five people on slide 3 of `PITCH_03.md` — not
+your group of four, who are your reviewers, and not your contributors of Week 2. The
+prediction is dated in `ai_log_08.md` before the Week 9 lecture; the testers' list lives
+in `week09/`, the UAT report in `week10/`; the store's test track (S3–S4) is where they
+install from. Five real people who could not use the product is the finding of the term —
+it is why the second rule of this course exists.
+
 ---
 
 ## 9. The decision record — what the log is for
@@ -203,6 +257,15 @@ used AI. It is an engineering record of one decision per week, with four parts:
 The **Evidence** block is the part a person reads first. It is pasted, trimmed to the
 lines that matter, and it shows the error — not a description of the error. A log with
 no evidence earns nothing, however long it is.
+
+**The people in the loop.** The assistant is not your only reviewer and must not become
+the only one. Every week, between the lecture and Saturday, your group of four meets
+online for one hour: each of you shows what changed, the other three say what they think.
+Bring that week's assistant error to the meeting — the question "did it fool you too?" is
+the fastest cross-check there is. The three entries in `weekNN/contributors_NN.json` are
+those three people, quoted; the assistant has no entry there. One student, one computer,
+one GitHub account: a log written on a classmate's machine is not yours. Questions to me
+go as an issue in your own repository, which I read on Sundays.
 
 Two rules the log also carries:
 
@@ -233,7 +296,10 @@ Two rules the log also carries:
 | 12 | Closure, poster | §9 The term's log in retrospect: which error cost most |
 
 Any other technique is welcome in any week in addition. The week's `ai_log_NN.md`
-scaffold names its technique at the top.
+scaffold names its technique at the top, and the week's `ASSIGNMENT_NN` points here. The
+two human-marked points of every week — the AI log — are read against this table: the
+technique of the week, applied, with the evidence pasted. The group meeting and the
+contributors file are read next to it.
 
 ---
 

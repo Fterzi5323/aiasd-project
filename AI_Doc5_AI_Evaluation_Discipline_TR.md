@@ -18,6 +18,13 @@ Aşağıdakilerin her biri, o anı beklemek yerine bilerek üretmenin adlandır�
 tekniğidir. Her haftanın ödevi beklediği tekniği adlandırır; §10'daki tablo bütün dönemi
 gösterir. Hepsini her hafta kullanabilirsiniz — biri zorunludur.
 
+Teknikler zaten bildiğiniz haftanın içinde yaşar: her push'tan önce checker, 10:00 /
+11:00 / 11:50 push'ları ve dondurma, Cumartesi 23:59, `requirements.json` kimlikleriniz,
+`PROPOSAL.md`'nin sonundaki Değişiklik günlüğü, dörtlü grubunuz ve ders ile Cumartesi
+arasındaki bir saatlik çevrimiçi toplantısı ve `weekNN/contributors_NN.json`. Hiçbiri yeni
+bir dosya ya da yeni bir alışkanlık istemez — zaten push ettiğiniz dosyalara ne konacağını
+söyler.
+
 ---
 
 ## 1. Önce kabul ölçütü
@@ -40,6 +47,11 @@ rezervasyonu olur. Elle düzelttim; son model `docs/data_model.md`'de."*
 
 **Günlükte.** Önce yazdığınız ölçütler, cevabın onlara karşı durumu, neyin takıldığı.
 
+**Bu derste.** Ölçütleriniz zaten var: 3. Hafta'dan beri donmuş `requirements.json`
+kimlikleri. Tasarımın ya da kodun karşılaması gereken REQ satırlarını istemin içine
+yapıştırın. Bir REQ'i bozan cevap haftanın hatasıdır; elinizde olmayan bir REQ'e ihtiyaç
+duyan cevap ise sessiz bir ekleme değil, Değişiklik günlüğüne tarihli bir satırdır.
+
 ---
 
 ## 2. Okuyarak değil, çalıştırarak doğrulayın
@@ -58,6 +70,11 @@ yerine yeni kod döndürdü. Spesifikasyon (REQ-006) dakikada bir kod diyor. Tra
 yanıt aşağıda. Zaman damgası kontrolüyle düzelttim; test eklendi."*
 
 **Günlükte.** Çalıştırdığınız komut, çıktı (yapıştırılmış, kırpılmış), düzeltme.
+
+**Bu derste.** İlk çalıştırma her zaman `python .github/check_deliverables.py` — 10:00,
+11:00 ve 11:50 push'larından ve Cumartesi 23:59'dan önce. Kırmızı bir kontrol kanıttır:
+yapıştırın. İkinci çalıştırma kendi telefonunuzda — uygulamanın telefon genişliğine
+daraltılmış hâli her haftanın gereksinimidir, 10. Hafta'nın işi değil.
 
 ---
 
@@ -82,6 +99,15 @@ rezervasyon sistemi var.' Kontrol ettim: Atlas kütüphanesinde yok (bankoda sor
 **Günlükte.** Üç itiraz aynen, hangisini nerede yanıtladığınız, hangisini hangi kanıtla
 çürüttüğünüz.
 
+**Bu derste.** Her hafta iki düşman gözden geçireniniz var ve farklı dosyalara giderler.
+Dörtlü grubunuzdaki üç kişi sizi haftalık çevrimiçi toplantıda dinler; cümleleri,
+alıntıyla, sizin `accepted: true/false` ve `why` kararınızla `weekNN/contributors_NN.json`
+içine gider. Asistanın itirazları `ai_log_NN.md` içine gider. İkisini yan yana koyun:
+asistanla grubunuzun ayrıştığı yerde *sizin* kullanıcılarınız hakkında genellikle insanlar,
+pazar ya da teknoloji hakkında asistan haklıdır — hangisi olduğunu ve nedenini `why`
+alanında söyleyin. 3. Hafta'da değerlendirenler sınıftı (7. slayt); 11. Hafta'da rol
+mağaza incelemecisidir, mağazanın kendi ret gerekçeleriyle (`AI_PLATFORMS_AND_STORES`).
+
 ---
 
 ## 4. Çapraz sorgu — iki asistan, tek istem
@@ -100,6 +126,11 @@ sonra'. İkisi de bana sormadı. Doğru sayı benim §3'ümde: sorun, giden insa
 öğleden sonra tuttuğu odalar — 15 dk; kendi kabul testimle REQ-004 yaptım."*
 
 **Günlükte.** İstem bir kez, iki cevap yan yana (kırpılmış), karar.
+
+**Bu derste.** Bu 2. Hafta'ydı: aynı §3–§4 iki asistana, her birinden sekiz gereksinim, bir
+yanlış bulundu. İki cevabın ucuz, doğrunun kendi belgelerinizde olduğu her yerde geri gelir
+— 4. Hafta'da veri modeli, 9. Hafta'da test planı. İki asistan 1. Hafta'da kurduklarınızdan
+(`AI_SETUP_CARD`) ikisi olmalı; ücretsiz katmanlar yeter.
 
 ---
 
@@ -123,6 +154,13 @@ sordum: güncel bir rakamı olmadığını söyledi — daha iyi cevap."*
 
 **Günlükte.** İddia, verdiği kaynak, kaynağın gerçekte ne dediği.
 
+**Bu derste.** İki yer. 6. Hafta'da kendi sohbet botunuz kendi belgeleriniz üzerinden
+projenizle ilgili soruları yanıtlar; kullandığı parçayı döndürmek zorundadır ve 7. Hafta
+testleri bunu kontrol eder — kaynak gösteremeyen bir sohbet botu, gösteremeyen bir
+asistanla aynı başarısızlıktır. 3. ve 10. Hafta'da `PROPOSAL.md` §8–§12'deki ve UAT
+raporundaki her sayı — mağaza ücretleri, inceleme süreleri, pazar büyüklükleri — geldiği
+sayfayı ya da kişiyi tarihiyle taşır.
+
 ---
 
 ## 6. Küçük diff'ler — bir seferde bir değişiklik, ve okuyun
@@ -142,6 +180,13 @@ uzunluğunu 6'dan 4 haneye değiştirmişti — istenmemiş, söylenmemiş. O pa
 import'ları aldım. `ruff` doğruluyor; `e41c…` commit'i yalnızca import'lar."*
 
 **Günlükte.** İstediğiniz değişiklik, aldığınız değişiklik, reddettiğiniz.
+
+**Bu derste.** 5. Hafta, 10. Hafta ve dönem sonunda bütün push geçmişinizin incelemesi
+tam olarak buna bakar: haftaya yayılmış commit'ler, her biri mesajında adlandırabildiğiniz
+bir değişiklik (`week05: OTP süre kontrolü, test eklendi`), bütünüyle yapıştırılmış
+olabilecek tek bir Cumartesi gecesi yığını yok. Her commit'ten önce `ruff check .`;
+commit'e giren bir anahtar eksi on puan ve iptal edilmiş bir anahtardır, bkz. iş akışı
+belgesi.
 
 ---
 
@@ -163,6 +208,10 @@ kaçırdı. Onu test ederek buldum (teknik 2); ele alma eklendi."*
 
 **Günlükte.** Ne buldu, neyi doğruladınız, neyi kaçırdı ve nasıl buldunuz.
 
+**Bu derste.** 8. Hafta projenin kendi çekirdek özelliğinin üç katmanda — sunucu, web,
+mobil — çalıştığı haftadır ve ders sonu kontrolü üçünü de okur. Bulduğunuz uyumsuzluğu grup
+toplantısına getirin: diğer üçünde de aynı üç katman ve genellikle aynı sınıf hata vardır.
+
 ---
 
 ## 8. Tahmin ile gözlem
@@ -183,6 +232,12 @@ olduğunu anlayamıyorum' — kimsenin tahmininde yoktu. Tablo `docs/test_report
 
 **Günlükte.** Tahmin (tarihli, testten önce), gözlem listesi, örtüşme.
 
+**Bu derste.** Testçileriniz `PITCH_03.md`'nin 3. slaydındaki beş kişidir — değerlendireniniz
+olan dörtlü grubunuz değil, 2. Hafta'nın katkıcıları da değil. Tahmin 9. Hafta dersinden
+önce `ai_log_08.md` içinde tarihlidir; testçi listesi `week09/`, UAT raporu `week10/`
+içinde yaşar; mağazanın test kanalı (S3–S4) kurdukları yerdir. Ürünü kullanamayan beş
+gerçek insan dönemin bulgusudur — bu dersin ikinci kuralı bunun için vardır.
+
 ---
 
 ## 9. Karar kaydı — günlük ne içindir
@@ -200,6 +255,15 @@ kullandığınızın günlüğü de değildir. Haftada bir kararın mühendislik
 **Kanıt** bloğu, bir insanın ilk okuduğu kısımdır. Yapıştırılmıştır, önemli satırlara
 kırpılmıştır ve hatayı gösterir — hatanın tarifini değil. Kanıtı olmayan bir günlük ne
 kadar uzun olursa olsun hiçbir şey kazandırmaz.
+
+**Döngüdeki insanlar.** Asistan tek değerlendireniniz değildir ve tek değerlendireniniz
+olmamalıdır. Her hafta, ders ile Cumartesi arasında, dörtlü grubunuz bir saat çevrimiçi
+buluşur: her biriniz neyin değiştiğini gösterir, diğer üçü ne düşündüğünü söyler. O
+haftanın asistan hatasını toplantıya getirin — "sizi de kandırdı mı?" sorusu var olan en
+hızlı çapraz kontroldür. `weekNN/contributors_NN.json` içindeki üç kayıt o üç kişidir,
+alıntıyla; asistanın orada kaydı yoktur. Bir öğrenci, bir bilgisayar, bir GitHub hesabı:
+bir sınıf arkadaşının makinesinde yazılmış günlük sizin değildir. Bana sorular kendi
+deponuzda bir issue olarak gelir; Pazar günleri okurum.
 
 Günlüğün taşıdığı iki kural daha:
 
@@ -231,7 +295,10 @@ Günlüğün taşıdığı iki kural daha:
 | 12 | Kapanış, poster | §9 Dönemin günlüğüne geriye bakış: en pahalıya mal olan hata |
 
 Herhangi bir hafta ek olarak başka bir teknik de kullanılabilir. Haftanın `ai_log_NN.md`
-iskeleti tekniğini en üstte adlandırır.
+iskeleti tekniğini en üstte adlandırır ve haftanın `ASSIGNMENT_NN`'i buraya işaret eder.
+Her haftanın insan eliyle verilen iki puanı — yapay zekâ günlüğü — bu tabloya karşı
+okunur: haftanın tekniği, uygulanmış, kanıtı yapıştırılmış. Grup toplantısı ve katkıcılar
+dosyası onun yanında okunur.
 
 ---
 
