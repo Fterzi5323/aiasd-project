@@ -38,7 +38,7 @@ On completing the course the student can:
 
 Course template and weekly assignments: github.com/vedatcoskun-course/aiasd-template (each week's `ASSIGNMENT_NN` in English and Turkish; `AI_SETUP_CARD`, `AI_WEEKLY_WORKFLOW_STUDENT` and `AI_SKELETON` at the root).
 
-Pre-reading, Week 1: Vaswani et al., "Attention Is All You Need" (2017); AI Technical Background; Development Environment and Tools; Working with AI Tools; AI as an Engineering Instrument — the Evaluation Discipline (`AI_Doc5`, the eight techniques the weekly AI log asks for; examinable). Week 2: two complete SDLC document sets (exam-hall allocation; lift controller with simulator); Platforms and Stores handout.
+Pre-reading, Week 1: Vaswani et al., "Attention Is All You Need" (2017); AI Technical Background; Development Environment and Tools; Working with AI Tools; Using AI Properly in Software Development (`AI_Doc5`, the eight techniques the weekly AI log asks for; examinable). Week 2: two complete SDLC document sets (exam-hall allocation; lift controller with simulator); Platforms and Stores handout.
 
 Tools: Python 3.12, Git/GitHub, VS Code, Streamlit, Ollama with an open-weight model, two chat assistants of the student's choice on free tiers, a mobile framework (Flutter / React Native–Expo / Kotlin / Swift). Students bring their own laptop every week.
 

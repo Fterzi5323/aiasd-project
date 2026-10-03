@@ -66,7 +66,7 @@ step by step in [`AI_WEEKLY_WORKFLOW_STUDENT_EN.md`](AI_WEEKLY_WORKFLOW_STUDENT_
 `AI_Doc2` AI Technical Background, `AI_Doc3` Development Environment and Tools,
 `AI_Doc4` Working with AI Tools, and `AI_Doc1`, the Transformer paper. The lecture
 is a twenty-minute summary of them. Later readings arrive the same way, numbered in order:
-`AI_Doc5` AI as an Engineering Instrument — the eight techniques your weekly AI log asks
+`AI_Doc5` Using AI Properly in Software Development — the eight techniques your weekly AI log asks
 for, one compulsory each week from Week 4; it is in the final exam.
 
 Both sections receive the same files. The assignments, the setup card and the workflow

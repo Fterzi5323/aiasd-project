@@ -38,7 +38,7 @@ Dersi tamamlayan öğrenci:
 
 Ders şablonu ve haftalık ödevler: github.com/vedatcoskun-course/aiasd-template (her haftanın `ASSIGNMENT_NN` dosyası İngilizce ve Türkçe; kökte `AI_SETUP_CARD`, `AI_WEEKLY_WORKFLOW_STUDENT` ve `AI_SKELETON`).
 
-Ön okuma, 1. Hafta: Vaswani vd., "Attention Is All You Need" (2017); AI Technical Background; Development Environment and Tools; Working with AI Tools; Yapay Zekâ Bir Mühendislik Aracı Olarak — Değerlendirme Disiplini (`AI_Doc5`, haftalık yapay zekâ günlüğünün istediği sekiz teknik; sınav kapsamında). 2. Hafta: iki tam SDLC belge seti (sınav salonu tahsisi; simülatörlü asansör denetleyicisi); Platforms and Stores el kitabı.
+Ön okuma, 1. Hafta: Vaswani vd., "Attention Is All You Need" (2017); AI Technical Background; Development Environment and Tools; Working with AI Tools; Yazılım Geliştirmede Yapay Zekâyı Doğru Kullanmak (`AI_Doc5`, haftalık yapay zekâ günlüğünün istediği sekiz teknik; sınav kapsamında). 2. Hafta: iki tam SDLC belge seti (sınav salonu tahsisi; simülatörlü asansör denetleyicisi); Platforms and Stores el kitabı.
 
 Araçlar: Python 3.12, Git/GitHub, VS Code, Streamlit, açık ağırlıklı bir modelle Ollama, öğrencinin seçtiği iki sohbet asistanı (ücretsiz katman), bir mobil çatı (Flutter / React Native–Expo / Kotlin / Swift). Öğrenciler her hafta kendi dizüstü bilgisayarlarını getirir.
 

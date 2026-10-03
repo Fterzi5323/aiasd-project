@@ -63,8 +63,8 @@ yapılır, puanlar nasıl bölünür, takıldığınızda ne denersiniz — adı
 **1. Hafta'dan önce okuyun** — üç ön okuma ve makale kökte: `AI_Doc2` AI Technical
 Background, `AI_Doc3` Development Environment and Tools, `AI_Doc4` Working with AI Tools
 ve `AI_Doc1`, Transformer makalesi. Ders bunların yirmi dakikalık özetidir. Sonraki
-okumalar aynı biçimde, sırayla numaralanmış olarak gelir: `AI_Doc5` Yapay Zekâ Bir
-Mühendislik Aracı Olarak — haftalık yapay zekâ günlüğünüzün istediği sekiz teknik, 4.
+okumalar aynı biçimde, sırayla numaralanmış olarak gelir: `AI_Doc5` Yazılım Geliştirmede
+Yapay Zekâyı Doğru Kullanmak — haftalık yapay zekâ günlüğünüzün istediği sekiz teknik, 4.
 Hafta'dan itibaren her hafta biri zorunlu; final sınavında çıkar.
 
 İki şube de aynı dosyaları alır. Ödevler, kurulum kartı ve iş akışı iki dilde gelir, `_EN`
