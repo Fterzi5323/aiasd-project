@@ -21,17 +21,24 @@ Ders, üretimi değil değerlendirmeyi notlandırır: asistanın ne ürettiğini
 
 Dersi tamamlayan öğrenci:
 
-- gerçek bir ürün için gereksinim, tasarım ve test belgelerini yazar ve ürün değiştikçe bunları tutarlı tutar (repoda Mermaid diyagramları);
-- yapay zekâ asistanlarını (Claude, Gemini, ChatGPT, Copilot, Ollama) verimli ve eleştirel kullanır — istem yazar, doğrular, düzeltir ve hataları kanıtlı bir haftalık yapay zekâ günlüğünde belgeler;
-- açık ağırlıklı modeller (Ollama/Qwen, BGE-M3) üzerinde, projenin kendi belgeleri üzerinden çalışan bir getirme destekli sohbet botu kurar ve çalıştırır;
-- Git/GitHub ile her gün çalışır: küçük commit'ler, CI kontrolleri, kod kalitesi (ruff), gizli anahtarların repo dışında tutulması;
-- bir uygulamayı mağaza yayın izinden geçirir — geliştirici hesabı, test kanalı, testçiler, inceleme, yayın — ve teslim edilen ürünü sözlü olarak savunur.
+1. **Proje önerisi hazırlar** — kendi yaşadığı gerçek bir problemden yola çıkarak Bölüm A'yı (problem, çözüm, paydaşlar, kullanım senaryoları) ve Bölüm B'yi (pazar, rakipler, ticari potansiyel, teknik riskler) yazar ve beş dakikada pitch eder (2–3. Hafta).
+2. **Gereksinim mühendisliği yapar** — fonksiyonel ve fonksiyonel olmayan gereksinimleri kimlikli (REQ-NNN), izlenebilir ve dondurulmuş bir SRS olarak yönetir; her değişikliği tarihli bir değişiklik günlüğüyle görünür kılar (2–3. Hafta).
+3. **Tasarlar ve prototipler** — mimari, veri modeli, sistem bağlam ve dağıtım diyagramları (repoda Mermaid); akran incelemesiyle revize edilmiş tıklanabilir prototip (4–5. Hafta).
+4. **Full-stack uygulama geliştirir** — e-posta kodu/OTP ile giriş yapan bir sunucu, web istemcisi ve mobil istemci; aynı özellik üç katmanda birden çalışır (5. ve 8. Hafta).
+5. **Mobil uygulama geliştirir** — Flutter, React Native–Expo, Kotlin ya da Swift ile telefonda çalışan, mağazaya hazır bir istemci (7–8. Hafta).
+6. **Açık ağırlıklı modellerle sohbet botu kurar** — Ollama + Qwen üzerinde, BGE-M3 gömmeleriyle projenin kendi belgeleri üzerinden getirme destekli bir sohbet botu; chat endpoint'i ve istemcilere entegrasyonu (6–7. Hafta).
+7. **Yapay zekâ asistanlarını mühendislik aracı olarak kullanır** — istem yazar, doğrular, düzeltir, hataları kanıtla haftalık yapay zekâ günlüğünde belgeler ve asistanı düşman gözden geçiren olarak kullanır; ders üretileni değil değerlendirmeyi notlar (her hafta).
+8. **Sürüm kontrolü ve sürekli entegrasyon uygular** — günlük küçük commit'ler, GitHub'da otomatik kontroller, ruff ile kod kalitesi, gizli anahtarların repo dışında tutulması (her hafta; CI 7. Hafta'dan).
+9. **Formal test süreçleri yürütür** — birim ve entegrasyon testleri, kayıtlı testçilerle beta test, hata listesi ve test raporu, gerçek kullanıcılarla Kullanıcı Kabul Testi (7. ve 9–10. Hafta).
+10. **Uygulamayı mağazada yayınlar** — S0–S6 izi: mağaza seçimi, geliştirici hesabı, uygulama kaydı, test kanalı sürümü, testçiler, incelemeye gönderme, inceleme düzeltmeleri ve yayın (3–11. Hafta).
+11. **İnceler ve iş birliği yapar** — sabit dörtlü grupta haftalık inceleme, alıntılanan geri bildirimi kabul/ret kararı ve gerekçesiyle kaydetme, sınıf arkadaşlarının işine paydaş, gözden geçiren ya da testçi olarak katkı (3. Hafta'dan).
+12. **Ürünü savunur** — uygulamayı sınav görevlisinin önünde mağazadan kurar ve koddaki ve belgelerdeki kararları gerekçelendirir; poster ve sunum (12–14. Hafta).
 
 ## Ders Materyali
 
 Ders şablonu ve haftalık ödevler: github.com/vedatcoskun-course/aiasd-template (her haftanın `ASSIGNMENT_NN` dosyası İngilizce ve Türkçe; kökte `AI_SETUP_CARD`, `AI_WEEKLY_WORKFLOW_STUDENT` ve `AI_SKELETON`).
 
-Ön okuma, 1. Hafta: Vaswani vd., "Attention Is All You Need" (2017); AI Technical Background; Development Environment and Tools; Working with AI Tools. 2. Hafta: iki tam SDLC belge seti (sınav salonu tahsisi; simülatörlü asansör denetleyicisi); Platforms and Stores el kitabı.
+Ön okuma, 1. Hafta: Vaswani vd., "Attention Is All You Need" (2017); AI Technical Background; Development Environment and Tools; Working with AI Tools; Yapay Zekâ Bir Mühendislik Aracı Olarak — Değerlendirme Disiplini (`AI_Doc5`, haftalık yapay zekâ günlüğünün istediği sekiz teknik; sınav kapsamında). 2. Hafta: iki tam SDLC belge seti (sınav salonu tahsisi; simülatörlü asansör denetleyicisi); Platforms and Stores el kitabı.
 
 Araçlar: Python 3.12, Git/GitHub, VS Code, Streamlit, açık ağırlıklı bir modelle Ollama, öğrencinin seçtiği iki sohbet asistanı (ücretsiz katman), bir mobil çatı (Flutter / React Native–Expo / Kotlin / Swift). Öğrenciler her hafta kendi dizüstü bilgisayarlarını getirir.
 
@@ -58,8 +65,8 @@ Araçlar: Python 3.12, Git/GitHub, VS Code, Streamlit, açık ağırlıklı bir 
 |---|---|---|
 | 1 | 22/09 · 23/09 | Temeller — araçlar, Git/GitHub, LLM'ler ve transformer'larla ilk temas |
 | 2 | 29/09 · 30/09 | Teklif Bölüm A + Gereksinimler (SRS) — problem, çözüm, paydaşlar, kullanım senaryoları |
-| 3 | 06/10 · 07/10 | Tasarım + Teklif Bölüm B — mimari, veri modeli, pazar, riskler; mağaza seçildi (S0) |
-| 4 | 13/10 · 14/10 | Tıklanabilir prototip; geliştirici hesabı açıldı (S1) |
+| 3 | 06/10 · 07/10 | Dörtlü gruplarda pitch ve inceleme; Teklif Bölüm B — pazar, rakipler, ticari potansiyel, riskler; mağaza seçildi (S0); gereksinimler donduruldu |
+| 4 | 13/10 · 14/10 | Tasarım — mimari, veri modeli, sistem bağlamı; tıklanabilir prototip; geliştirici hesabı açıldı (S1) |
 | 5 | 20/10 · 21/10 | Prototip revizyonu; geliştirme başlar — sunucu iskeleti, e-posta kodu / OTP ile giriş |
 | 6 | 27/10 · 28/10 | Sohbet botu I — motor: Ollama + Qwen, BGE-M3 gömmeleri, chat endpoint'i; uygulama kaydı (S2) |
 | 7 | 03/11 · 04/11 | Sohbet botu II — web ve mobil istemcilerde; testler; CI |

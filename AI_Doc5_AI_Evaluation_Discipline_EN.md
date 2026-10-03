@@ -1,0 +1,248 @@
+# AI as an engineering instrument — the evaluation discipline
+
+*AIASD · Atlas University · Fall 2026–27 · Prof. Dr. Vedat Coşkun*
+*Companion to `AI_Doc4` (what the tools are and how to spend them). This document is about
+what you do with what they give you. Examinable: the final exam asks about it.*
+
+---
+
+## 0. The one sentence
+
+This course does not grade what the assistant produced. It grades how well **you
+specified, checked, corrected and accounted for** what it produced. An assistant can write
+every file an assignment asks for in ten minutes; the two points of your weekly `ai_log`
+are paid for the moment you caught it being wrong, with the evidence pasted, and what you
+did about it.
+
+Everything below is a named technique for producing that moment on purpose, rather than
+waiting for it to happen. Each week's assignment names the technique it expects; the
+table in §10 shows the whole term. You may use any of them any week — one of them is
+compulsory.
+
+---
+
+## 1. Acceptance criteria first
+
+**What.** Before you ask for anything, write down how you will know the answer is right.
+Two or three lines, in your own words, *before* the prompt — then put them in the prompt.
+
+**Why.** A request without a test is a request for something plausible. Models are very
+good at plausible. "Write me a data model for StudyRoom" returns a tidy diagram with a
+`Payment` table in it; "Write me a data model for StudyRoom: five entities at most, no
+money anywhere, a reservation must know who checked in and when" returns something you
+can check line by line — and the check is already written.
+
+**Weak.** *"I asked Claude for the data model and it looked fine, I used it."*
+
+**Strong.** *"Criteria before asking: ≤5 entities, no payment, check-in time on the
+reservation. The first answer had 7 entities, including `Invoice`. Second prompt with the
+criteria pasted: 5 entities, but check-in was on `User`, not `Reservation` — wrong, one
+user has many reservations. Fixed by hand; final model in `docs/data_model.md`."*
+
+**In the log.** The criteria you wrote first, the answer against them, what failed.
+
+---
+
+## 2. Verify by running, not by reading
+
+**What.** Anything executable is verified by executing it: run the code, send the
+request, open the page on a phone, paste the Mermaid into the preview. Reading it and
+nodding is not verification.
+
+**Why.** Generated code reads correctly far more often than it runs correctly. The
+assistant has never run it either; it has seen a great deal of code that looked like it.
+
+**Weak.** *"Copilot generated the OTP endpoint. The code looks right."*
+
+**Strong.** *"Ran the endpoint: a second request with the same e-mail within 60 s
+returned a new code instead of refusing. The spec (REQ-006) says one code per minute.
+Traceback and the two responses pasted below. Fixed with a timestamp check; test added."*
+
+**In the log.** The command you ran, the output (pasted, trimmed), the fix.
+
+---
+
+## 3. The hostile reviewer
+
+**What.** Hand the assistant your own work and a role: the investor who wants to say no,
+the store reviewer who wants to reject, the tester who wants to break it. Ask for the
+three strongest objections, numbered. Then **answer one** in the document and **show one
+to be wrong** with evidence.
+
+**Why.** A model asked "is this good?" says yes. A model asked "why will this fail?"
+produces a list — and about one item in three is a real problem you had not seen.
+The other two are where you learn to disagree with it, with reasons.
+
+**Weak.** *"I asked ChatGPT to review my proposal and it gave useful feedback that I
+applied."*
+
+**Strong.** *"Objection 2: 'nobody will enter a reservation by hand; they will just walk
+in.' True for the ground-floor rooms — I added a QR check-in to §4. Objection 3: 'the
+library already has a booking system.' Checked: Atlas library has none (asked at the
+desk, 2026-10-07). Kept the project; wrote the check into §9."*
+
+**In the log.** The three objections verbatim, which you answered where, which you
+refuted with what evidence.
+
+---
+
+## 4. Cross-examination — two assistants, one prompt
+
+**What.** Give two different assistants exactly the same prompt and your same source
+text. Compare the two answers with each other and with what you already know.
+
+**Why.** Where two models agree, you have a candidate — not a fact. Where they disagree,
+at least one of them is wrong, and finding out which is the fastest way to a real error
+with real evidence. This is the Week 2 technique; it stays useful all term.
+
+**Weak.** *"Both gave similar requirements so I merged them."*
+
+**Strong.** *"Claude: 'reservation expires after 15 min without check-in'. Gemini:
+'after 2 h'. Neither asked me. The right number is in my §3: the problem is rooms held
+all afternoon by people who left — 15 min, made it REQ-004 with my own acceptance test."*
+
+**In the log.** The prompt once, the two answers side by side (trimmed), the decision.
+
+---
+
+## 5. Make it cite — and let it say "I don't know"
+
+**What.** Ask for the source of every factual claim: a document, a page, a line of your
+own code. Tell it explicitly that "I don't know" is an acceptable answer. Then **open the
+source**.
+
+**Why.** Models produce references with the same fluency as everything else; a share of
+them do not exist. Your chatbot (Week 6) will do the same over your own documents unless
+you make it quote the chunk it used. A fact you did not check is not a fact you know.
+
+**Weak.** *"According to the AI, Google Play review takes 1–3 days."*
+
+**Strong.** *"Asked for the source of '1–3 days'. It gave a Play Console help page; opened
+it (2026-10-08): the page says 'can take up to 7 days or longer for new developer
+accounts'. §12 now says 7 days and cites the page. Asked the same of Gemini: it said it
+did not have a current figure — the better answer."*
+
+**In the log.** The claim, the source it gave, what the source actually says.
+
+---
+
+## 6. Small diffs — one change at a time, and read it
+
+**What.** Ask for one change, not a rewrite. Read the diff before you accept it — all of
+it, including the lines you did not ask to change. Commit each accepted change on its own.
+
+**Why.** "Refactor this file" returns a file in which three things changed that you did
+not request, one of them silently. A diff you can read in two minutes is a diff you can
+be responsible for; this is also what makes your commit history readable in the Week 5
+review.
+
+**Weak.** *"Asked Copilot to clean up `app.py`, accepted, pushed."*
+
+**Strong.** *"Asked only for the unused imports to go. The diff also changed the OTP
+length from 6 to 4 digits — not requested, not mentioned. Rejected that hunk, kept the
+imports. `ruff` confirms; commit `e41c…` is the imports only."*
+
+**In the log.** The change you asked for, the change you got, what you refused.
+
+---
+
+## 7. Consistency across the three tiers
+
+**What.** When the same feature exists in the server, the web client and the mobile
+client, give the assistant all three and ask it to find the inconsistency. Then verify
+the one it finds, and look for the one it missed.
+
+**Why.** Three generated pieces agree with themselves and not with each other: a field
+named `room_id` on the server and `roomId` in the app, a status the server can return
+that no client handles. Models are good at spotting these when asked to, and useless
+when not.
+
+**Weak.** *"Everything works on all three."*
+
+**Strong.** *"Asked for mismatches across `server/api.py`, `web/app.js`, `mobile/api.dart`.
+It found `checked_in` vs `checkedIn` — real, fixed. It missed that the server returns
+`409 Conflict` for a double booking and the mobile client treats anything non-200 as
+'network error'. Found that by testing (technique 2); added handling."*
+
+**In the log.** What it found, what you verified, what it missed and how you found it.
+
+---
+
+## 8. Predicted versus observed
+
+**What.** Before a test with people (Week 9 beta, Week 10 UAT), ask the assistant what
+will go wrong. Write the prediction down. After the test, put the testers' real bug list
+next to it.
+
+**Why.** This is the cleanest measurement in the course of what a model knows about your
+users: usually something, never everything. The gap is the evidence that human testing
+was not optional — and it is the paragraph that makes your test report worth reading.
+
+**Weak.** *"The testers found some bugs which I fixed."*
+
+**Strong.** *"Predicted (5 items): login code not arriving, slow list, …. Observed (7 items
+from 5 testers): 2 of the 5 predicted; the top complaint — 'I cannot tell which room is
+mine on the map' — was in nobody's prediction. Table in `docs/test_report.md`."*
+
+**In the log.** The prediction (dated, before the test), the observed list, the overlap.
+
+---
+
+## 9. The decision record — what the log is for
+
+Your `weekNN/ai_log_NN.md` is **not a chat transcript** and not a diary of how much you
+used AI. It is an engineering record of one decision per week, with four parts:
+
+| Part | Question it answers | Fails when |
+|---|---|---|
+| **Used for** | Which assistant, which prompt, on which of your files? | "I used ChatGPT for the proposal." |
+| **Got right** | What did you keep, and why was it right? | "It was helpful." |
+| **Got wrong** | One concrete error — the technique of the week produced it | "Some things were not relevant." |
+| **Evidence + fix** | The pasted output, and the change you made by hand | Nothing pasted; "I fixed it." |
+
+The **Evidence** block is the part a person reads first. It is pasted, trimmed to the
+lines that matter, and it shows the error — not a description of the error. A log with
+no evidence earns nothing, however long it is.
+
+Two rules the log also carries:
+
+- **A changed plan is written down.** A requirement you drop, a tier you simplify, a
+  store you switch — one dated line in `PROPOSAL.md`'s change log, or one line in the
+  log, with the reason. Changing your mind is engineering; changing it silently is not.
+- **Some things are not done with an assistant at all.** Your pitch (`PITCH_03.md`), the
+  last time the problem happened to you, the five people who will test your product, the
+  sentences your reviewers wrote and what you decided about them. These are about your
+  life and your people; an assistant cannot know them, and I will ask.
+
+---
+
+## 10. The term, technique by technique
+
+| Week | Deliverable the technique serves | Compulsory technique |
+|---|---|---|
+| 2 | Proposal Part A, requirements | §4 Cross-examination |
+| 3 | Proposal Part B | §3 Hostile reviewer (the investor) |
+| 4 | Design, data model, prototype | §1 Acceptance criteria first |
+| 5 | Server skeleton, OTP login | §2 Verify by running |
+| 6 | Chatbot engine over your documents | §5 Make it cite |
+| 7 | Chatbot in the clients, tests, CI | §6 Small diffs |
+| 8 | Core feature on all three tiers | §7 Consistency across tiers |
+| 9 | Beta test, bug list, test report | §8 Predicted versus observed |
+| 10 | UAT report, submission | §5 Make it cite, on your own claims |
+| 11 | Release, review fixes | §3 Hostile reviewer (the store reviewer) |
+| 12 | Closure, poster | §9 The term's log in retrospect: which error cost most |
+
+Any other technique is welcome in any week in addition. The week's `ai_log_NN.md`
+scaffold names its technique at the top.
+
+---
+
+## 11. The short version
+
+Write the test before the prompt. Run what can be run. Ask why it will fail, not whether
+it is good. Make two of them disagree. Make it cite, and open the citation. Change one
+thing, read the diff. Put the prediction next to the result. Write down the decision,
+paste the evidence, and keep your own life out of the assistant's hands.
+
+An assistant that is never caught being wrong is not a good assistant; it is an
+assistant nobody checked.

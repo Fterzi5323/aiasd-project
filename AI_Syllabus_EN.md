@@ -21,17 +21,24 @@ The course grades the evaluation, not the generation: not what the assistant pro
 
 On completing the course the student can:
 
-- write requirements, design and test documents for a real product and keep them consistent as the product changes (Mermaid diagrams in the repository);
-- use AI assistants (Claude, Gemini, ChatGPT, Copilot, Ollama) productively and critically — prompt, verify, correct, and document errors in a weekly AI log with evidence;
-- build and run a retrieval-augmented chatbot on open-weight models (Ollama/Qwen, BGE-M3) over the project's own documents;
-- work with Git/GitHub daily: small commits, CI checks, code quality (ruff), secrets kept out of the repository;
-- take an application through a store's publication track — developer account, test track, testers, review, release — and defend the shipped product orally.
+1. **Write a project proposal** — start from a real problem of their own and write Part A (problem, solution, stakeholders, use cases) and Part B (market, competitors, commercial potential, technical risks), and pitch it in five minutes (Weeks 2–3).
+2. **Engineer requirements** — manage functional and non-functional requirements as an identified (REQ-NNN), traceable, frozen SRS, and make every change visible with a dated change log (Weeks 2–3).
+3. **Design and prototype** — architecture, data model, system-context and deployment diagrams (Mermaid, in the repository); a clickable prototype revised after peer review (Weeks 4–5).
+4. **Develop a full-stack application** — a server with login by e-mail code/OTP, a web client and a mobile client; the same feature running on all three tiers (Weeks 5, 8).
+5. **Develop a mobile application** — with Flutter, React Native–Expo, Kotlin or Swift, running on a phone and ready for a store (Weeks 7–8).
+6. **Build a chatbot on open-weight models** — a retrieval-augmented chatbot on Ollama + Qwen with BGE-M3 embeddings over the project's own documents; the chat endpoint and its integration into the clients (Weeks 6–7).
+7. **Use AI assistants as an engineering instrument** — prompt, verify, correct, document errors with evidence in a weekly AI log, and use the assistant as a hostile reviewer; the course grades the evaluation, not the generation (every week).
+8. **Practise version control and continuous integration** — small daily commits, automatic checks on GitHub, code quality with ruff, secrets kept out of the repository (every week; CI from Week 7).
+9. **Run formal testing** — unit and integration tests, a beta test with enrolled testers, a bug list and a test report, and a User Acceptance Test with real users (Weeks 7, 9–10).
+10. **Publish an application on a store** — the S0–S6 track: store chosen, developer account, app record, test-track build, testers, submission, review fixes and release (Weeks 3–11).
+11. **Review and collaborate** — weekly review in a fixed group of four, feedback recorded as quotes with an accept/reject decision and a reason, contributions to classmates' work as stakeholder, reviewer or tester (from Week 3).
+12. **Defend the product** — install the app from the store in front of the examiner and justify the decisions in the code and the documents; poster and presentation (Weeks 12–14).
 
 ## Course Material
 
 Course template and weekly assignments: github.com/vedatcoskun-course/aiasd-template (each week's `ASSIGNMENT_NN` in English and Turkish; `AI_SETUP_CARD`, `AI_WEEKLY_WORKFLOW_STUDENT` and `AI_SKELETON` at the root).
 
-Pre-reading, Week 1: Vaswani et al., "Attention Is All You Need" (2017); AI Technical Background; Development Environment and Tools; Working with AI Tools. Week 2: two complete SDLC document sets (exam-hall allocation; lift controller with simulator); Platforms and Stores handout.
+Pre-reading, Week 1: Vaswani et al., "Attention Is All You Need" (2017); AI Technical Background; Development Environment and Tools; Working with AI Tools; AI as an Engineering Instrument — the Evaluation Discipline (`AI_Doc5`, the eight techniques the weekly AI log asks for; examinable). Week 2: two complete SDLC document sets (exam-hall allocation; lift controller with simulator); Platforms and Stores handout.
 
 Tools: Python 3.12, Git/GitHub, VS Code, Streamlit, Ollama with an open-weight model, two chat assistants of the student's choice on free tiers, a mobile framework (Flutter / React Native–Expo / Kotlin / Swift). Students bring their own laptop every week.
 
@@ -58,8 +65,8 @@ Tools: Python 3.12, Git/GitHub, VS Code, Streamlit, Ollama with an open-weight m
 |---|---|---|
 | 1 | 22/09 · 23/09 | Foundations — tools, Git/GitHub, first contact with LLMs and transformers |
 | 2 | 29/09 · 30/09 | Proposal Part A + Requirements (SRS) — problem, solution, stakeholders, use cases |
-| 3 | 06/10 · 07/10 | Design + Proposal Part B — architecture, data model, market, risks; store chosen (S0) |
-| 4 | 13/10 · 14/10 | Clickable prototype; developer account registered (S1) |
+| 3 | 06/10 · 07/10 | Pitch and review in groups of four; Proposal Part B — market, competitors, commercial potential, risks; store chosen (S0); requirements frozen |
+| 4 | 13/10 · 14/10 | Design — architecture, data model, system context; clickable prototype; developer account registered (S1) |
 | 5 | 20/10 · 21/10 | Prototype revision; development starts — server skeleton, login by e-mail code / OTP |
 | 6 | 27/10 · 28/10 | Chatbot I — the engine: Ollama + Qwen, BGE-M3 embeddings, chat endpoint; app record (S2) |
 | 7 | 03/11 · 04/11 | Chatbot II — in the web and mobile clients; tests; CI |
