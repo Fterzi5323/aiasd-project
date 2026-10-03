@@ -6,7 +6,38 @@ ne yaptığınız hakkında. Sınav kapsamındadır: final sınavında bu belged
 
 ---
 
-## 0. Tek cümle
+## 0. Dört kişi, bir asistan
+
+Aynı istem — *"Bana e-postayla altı haneli kod gönderen ve kontrol eden bir giriş
+endpoint'i yaz"* — dört farklı kişiye verildiğinde asistan her birine aynı kırk satır kodu
+döndürür. 1. Hafta'da dört depo birbirinin aynısı görünür. 5. Hafta'da artık görünmez ve
+bu fark, bu belgenin konusudur.
+
+Dördü iki şeyde ayrılır: **yazılım mühendisliğinin kavramlarına** sahip olup olmadıkları
+(gereksinim nedir, arayüz nedir, `409` ne demektir, bir test neyi kanıtlar, sürüm nedir,
+risk nedir) ve **asistan kullanma disiplinine** sahip olup olmadıkları (çıktıyı bir iddia
+saymak, kontrol etmek, kararı kaydetmek, nerede kullanmayacağını bilmek). Bu ders ilkinin
+bölümünüzde çevrenizde öğretildiğini varsayar ve ikincisini öğretir; notladığı şey ikisinin
+birlikteliğidir.
+
+| | Asistan disiplini olmadan | Disiplinle |
+|---|---|---|
+| **Mühendislik kavramları olmadan** | Kırk satırı yapıştırır, kodun geldiğini görür, push eder. İlk gerçek kullanıcı bir dakika içinde ikinci kodu ister ve yenisini alır; ilk hata yeniden sorularak "düzeltilir", geçmiş Cumartesi gecesi tek bir commit'tir. Ürün demoda çalışır, başka hiçbir yerde çalışmaz. | Özenli bir istem yazar, cevaptan şüphelenir, ikinci bir asistana sorar — ve *neyi* kontrol edeceğini söyleyemez. "Aynı e-posta bir dakikada iki kez"in bir durum olduğunu bilmez, `409`u hiç görmemiştir, kavram olmadığı için kabul ölçütü yazamaz. Doğru yerde şüphelenir, hiçbir şeyi doğrulamaz. |
+| **Mühendislik kavramlarıyla** | Endpoint'in tam olarak ne yapması gerektiğini bilir — ve acelesi vardır. Diff'i okumayı atlar, bir testçinin e-posta adresini isteme yapıştırır, kütüphane sürümünün iki yıllık olduğunu fark etmez. Kavramlar vardır; "derlendi" diye çıktıya uygulanmaz. Ya da asistanı büsbütün reddeder ve 6. Hafta'da üç hafta geridedir. | Kırk satırı REQ-006'ya karşı okur, ikinci istek durumunu çalıştırır, yeni kodu görür, reddeder, testi ekler, değişikliği adını söyleyen bir mesajla kendi başına commit eder ve iki yanıtı yapıştırarak günlüğe dört satır yazar. Aynı asistan, aynı istem, başka bir mühendis. |
+
+Sağ sütundaki hiçbir şey başka bir asistan ya da daha iyi bir istem gerektirmez. Çıktının
+neyi karşılaması gerektiğini bilmeyi, karşılayıp karşılamadığına bakmayı ve başkasının
+okuyabileceği bir kayıt bırakmayı gerektirir. Bu üçü aşağıdaki sekiz tekniktir. Her
+tekniğin altındaki örnekler iki sütuna göre etiketlidir: **Eğitimsiz kullanıcı** ve **Bu
+dersi alan** — aynı durum, iki kişi.
+
+Mühendislik kavramları olmadan gelen bir öğrenci sağ sütuna kapalı değildir: aşağıdaki
+her teknik ihtiyaç duyduğu kavramı ve dersin onu hangi hafta verdiğini söyler. Sıra
+önemlidir — önce kavram, sonra asistan.
+
+---
+
+## 0.1 Tek cümle
 
 Bu ders asistanın ne ürettiğini notlamaz. Üretileni sizin ne kadar iyi **tarif ettiğinizi,
 kontrol ettiğinizi, düzelttiğinizi ve hesabını verdiğinizi** notlar. Bir asistan bir ödevin
@@ -57,9 +88,9 @@ derli toplu bir diyagram döndürür; "StudyRoom için veri modeli: en çok beş
 yerde para yok, bir rezervasyon kimin ne zaman check-in yaptığını bilmeli" satır satır
 kontrol edebileceğiniz bir şey döndürür — ve kontrol zaten yazılmıştır.
 
-**Zayıf.** *"Claude'dan veri modelini istedim, iyi görünüyordu, kullandım."*
+**Eğitimsiz kullanıcı.** *"Claude'dan veri modelini istedim, iyi görünüyordu, kullandım."*
 
-**Güçlü.** *"Sormadan önceki ölçütler: ≤5 varlık, ödeme yok, check-in zamanı rezervasyonda.
+**Bu dersi alan.** *"Sormadan önceki ölçütler: ≤5 varlık, ödeme yok, check-in zamanı rezervasyonda.
 İlk cevapta 7 varlık vardı, `Invoice` dahil. Ölçütleri yapıştırarak ikinci istem: 5
 varlık, ama check-in `Reservation`'da değil `User`'daydı — yanlış, bir kullanıcının çok
 rezervasyonu olur. Elle düzelttim; son model `docs/data_model.md`'de."*
@@ -82,9 +113,9 @@ doğrulama değildir.
 **Neden.** Üretilen kod, doğru çalıştığından çok daha sık doğru okunur. Asistan da onu hiç
 çalıştırmamıştır; ona benzeyen çok kod görmüştür.
 
-**Zayıf.** *"Copilot OTP endpoint'ini üretti. Kod doğru görünüyor."*
+**Eğitimsiz kullanıcı.** *"Copilot OTP endpoint'ini üretti. Kod doğru görünüyor."*
 
-**Güçlü.** *"Endpoint'i çalıştırdım: aynı e-postayla 60 sn içinde ikinci istek reddetmek
+**Bu dersi alan.** *"Endpoint'i çalıştırdım: aynı e-postayla 60 sn içinde ikinci istek reddetmek
 yerine yeni kod döndürdü. Spesifikasyon (REQ-006) dakikada bir kod diyor. Traceback ve iki
 yanıt aşağıda. Zaman damgası kontrolüyle düzelttim; test eklendi."*
 
@@ -107,10 +138,10 @@ Sonra **birini belgede yanıtlayın** ve **birinin yanlış olduğunu kanıtla g
 sorulan model bir liste üretir — ve her üç maddeden biri görmediğiniz gerçek bir sorundur.
 Diğer ikisi, onunla gerekçeli olarak aynı fikirde olmamayı öğrendiğiniz yerdir.
 
-**Zayıf.** *"ChatGPT'den teklifimi incelemesini istedim, yararlı geri bildirim verdi,
+**Eğitimsiz kullanıcı.** *"ChatGPT'den teklifimi incelemesini istedim, yararlı geri bildirim verdi,
 uyguladım."*
 
-**Güçlü.** *"İtiraz 2: 'Kimse rezervasyonu elle girmez; içeri girer geçer.' Zemin kat
+**Bu dersi alan.** *"İtiraz 2: 'Kimse rezervasyonu elle girmez; içeri girer geçer.' Zemin kat
 odaları için doğru — §4'e QR ile check-in ekledim. İtiraz 3: 'Kütüphanenin zaten bir
 rezervasyon sistemi var.' Kontrol ettim: Atlas kütüphanesinde yok (bankoda sordum,
 2026-10-07). Projeyi korudum; kontrolü §9'a yazdım."*
@@ -138,9 +169,9 @@ cevabı birbiriyle ve zaten bildiklerinizle karşılaştırın.
 yerde en az biri yanlıştır; hangisinin yanlış olduğunu bulmak, gerçek kanıtlı gerçek bir
 hataya giden en hızlı yoldur. Bu 2. Hafta'nın tekniğidir; bütün dönem işe yarar.
 
-**Zayıf.** *"İkisi de benzer gereksinimler verdi, birleştirdim."*
+**Eğitimsiz kullanıcı.** *"İkisi de benzer gereksinimler verdi, birleştirdim."*
 
-**Güçlü.** *"Claude: 'rezervasyon check-in olmadan 15 dk sonra düşer'. Gemini: '2 saat
+**Bu dersi alan.** *"Claude: 'rezervasyon check-in olmadan 15 dk sonra düşer'. Gemini: '2 saat
 sonra'. İkisi de bana sormadı. Doğru sayı benim §3'ümde: sorun, giden insanların bütün
 öğleden sonra tuttuğu odalar — 15 dk; kendi kabul testimle REQ-004 yaptım."*
 
@@ -164,9 +195,9 @@ sohbet botunuz da (6. Hafta) kullandığı parçayı alıntılamasını sağlama
 belgeleriniz üzerinde aynısını yapar. Kontrol etmediğiniz bir olgu bildiğiniz bir olgu
 değildir.
 
-**Zayıf.** *"Yapay zekâya göre Google Play incelemesi 1–3 gün sürüyor."*
+**Eğitimsiz kullanıcı.** *"Yapay zekâya göre Google Play incelemesi 1–3 gün sürüyor."*
 
-**Güçlü.** *"'1–3 gün'ün kaynağını istedim. Bir Play Console yardım sayfası verdi; açtım
+**Bu dersi alan.** *"'1–3 gün'ün kaynağını istedim. Bir Play Console yardım sayfası verdi; açtım
 (2026-10-08): sayfa 'yeni geliştirici hesapları için 7 güne kadar ya da daha uzun
 sürebilir' diyor. §12 artık 7 gün diyor ve sayfayı kaynak gösteriyor. Aynısını Gemini'ye
 sordum: güncel bir rakamı olmadığını söyledi — daha iyi cevap."*
@@ -192,9 +223,9 @@ kendi başına commit edin.
 değiştiği bir dosya döndürür. İki dakikada okuyabildiğiniz bir diff sorumluluğunu
 alabildiğiniz bir diff'tir; 5. Hafta incelemesinde commit geçmişinizi okunur kılan da budur.
 
-**Zayıf.** *"Copilot'tan `app.py`'yi temizlemesini istedim, kabul ettim, push ettim."*
+**Eğitimsiz kullanıcı.** *"Copilot'tan `app.py`'yi temizlemesini istedim, kabul ettim, push ettim."*
 
-**Güçlü.** *"Yalnızca kullanılmayan import'ların gitmesini istedim. Diff ayrıca OTP
+**Bu dersi alan.** *"Yalnızca kullanılmayan import'ların gitmesini istedim. Diff ayrıca OTP
 uzunluğunu 6'dan 4 haneye değiştirmişti — istenmemiş, söylenmemiş. O parçayı reddettim,
 import'ları aldım. `ruff` doğruluyor; `e41c…` commit'i yalnızca import'lar."*
 
@@ -218,9 +249,9 @@ verin ve tutarsızlığı bulmasını isteyin. Sonra bulduğunu doğrulayın ve 
 `room_id`, uygulamada `roomId`; sunucunun döndürebildiği ama hiçbir istemcinin ele almadığı
 bir durum. Modeller istenince bunları iyi bulur, istenmeyince hiç bulmaz.
 
-**Zayıf.** *"Üçünde de her şey çalışıyor."*
+**Eğitimsiz kullanıcı.** *"Üçünde de her şey çalışıyor."*
 
-**Güçlü.** *"`server/api.py`, `web/app.js`, `mobile/api.dart` arasında uyumsuzluk istedim.
+**Bu dersi alan.** *"`server/api.py`, `web/app.js`, `mobile/api.dart` arasında uyumsuzluk istedim.
 `checked_in` / `checkedIn`'i buldu — gerçek, düzeltildi. Sunucunun çifte rezervasyonda
 `409 Conflict` döndürdüğünü ve mobil istemcinin 200 dışı her şeyi 'ağ hatası' saydığını
 kaçırdı. Onu test ederek buldum (teknik 2); ele alma eklendi."*
@@ -243,9 +274,9 @@ koyun.
 budur: genellikle bir şeyler, asla her şey. Aradaki fark, insan testinin isteğe bağlı
 olmadığının kanıtıdır — ve test raporunuzu okunur kılan paragraftır.
 
-**Zayıf.** *"Testçiler bazı hatalar buldu, düzelttim."*
+**Eğitimsiz kullanıcı.** *"Testçiler bazı hatalar buldu, düzelttim."*
 
-**Güçlü.** *"Tahmin (5 madde): giriş kodunun gelmemesi, yavaş liste, …. Gözlem (5 testçiden
+**Bu dersi alan.** *"Tahmin (5 madde): giriş kodunun gelmemesi, yavaş liste, …. Gözlem (5 testçiden
 7 madde): tahmin edilen 5'ten 2'si; en büyük şikâyet — 'haritada hangi odanın benim
 olduğunu anlayamıyorum' — kimsenin tahmininde yoktu. Tablo `docs/test_report.md`'de."*
 
@@ -353,7 +384,48 @@ dosyası onun yanında okunur.
 
 ---
 
-## 11. Kısa sürüm
+## 11. 14. Hafta'da yapabildiğiniz, 1. Hafta'da yapamadığınız
+
+Her satır kendinizde sınayabileceğiniz bir iddiadır ve her biri yukarıdaki dört kişiden
+birinin diğerlerinden ayrıldığı yerdir.
+
+1. Bir ürün fikri verildiğinde ne yapması ve ne yapmaması gerektiğini, kabul ölçütlü
+   numaralı gereksinimler olarak söyleyebilir ve bunları asistana tek satır yazmadan *önce*
+   verebilirsiniz (§1, 2–4. Hafta).
+2. Üretilmiş kırk satırı okuyup her parçanın hangi gereksinime hizmet ettiğini ve hangi
+   durumu ele almadığını söyleyebilirsiniz (§1, §2, 5. Hafta).
+3. Çalışan bir programı makul görünen bir programdan ayırabilirsiniz, çünkü çalıştırdınız
+   — ve farkı gösteren çıktıyı üretebilirsiniz (§2).
+4. Kendi işinize üç güçlü itiraz alıp birini belgede yanıtlayabilir, birinin yanlış
+   olduğunu bir kaynakla gösterebilirsiniz (§3, 3. ve 11. Hafta).
+5. İki asistanı birbirine düşürüp tek yanlış cevabı bulabilir, yanlışlığının gerekçesini
+   kendi belgelerinizden gösterebilirsiniz (§4).
+6. Kaynaklı bir olguyu uydurulmuş olandan ayırabilirsiniz, çünkü kaynağı açıp
+   tarihlediniz; ve kendi sohbet botunuz kullandığı pasajı gösterebilir (§5, 6. ve 10.
+   Hafta).
+7. Aynı diff içinde istediğiniz değişikliği kabul edip istemediğinizi reddedebilirsiniz —
+   ve geçmişiniz tek bir yığın değil, bir hafta boyunca adlandırılmış değişiklikler
+   gösterir (§6, 5./10. Hafta incelemeleri).
+8. Üretilmiş üç katmanın birbiriyle nerede çeliştiğini bulabilir, asistanın bulduğunu
+   doğrulayıp kaçırdığını yakalayabilirsiniz (§7, 8. Hafta).
+9. Beş gerçek insan ürününüzü test etmeden önce neyin ters gideceğini yazabilir, sonra
+   onların listesini sizinkinin yanına koyabilirsiniz (§8, 9–10. Hafta).
+10. Kullanıcılarınızın ve sınıf arkadaşlarınızın adlarını, numaralarını ve e-postalarını
+    bulut asistanından, bir anahtarı depodan uzak tutabilirsiniz — kural olarak değil,
+    alışkanlık olarak (§9).
+11. Asistanın verdiği hangi sürümün ve hangi mağaza kuralının eskidiğini ve nerede kontrol
+    ettiğinizi söyleyebilirsiniz (§9).
+12. Uygulama mağazadan kurulmuş hâlde sınav görevlisinin karşısına çıkıp her satır için "bu
+    neden burada?" sorusunu yanıtlayabilirsiniz — çünkü push sizindi ve kayıt var (§9,
+    13–14. Hafta).
+
+Asistanlı eğitimsiz kullanıcı bunların hiçbirini yapamaz ve bunu bilmez. Disiplinsiz
+mühendis çoğunu yapabilir ve yapmaz. On iki haftanın amacı sağ sütunu düşünmeden
+yaptığınız şey hâline getirmektir.
+
+---
+
+## 12. Kısa sürüm
 
 Testi istemden önce yazın. Çalıştırılabileni çalıştırın. İyi mi diye değil, neden
 başarısız olur diye sorun. İkisini birbirine düşürün. Kaynak gösterttirin ve kaynağı açın.
