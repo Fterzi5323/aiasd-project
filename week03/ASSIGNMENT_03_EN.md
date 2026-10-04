@@ -134,9 +134,17 @@ ask for the three strongest objections. Then **answer one of them in the proposa
 **show one objection to be wrong** — with evidence: a number, a source, a thing you
 checked. Paste the exchange. A log that says "it gave useful feedback" earns nothing.
 
-### 7. Push again, checks green
+### 7. Get your acceptance criteria ready for Week 4
 
-Commits spread over the week, messages that say what changed. Everything the checker
+In Week 4 every acceptance criterion in `requirements.json` becomes a test case, and the
+members of your group run those test cases on your clickable prototype. A criterion that
+nobody can check, such as "users are satisfied", cannot become a test case. Read your
+criteria again this week and rewrite the ones that do not say what a tester should see.
+This is not marked this week; next week it is the starting point.
+
+### 8. Push again, checks green
+
+Several commits as you work, each with some new work in it and a message that says what changed; a commit does not need to be a finished part. Everything the checker
 asks for is listed below.
 
 ---
@@ -161,8 +169,8 @@ asks for is listed below.
 
 ## Not this week
 
-No code, no design documents yet (Week 4), no environment set-up. Do not start the store
-account; naming the store in §12 is enough.
+No code, no prototype yet (Week 4), no design documents yet (Week 5), no environment
+set-up. Do not start the store account; naming the store in §12 is enough.
 
 ---
 
@@ -173,8 +181,8 @@ sentences, Change log started — read from your repository as it stands at the 
 
 **Saturday 23:59 — 5 points.** Checks green on your final state: **2**. Human
 involvement: **2** — your `ai_log_03.md` with its evidence, and reviews with real
-sentences and real decisions behind them. Commit discipline: **1** — commits spread
-over the week, with real progress between them.
+sentences and real decisions behind them. Commit discipline: **1** — several pushes at
+different times in the lecture (at least three) and several commits as you work, each with some new work in it.
 
 **Contributors' bonus.** Each reviewer you name earns 10% of your week's mark; you earn
 the same for the reviews you give. From Week 4 the names are your group.

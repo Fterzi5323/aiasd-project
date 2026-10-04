@@ -125,7 +125,7 @@ böyle mesajlar size commit hijyeni puanına (§3'te anlatılan commit disiplini
 olur.
 
 **10:00'da, 11:00'de ve 11:50'de push edin**; bu, iş hangi durumda olursa olsun her
-derste üç push demektir. 10:00'da ve 11:00'de sınıf tablosuna (her öğrencinin deposunun
+derste en az üç push demektir. 10:00'da ve 11:00'de sınıf tablosuna (her öğrencinin deposunun
 ne durumda olduğunu gösteren, perdeye yansıtılan tablo) bakıp herkesin nerede olduğunu
 görürüm; dersin puanını belirleyen push 11:50'deki push'tur. Push etmek hiçbir şeye mal
 olmaz ve push edilmiş yarım bir bölüm, push edilmemiş bitmiş bir bölümden daha değerlidir.
@@ -156,8 +156,10 @@ değerindedir.
 Bir öğrenci bir bilgisayarda, bir GitHub hesabıyla çalışır. Bir sınıf arkadaşınızın
 bilgisayarında ya da onun GitHub oturumunda yapılan iş, ders için hiçbir puan getirmez.
 
-**Commit disiplini (haftada 1 puan) her hafta o haftanın commit'lerine bakılarak
-değerlendirilir.** Üç soru sorarım: iş zamana yayılarak mı büyümüş, bir commit'ten
+**Commit disiplini (haftada 1 puan) her hafta değerlendirilir.** Derste farklı
+zamanlarda birkaç push (en az üç) ararım; her birinde yeni iş olmalı. Ders dışında tek oturuşta çalışabilirsiniz; baktığım şey,
+çalıştıkça yapılmış, her birinde biraz yeni iş ve ne değiştiğini söyleyen bir mesaj olan
+birkaç commit'tir. Bir commit'in bitmiş bir parça olması gerekmez. Üç soru sorarım: iş adım adım mı büyümüş, bir commit'ten
 diğerine gerçek bir ilerleme var mı, metin üzerinde çalışılmış mı yoksa bitmiş hâlde mi
 yapıştırılmış? Hafta sonunda tek bir commit ya da tek parça hâlinde gelen metin puan
 getirmez. Bir haftada şüpheli bir durum görürsem karar vermeden önce önceki haftalarınıza
@@ -233,7 +235,7 @@ denir. Cumartesi durumunuzdaki yeşil tik **2 puan** değerindedir.
 
 **Tutarlılık ve commit disiplini — 1 puan.** Bu haftanın işi, önceki haftalarda
 yazdığınız gereksinimlerden ve tasarımdan gerçekten türüyor mu; commit geçmişiniz son
-dakikada tek bir yığın yerine haftaya yayılmış çalışma gösteriyor mu? Planınızı
+dakikada gelen tek bir yığın yerine adım adım büyüyen bir çalışma gösteriyor mu? Planınızı
 değiştirdiyseniz, değişiklik `PROPOSAL.md` dosyasının değişiklik günlüğüne tarihli bir
 satır olarak girdi mi? Fikir değiştirmek normal ve sağlıklıdır, ama değişiklik görünür
 olmalıdır. Sessizce terk edilen bir gereksinim puana mal olur; `ai_log_NN.md` içinde tek

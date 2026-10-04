@@ -237,10 +237,19 @@ notlanmaz; asistanın yazdığı bir günlük en çok 1 alır.
 | Ders sonu, 11:50 push'u | 5 | sunum tam, üç değerlendiren gerçek cümlelerle, değişiklik günlüğü başlamış |
 | Cumartesi denetleyici | 2 | §8–§12 dolu, mağaza adlandırılmış, üç itirazlı ai_log |
 | İnsan katkısı | 2 | ai_log ve kanıtı; arkasında gerçek kararlar olan incelemeler |
-| Commit disiplini | 1 | haftaya yayılmış, aralarında gerçek ilerleme olan commit'ler |
+| Commit disiplini | 1 | derste birkaç push (en az 3); çalıştıkça birkaç commit |
 
-Katkı bonusu: adını yazdığınız her değerlendiren haftalık notunuzun %10'unu kazanır; siz de
-verdiğiniz incelemeler için aynısını.
+Katkı bonusu: adını yazdığınız her değerlendiren haftalık notunuzun %10'unu kazanır; siz de verdiğiniz incelemeler için aynısını.
+
+---
+
+## Gelecek hafta: prototip ve test case'ler
+
+**4. Hafta:** ana akışınızın tıklanabilir bir prototipi ve kabul ölçütlerinizden yazılmış test case'ler.
+
+Grubunuz test case'leri prototip üzerinde yürütür; çalışmayan şey, gereksinimlerde neyin eksik olduğunu gösterir.
+
+**Gelecek haftaya kadar:** kabul ölçütlerinizi yeniden okuyun. Bir testçinin ne görmesi gerektiğini söylemeyen her ölçütü yeniden yazın.
 
 ---
 

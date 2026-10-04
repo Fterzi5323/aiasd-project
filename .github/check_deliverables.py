@@ -277,6 +277,10 @@ def proposal_sections() -> dict[int, dict]:
     for k, m in enumerate(heads):
         end = heads[k + 1].start() if k + 1 < len(heads) else len(text)
         body = text[m.end():end]
+        # the last section ends where the Change log begins - its lines are not §12's prose
+        tail = re.search(r"^## Change log", body, re.M)
+        if tail:
+            body = body[:tail.start()]
         body = re.sub(r"^---\s*$|^## .*$", "", body, flags=re.M)  # part separators
         mermaid = any("%% EXAMPLE" not in blk for blk in re.findall(r"```mermaid\n(.*?)```", body, re.DOTALL))
         prose = re.sub(r"<!--.*?-->", "", body, flags=re.DOTALL)
@@ -316,7 +320,7 @@ def contributors(week: int) -> list[dict] | None:
     if raw is None:
         return None
     try:
-        data = json.loads(raw)
+        data = json.loads(raw.lstrip("\ufeff"))
     except json.JSONDecodeError:
         return None
     items = data.get("contributors", data) if isinstance(data, dict) else data
@@ -500,65 +504,279 @@ def week3() -> None:
     check_ai_log(3)
 
 
+# ── Week 4: clickable prototype, test cases, walk-through ────────────
+
+WEEK4_FROM = "2026-10-12"  # the Monday of Week 4: the walk-through's Change log lines are dated from here
+RUN_WEEK = 0  # the last week this run checks; main() sets it
+STORES = {  # the name in store.json -> words that name the same store in PROPOSAL.md §12
+    "google play": ("google play", "play store"),
+    "huawei appgallery": ("appgallery", "huawei"),
+    "samsung galaxy store": ("galaxy store", "samsung"),
+    "apple app store": ("app store", "apple", "testflight"),
+}
+
+
+def load_json(path: str):
+    raw = read(path)
+    if raw is None:
+        return None
+    try:
+        return json.loads(raw.lstrip("﻿"))
+    except json.JSONDecodeError:
+        return None
+
+
+def filled(value) -> str:
+    """The text of a field, or "" if it is empty or still the scaffold's '…'."""
+    text = str(value if value is not None else "").strip()
+    return "" if text.strip(".…") == "" else text
+
+
+def my_number() -> str:
+    data = load_json("student.json")
+    return str(data.get("student_id", "")).strip().split("-")[0] if isinstance(data, dict) else ""
+
+
+def requirement_index() -> dict[str, dict]:
+    """week02/requirements.json by id, dropped requirements included."""
+    data = load_json("week02/requirements.json")
+    items = data.get("requirements", data) if isinstance(data, dict) else data
+    out: dict[str, dict] = {}
+    for it in items if isinstance(items, list) else []:
+        rid = str(it.get("id", "")).strip() if isinstance(it, dict) else ""
+        if re.fullmatch(r"REQ-\d{3}", rid):
+            out[rid] = it
+    return out
+
+
+def test_cases() -> list[dict] | None:
+    data = load_json("week04/test_cases.json")
+    items = data.get("test_cases", data) if isinstance(data, dict) else data
+    if not isinstance(items, list):
+        return None
+    # an untouched scaffold entry (all '…') is the same as no entry
+    return [t for t in items if isinstance(t, dict)
+            and (filled(t.get("title")) or filled(t.get("expected")))]
+
+
+def prototype_screens() -> dict[str, str]:
+    """week04/prototype/*.html by file name."""
+    folder = ROOT / "week04" / "prototype"
+    if not folder.is_dir():
+        return {}
+    return {p.name: p.read_text(encoding="utf-8", errors="replace")
+            for p in sorted(folder.glob("*.html")) if p.is_file()}
+
+
+def screen_links(html: str) -> set[str]:
+    """Every screen a page leads to: an href, a form action or a quoted name in a script."""
+    html = re.sub(r"<!--.*?-->", " ", html, flags=re.DOTALL)  # a commented-out link is not a link
+    names = re.findall(r"""["']\s*(?:\./)?([\w.\-]+\.html)(?:[?#][^"']*)?\s*["']""", html)
+    return {n for n in names if not n.lower().startswith(("http", "www"))}
+
+
+def visible_text(html: str) -> str:
+    html = re.sub(r"<!--.*?-->|<script.*?</script>|<style.*?</style>", " ", html, flags=re.DOTALL | re.I)
+    return re.sub(r"<[^>]+>", " ", html)
+
+
+def serves(html: str) -> list[str]:
+    m = re.search(r"<!--\s*serves:(.*?)-->", html, re.DOTALL | re.I)
+    if not m or "[" in m.group(1):  # the starter's [placeholder] names nothing yet
+        return []
+    return re.findall(r"REQ-\d{3}", m.group(1))
+
+
+def round_of(run: dict) -> int:
+    """The walk-through round of a run: 1 unless it says 2 (as 2, "2", 2.0 or "round 2")."""
+    m = re.search(r"\d+", str(run.get("round", "1")))
+    return int(m.group()) if m else 1
+
+
+def check_group(week: int, role: str, slot: str = SESSION) -> list[str]:
+    """The three other members of the group in weekNN/contributors_NN.json; returns their numbers."""
+    path = f"week{week:02d}/contributors_{week:02d}.json"
+    items = contributors(week)
+    if items is None:
+        check(week, f"{path} valid JSON", False, "missing or does not parse", slot)
+        return []
+    items = [i for i in items if isinstance(i, dict)]
+    ids = [str(i.get("student_id", "")).strip() for i in items]
+    good = [i for i in ids if re.fullmatch(r"\d{9}(-\d+)?", i)]
+    check(week, f"{path} names the three members of your group", len(good) == 3 and len(set(good)) == 3,
+          f"{len(good)} valid numbers — need three, different", slot)
+    me = my_number()
+    check(week, f"{path} does not list yourself", me == "" or me not in [g.split("-")[0] for g in good],
+          "your own number is in it", slot)
+    check(week, f"{path} role is '{role}'", bool(items) and all(str(i.get("role", "")).strip() == role for i in items),
+          "wrong or empty role", slot)
+    thin = [i for i in items if len(str(i.get("what", "")).strip()) < 25]
+    check(week, f"{path} quotes what each one found or said", bool(items) and not thin,
+          f"{len(thin)} entries without a real sentence", slot)
+    undecided = [i for i in items if i.get("accepted") not in (True, False) or len(str(i.get("why", "")).strip()) < 15]
+    check(week, f"{path} accepted/why decided for each", bool(items) and not undecided,
+          f"{len(undecided)} entries without a decision and a reason", DEADLINE)
+    return [g.split("-")[0] for g in good]
+
+
 def week4() -> None:
-    """Prototype and peer round in the lab; diagrams and write-up afterwards.
+    """A clickable prototype and test cases in the lab, run by the group on the prototype;
+    by Saturday the fixes, a second round, the updated requirements, S1 and the log.
 
-    The clickable prototype comes before the diagrams on purpose. It is the
-    cheapest place to find out the flow is wrong — cheaper than discovering it
-    after the architecture is drawn, when the temptation is to bend the
-    prototype to fit the picture rather than the other way round.
+    The prototype comes before the design on purpose (decided 4 Oct 2026): nobody writes
+    every requirement without seeing the product, and a missing screen costs minutes
+    today against a server change and two clients in Week 8. The requirements and the
+    test cases become the baseline at the end of Week 5.
     """
-    check(4, "week04/app.py parses", parses("week04/app.py"), "missing or syntax error")
-    app = read("week04/app.py") or ""
-    check(4, "app.py imports streamlit", "streamlit" in app, "not imported")
-    check(
-        4,
-        "app.py has more than one page or view",
-        len(re.findall(r"st\.(tabs|sidebar|page_link|radio|selectbox)", app)) >= 1,
-        "a prototype people can click needs somewhere to click to",
-    )
+    reqs = requirement_index()
+    live = {r: it for r, it in reqs.items() if not it.get("dropped")}
+    musts = sorted(r for r, it in live.items()
+                   if str(it.get("priority", "")).strip().lower() == "must" and filled(it.get("description")))
 
-    feedback = read("week04/feedback.md") or ""
-    check(
-        4,
-        "week04/feedback.md present",
-        len(feedback.strip()) >= 200,
-        "what three people told you when they clicked your prototype",
-    )
-    check(
-        4,
-        "feedback.md records what you changed",
-        bool(re.search(r"chang|fix|mov|renam|remov|add", feedback, re.IGNORECASE)),
-        "say what you changed, and what you deliberately did not",
-        DEADLINE,
-    )
+    # --- the prototype ---------------------------------------------------------------
+    screens = prototype_screens()
+    if not screens:
+        check(4, "week04/prototype/ has screens", False,
+              "no .html files in week04/prototype/ — run the checker to bring the starter screens")
+        check(4, "prototype has at least 7 screens", False, "no screens yet", DEADLINE)
+    else:
+        check(4, "week04/prototype/index.html present", "index.html" in screens,
+              "the first screen must be week04/prototype/index.html")
+        check(4, "prototype has at least 5 screens", len(screens) >= 5,
+              f"{len(screens)} .html files in week04/prototype/ — the 3 starter screens and at least 2 of yours")
+        broken = sorted({f"{name} → {to}" for name, html in screens.items() for to in screen_links(html) if to not in screens})
+        check(4, "every link in the prototype leads to a screen that exists", bool(screens) and not broken,
+              f"broken: {broken[:3]}")
+        seen, todo = set(), ["index.html"] if "index.html" in screens else []
+        while todo:
+            name = todo.pop()
+            if name in seen or name not in screens:
+                continue
+            seen.add(name)
+            todo.extend(screen_links(screens[name]))
+        unreachable = sorted(set(screens) - seen)
+        check(4, "every screen can be reached from index.html", bool(screens) and not unreachable,
+              f"no link leads to: {unreachable[:3]}")
+        holes = sorted(n for n, html in screens.items() if re.search(r"\[[^\]\n]{1,80}\]", visible_text(html)))
+        check(4, "prototype [bracketed] parts replaced", bool(screens) and not holes, f"still in: {holes[:3]}")
+        check(4, "prototype has at least 7 screens", len(screens) >= 7,
+              f"{len(screens)} screens — the full flow by Saturday", DEADLINE)
+        unnamed = sorted(n for n, html in screens.items() if not serves(html) or any(r not in reqs for r in serves(html)))
+        check(4, "every screen names the requirements it serves", bool(screens) and not unnamed,
+              f"no '<!-- serves: REQ-… -->' line, or an id that is not in requirements.json: {unnamed[:3]}", DEADLINE)
+        if RUN_WEEK <= 4:  # the prototype is not kept up to date once Week 5 starts
+            shown = {r for html in screens.values() for r in serves(html)}
+            missing = [r for r in musts if live[r].get("functional") is True and r not in shown]
+            check(4, "every functional must requirement has a screen", bool(screens) and not missing,
+                  f"no screen serves: {missing[:4]}", DEADLINE)
 
-    seq = read("week04/sequence/sequence_diagram.mmd") or ""
-    check(
-        4,
-        "sequence diagram is Mermaid",
-        "sequenceDiagram" in seq,
-        "no sequenceDiagram keyword",
-        DEADLINE,
-    )
+    # --- the test cases --------------------------------------------------------------
+    cases = test_cases()
+    if cases is None:
+        check(4, "week04/test_cases.json valid JSON", False, "missing or does not parse")
+        cases = []
+    else:
+        ids = [str(t.get("id", "")).strip() for t in cases]
+        bad = [i for i in ids if not re.fullmatch(r"TC-\d{3}-\d{2}", i)]
+        dup = sorted({i for i in ids if ids.count(i) > 1})
+        check(4, "test case ids follow TC-NNN-NN, no duplicates", bool(ids) and not bad and not dup,
+              f"bad: {bad[:3]} duplicated: {dup[:3]}")
+        wrong = [i for i, t in zip(ids, cases)
+                 if str(t.get("req", "")).strip() not in reqs or i[3:6] != str(t.get("req", "")).strip()[4:]]
+        check(4, "every test case tests a requirement that exists", bool(ids) and not wrong,
+              f"req missing from requirements.json, or not the number in the id: {wrong[:3]}")
+        thin = [i for i, t in zip(ids, cases)
+                if not (isinstance(t.get("steps"), list) and t["steps"] and all(filled(s) for s in t["steps"]))
+                or len(filled(t.get("expected"))) < 15]
+        check(4, "every test case has steps and an expected result", bool(ids) and not thin,
+              f"empty steps or an expected result under 15 characters: {thin[:3]}")
+    active = [t for t in cases if not t.get("dropped")]
+    covered = {str(t.get("req", "")).strip() for t in active}
+    uncovered = [r for r in musts if r not in covered]
+    check(4, "every must requirement has a test case", bool(musts) and not uncovered,
+          f"no test case for: {uncovered[:4]}")
+    per_req = {r: sum(1 for t in active if str(t.get("req", "")).strip() == r) for r in covered}
+    check(4, "at least three requirements have a second test case", sum(1 for n in per_req.values() if n >= 2) >= 3,
+          f"{sum(1 for n in per_req.values() if n >= 2)} requirements with two or more — add one for when something goes wrong",
+          DEADLINE)
 
-    arch = read("week04/architecture/architecture_diagram.mmd") or ""
-    check(
-        4,
-        "architecture diagram is Mermaid",
-        any(k in arch for k in ("graph", "flowchart")),
-        "no graph/flowchart",
-        DEADLINE,
-    )
+    # --- the walk-through and the testers ----------------------------------------------
+    testers = check_group(4, "prototype-tester")
+    data = load_json("week04/walkthrough_04.json")
+    runs = data.get("runs", data) if isinstance(data, dict) else data
+    if not isinstance(runs, list):
+        check(4, "week04/walkthrough_04.json valid JSON", False, "missing or does not parse")
+        runs = []
+    runs = [r for r in runs if isinstance(r, dict) and (filled(r.get("tc")) or filled(r.get("tester")))]
+    round1 = [r for r in runs if round_of(r) == 1]
+    count: dict[str, int] = {}
+    for r in round1:
+        t = str(r.get("tester", "")).strip().split("-")[0]
+        if re.fullmatch(r"\d{9}", t):
+            count[t] = count.get(t, 0) + 1
+    me = my_number()
+    enough = [t for t, n in count.items() if n >= 2 and t != me]
+    check(4, "walk-through: three testers ran at least two test cases each", len(enough) >= 3,
+          f"{len(enough)} testers with two or more runs in round 1")
+    none = "no runs recorded in week04/walkthrough_04.json yet"
+    check(4, "walk-through: the testers are the people in contributors_04.json",
+          bool(count) and set(count) == set(testers),
+          none if not runs else f"testers {sorted(count)} — contributors {sorted(testers)}")
+    tested = {str(r.get("tc", "")).strip()[3:6] for r in round1} - {"001"}
+    check(4, "walk-through: round 1 covers at least three requirements besides the login",
+          len(tested) >= 3, none if not runs else f"{len(tested)} — run test cases of your main flow, not only REQ-001")
+    known = {str(t.get("id", "")).strip() for t in cases}
+    unknown = sorted({str(r.get("tc", "")).strip() for r in runs} - known)
+    check(4, "walk-through: every run names a test case in test_cases.json", bool(runs) and not unknown,
+          none if not runs else f"not in test_cases.json: {unknown[:3]}")
+    odd = [r for r in runs if str(r.get("result", "")).strip().lower() not in ("pass", "fail", "blocked")
+           or (str(r.get("result", "")).strip().lower() in ("fail", "blocked") and len(str(r.get("note", "")).strip()) < 15)]
+    check(4, "walk-through: each result is pass, fail or blocked, with a note for fail and blocked",
+          bool(runs) and not odd,
+          none if not runs else f"{len(odd)} runs without a valid result, or a fail/blocked without a note")
+    dropped = {str(t.get("id", "")).strip() for t in cases if t.get("dropped")}
+    failed = {str(r.get("tc", "")).strip() for r in round1 if str(r.get("result", "")).strip().lower() == "fail"}
+    rerun = {str(r.get("tc", "")).strip() for r in runs if round_of(r) == 2}
+    open_fails = sorted(failed - rerun - dropped)
+    check(4, "walk-through: every failed test case was run again in round 2", bool(runs) and not open_fails,
+          none if not runs else
+          f"no round 2 for: {open_fails[:3]} — run it again after the fix, or drop it with a Change log line", DEADLINE)
 
-    design = read("week04/design.md") or ""
-    check(
-        4,
-        "week04/design.md ≥300 chars",
-        len(design.strip()) >= 300,
-        f"{len(design.strip())} chars",
-        DEADLINE,
-    )
+    # --- what the walk-through changed: the Change log ---------------------------------
+    text = read("PROPOSAL.md") or ""
+    m = re.search(r"^## Change log.*?$", text, re.M)
+    log = re.sub(r"<!--.*?-->", "", text[m.end():], flags=re.DOTALL) if m else ""
+    lines = [ln for ln in log.splitlines()
+             if any(d >= WEEK4_FROM for d in re.findall(r"20\d\d-\d\d-\d\d", ln))
+             and re.search(r"REQ-\d{3}|TC-\d{3}-\d{2}", ln)]
+    check(4, "PROPOSAL.md change log: a line from the walk-through that names the ids", bool(lines),
+          f"no line dated {WEEK4_FROM} or later that names a REQ or TC id", DEADLINE)
+
+    # --- S1: the developer account -------------------------------------------------------
+    st = load_json("week04/store.json")
+    if not isinstance(st, dict):
+        check(4, "week04/store.json valid JSON", False, "missing or does not parse", DEADLINE)
+    else:
+        name = " ".join(str(st.get("store", "")).lower().split())
+        check(4, "store.json names the store", name in STORES,
+              "one of 'Google Play', 'Huawei AppGallery', 'Samsung Galaxy Store', 'Apple App Store'", DEADLINE)
+        s1 = st.get("S1") if isinstance(st.get("S1"), dict) else {}
+        ok = (re.fullmatch(r"20\d\d-\d\d-\d\d", str(s1.get("date", "")).strip()) and filled(s1.get("developer_name"))
+              and str(s1.get("status", "")).strip().lower() in ("applied", "verified"))
+        check(4, "store.json S1 filled in (date, developer name, applied/verified)", bool(ok),
+              "date as 2026-10-13, your developer name, status 'applied' or 'verified'", DEADLINE)
+        ev = str(s1.get("evidence", "")).strip()
+        ev_ok = (bool(ev) and ".." not in ev and not Path(ev).is_absolute() and ":" not in ev
+                 and ((ROOT / ev).is_file() or (ROOT / "week04" / ev).is_file()))
+        check(4, "store.json S1 screenshot saved", ev_ok, "the file named in 'evidence' is not in week04/", DEADLINE)
+        s12 = (proposal_sections().get(12) or {}).get("text", "").lower()
+        check(4, "store.json and PROPOSAL.md §12 name the same store",
+              name in STORES and any(k in s12 for k in STORES[name]),
+              "change one of them, with a Change log line", DEADLINE)
+
+    # --- the log: acceptance criteria first ----------------------------------------------
+    check(4, "ai_log_04.md names the requirements it gave the assistant",
+          bool(re.search(r"REQ-\d{3}", ai_log_section(4))), "no REQ id outside the comments and the evidence", DEADLINE)
     check_ai_log(4)
 
 
@@ -863,8 +1081,10 @@ def sync_course_files(current: int) -> None:
 
 
 def main() -> int:
+    global RUN_WEEK
     maybe_update()
     current, source = resolve_week()
+    RUN_WEEK = current
     sync_course_files(current)
 
     print("=" * 64)

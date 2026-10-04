@@ -136,9 +136,17 @@ Bu hafta asistan, hayır demek isteyen yatırımcıyı oynar. Bölüm B'nizi ver
 gösterin** — kanıtla: bir sayı, bir kaynak, kontrol ettiğiniz bir şey. Yazışmayı
 yapıştırın. "Yararlı geri bildirim verdi" diyen bir günlük puan getirmez.
 
-### 7. Yeniden push, kontroller yeşil
+### 7. Kabul ölçütlerinizi 4. Hafta'ya hazırlayın
 
-Haftaya yayılmış commit'ler, ne değiştiğini söyleyen mesajlar. Denetleyicinin istediği
+4. Hafta'da `requirements.json` içindeki her kabul ölçütü bir test case'e dönüşür ve
+grubunuzun üyeleri bu test case'leri tıklanabilir prototipiniz üzerinde yürütür. "Kullanıcılar
+memnun kalır" gibi kimsenin kontrol edemeyeceği bir ölçüt test case'e dönüşemez. Bu hafta
+ölçütlerinizi yeniden okuyun ve bir testçinin ne görmesi gerektiğini söylemeyenleri yeniden
+yazın. Bu hafta notlanmaz; gelecek hafta başlangıç noktası budur.
+
+### 8. Yeniden push, kontroller yeşil
+
+Çalıştıkça yapılan, her birinde biraz yeni iş ve ne değiştiğini söyleyen bir mesaj olan commit'ler; bir commit'in bitmiş bir parça olması gerekmez. Denetleyicinin istediği
 her şey aşağıda.
 
 ---
@@ -163,8 +171,8 @@ her şey aşağıda.
 
 ## Bu hafta değil
 
-Kod yok, tasarım belgeleri henüz yok (4. hafta), ortam kurulumu yok. Mağaza hesabı
-açmayın; §12'de mağazayı adlandırmak yeter.
+Kod yok, prototip henüz yok (4. hafta), tasarım belgeleri henüz yok (5. hafta), ortam
+kurulumu yok. Mağaza hesabı açmayın; §12'de mağazayı adlandırmak yeter.
 
 ---
 
@@ -175,7 +183,7 @@ Değişiklik günlüğü başlamış — 11:50 push'undaki reponuzdan okunur.
 
 **Cumartesi 23:59 — 5 puan.** Son durumda kontroller yeşil: **2**. İnsan katkısı: **2** —
 kanıtıyla `ai_log_03.md` ve arkasında gerçek cümleler, gerçek kararlar olan incelemeler.
-Commit disiplini: **1** — haftaya yayılmış, aralarında gerçek ilerleme olan commit'ler.
+Commit disiplini: **1** — derste farklı zamanlarda birkaç push (en az üç) ve çalıştıkça yapılan birkaç commit; her birinde biraz yeni iş olsun.
 
 **Katkı bonusu.** Adını yazdığınız her değerlendiren haftalık notunuzun %10'unu kazanır;
 siz de verdiğiniz incelemeler için aynısını kazanırsınız. 4. Hafta'dan itibaren isimler grubunuzdur.

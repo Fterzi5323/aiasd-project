@@ -187,7 +187,7 @@ that a committed key is an automatic 10-point deduction.
 
 ## Repository rules
 
-- Commit **at least three times a week, spread across the week.** If you make one push on Saturday night and nothing else, that costs you the commit-discipline point.
+- Push **several times in every lecture** (at least three), each time with new work in it, and outside the lecture **commit several times as you work**, each time with some new work in it; a commit does not need to be a finished part. One push on Saturday night and nothing else costs you the commit-discipline point.
 - Fill in that week's `ai_log_NN.md`. Every week has one, and a person reads it.
 - Do **not** commit `.venv/`, `__pycache__/`, or API keys.
 - Run `ruff check .` before committing (`ruff` is a tool that reports common mistakes in Python code). It catches the unused imports that AI tends to leave behind.

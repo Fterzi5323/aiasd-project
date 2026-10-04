@@ -240,10 +240,19 @@ English. Your language is not graded; a log written by an assistant earns at mos
 | End of lecture, 11:50 push | 5 | pitch complete, three reviewers with real sentences, change log started |
 | Saturday checker | 2 | §8–§12 filled, store named, ai_log with three objections |
 | Human involvement | 2 | the ai_log and its evidence; reviews with real decisions behind them |
-| Commit discipline | 1 | commits spread over the week, real progress between them |
+| Commit discipline | 1 | several lecture pushes (at least 3); several commits as you work |
 
-Contributors' bonus: each reviewer you name earns 10 % of your week's mark; so do you,
-for the reviews you give.
+Contributors' bonus: each reviewer you name earns 10 % of your week's mark; so do you, for the reviews you give.
+
+---
+
+## Next week: prototype and test cases
+
+**Week 4:** a clickable prototype of your main flow, and test cases written from your acceptance criteria.
+
+Your group runs the test cases on the prototype; what does not work shows what is missing from the requirements.
+
+**Before next week:** read your acceptance criteria again. Rewrite every criterion that does not say what a tester should see.
 
 ---
 

@@ -79,9 +79,12 @@ mağaza App Store'dur.
 
 Tabloda saklı iki gerçek vardır:
 
-- **Bir Android mağazasında yayınlamak için Android telefon gerekmez.** Android
-  Studio'daki emülatör geliştirmek ve test etmek için yeter ve mağaza paketi her iki
-  durumda da kabul eder.
+- **Bir Android mağazasında yayınlamak için kendi Android telefonunuz gerekmez.**
+  Android Studio'daki emülatör geliştirmek ve test etmek için yeter ve mağaza paketi her
+  iki durumda da kabul eder. Bir istisna var: Google Play, yeni bir kişisel hesaptan bir
+  kez, Play Console uygulamasıyla gerçek bir Android telefonda (Android 10 ya da sonrası;
+  emülatör kabul edilmez) onay ister. Bir arkadaşınızın telefonunu bir dakikalığına ödünç
+  almanız yeter.
 - **Native iOS derlemek için Mac gerekir.** App Store isteyen Windows kullanıcıları, iOS
   binary'sini bulutta derleyen Expo EAS ya da Codemagic'ten geçer; ama Apple üyeliğini
   yine siz ödersiniz.
@@ -91,7 +94,7 @@ Tabloda saklı iki gerçek vardır:
 | | Google Play | Huawei AppGallery | Samsung Galaxy Store | Apple App Store |
 |---|---|---|---|---|
 | Geliştirici ücreti | tek seferlik (≈ 25 $) | ücretsiz | ücretsiz | yıllık (≈ 99 $) |
-| Kayıt | bir Google hesabı ve kimlik doğrulama | bir Huawei ID, kimlik belgesi ve birkaç günlük onay | bir Samsung hesabı ve satıcı onayı | bir Apple ID, kimlik doğrulama ve ödeme |
+| Kayıt | bir Google hesabı, kimlik doğrulama ve bir kez gerçek bir Android telefon | bir Huawei ID, kimlik belgesi ve birkaç günlük onay | bir Samsung hesabı ve satıcı onayı | bir Apple ID, kimlik doğrulama ve ödeme |
 | Derleme | Mac ya da Windows | Mac ya da Windows | Mac ya da Windows | Mac (ya da bulut build) |
 | Yayından önce | yeni bireysel hesaplar 14 gün boyunca 12 testçiyle kapalı test (yalnızca adı yazılı testçilere açık bir test) yapmak zorundadır | inceleme; birkaç gün sürer | inceleme; birkaç gün sürer | inceleme; genellikle günler sürer ve retle sonuçlanabilir |
 | Bu sınıftaki erişim | neredeyse her Android telefon | Huawei telefonlar; diğer Android kullanıcıları AppGallery uygulamasını kurabilir | Samsung telefonlar; diğer Android kullanıcıları Galaxy Store'u kurabilir | her iPhone |

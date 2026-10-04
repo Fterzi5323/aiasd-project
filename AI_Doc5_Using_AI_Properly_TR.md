@@ -69,7 +69,7 @@ gösterir.
 | Faz (haftalar) | İyi yaptığı | Güvenilir biçimde yanlış yaptığı | Yakalayan teknik |
 |---|---|---|---|
 | Teklif ve gereksinimler (2–3) | Listeleri ve yapıyı hızla üretir: bir dakikada sekiz gereksinim. | Sizin önceliklerinizi ve sizin kullanıcılarınızı bilmez; kaynağı olmayan sayılar (pazar büyüklüğü, inceleme süresi) verir; ve hiç istemediğiniz özellikler ekler, örneğin para almayan bir uygulamaya bir `Payment` tablosu. | §4, §3, §5 |
-| Tasarım ve prototip (4) | Kısa bir tariften diyagramlar, veri modelleri ve ekran akışları çizer. | Bir kısıtı her istemde tekrarlamazsanız onu unutur; bir fazla varlık ekler; bir alanı yanlış tabloya koyar (örneğin check-in zamanını rezervasyona değil kullanıcıya koyar). | §1 |
+| Prototip, test case'ler ve tasarım (4–5) | Kısa bir tariften ekran akışları, test case'ler, diyagramlar ve veri modelleri çizer. | Bir kısıtı her istemde tekrarlamazsanız onu unutur; bir fazla varlık ekler; bir alanı yanlış tabloya koyar (örneğin check-in zamanını rezervasyona değil kullanıcıya koyar). | §1 |
 | Sunucu, giriş ve sohbet botu (5–7) | Kalıp kodu, endpoint'leri, testleri ve Ollama çevresindeki tutkal kodunu yazar. | Uç durumları kaçırır: örneğin bir kullanıcı birincisinin süresi dolmadan ikinci bir giriş kodu ister ve kod reddetmek yerine yenisini gönderir. O zamandan beri kaldırılmış ya da yeniden adlandırılmış kütüphane sürümleri kurar, dolayısıyla `pip install` başarısız olur. Tek bir değişiklik istendiğinde, söz etmediği ikinci bir değişikliği de yapar. | §2, §6, §5 |
 | Üç katman (8) | Her katmanı (sunucu, web, mobil) kendi başına doğru yazar. | Üç katmanı birbiriyle uyuşturmaz: aynı alan sunucuda `room_id`, uygulamada `roomId` adını taşır; sunucu hiçbir istemcinin ele almadığı bir durum kodu döndürür. | §7 |
 | İnsanlarla test (9–10) | Test planları, hata raporu şablonları ve olası arızaların bir listesini yazar. | Beş testçinizin gerçekte ne yapacağını bilemez, çünkü onlarla hiç tanışmamıştır. | §8 |
@@ -200,7 +200,7 @@ dolayısıyla 15 dakika doğrudur. Bunu kendi kabul testimle REQ-004 yaptım."*
 
 **Bu derste.** Bu, 2. Hafta'nın alıştırmasıydı: aynı §3–§4 iki asistana verildi, her
 birinden sekiz gereksinim alındı ve bir yanlış gereksinim bulundu. Teknik, iki cevabın ucuz
-ve doğrunun kendi belgelerinizde olduğu her yerde geri gelir, örneğin 4. Hafta'daki veri
+ve doğrunun kendi belgelerinizde olduğu her yerde geri gelir, örneğin 5. Hafta'daki veri
 modelinde ve 9. Hafta'daki test planında. İki asistan, 1. Hafta'da kurduklarınızdan
 (`AI_SETUP_CARD`) ikisi olmalıdır; ücretsiz katmanlar yeterlidir.
 
@@ -258,8 +258,8 @@ doğruluyor; `e41c…` commit'i yalnızca import değişikliklerini içeriyor."*
 
 **Günlükte.** İstediğiniz değişikliği, aldığınız değişikliği ve reddettiğinizi kaydedin.
 
-**Bu derste.** Haftalık commit disiplini puanı tam olarak şuna bakar: haftaya yayılmış
-commit'ler, her biri mesajında adlandırabildiğiniz
+**Bu derste.** Haftalık commit disiplini puanı tam olarak şuna bakar: çalıştıkça
+yapılmış birkaç commit, her biri mesajında adlandırabildiğiniz
 bir değişiklik (örneğin `week05: OTP expiry check, test added`) ve bütünüyle yapıştırılmış
 olabilecek tek bir Cumartesi gecesi yığınının bulunmaması. Her commit'ten önce
 `ruff check .` çalıştırın. Commit'e giren bir anahtar, iş akışı belgesinde anlatıldığı gibi,
@@ -412,8 +412,8 @@ Günlük iki kural daha taşır:
 |---|---|---|
 | 2 | Teklif Bölüm A, gereksinimler | §4 Çapraz sorgu |
 | 3 | Teklif Bölüm B | §3 Düşman gözden geçiren (yatırımcı) |
-| 4 | Tasarım, veri modeli, prototip | §1 Önce kabul ölçütü |
-| 5 | Sunucu iskeleti, OTP ile giriş | §2 Çalıştırarak doğrulama |
+| 4 | Tıklanabilir prototip, kabul ölçütlerinden test case'ler | §1 Önce kabul ölçütü |
+| 5 | Tasarım, API sözleşmesi, sunucu iskeleti, OTP ile giriş | §2 Çalıştırarak doğrulama |
 | 6 | Kendi belgeleriniz üzerinde sohbet botu motoru | §5 Kaynak gösterttirme |
 | 7 | İstemcilerde sohbet botu, testler, CI | §6 Küçük diff'ler |
 | 8 | Üç katmanda çekirdek özellik | §7 Katmanlar arası tutarlılık |

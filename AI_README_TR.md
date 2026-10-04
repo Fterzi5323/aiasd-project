@@ -190,7 +190,7 @@ oluşturun) ve commit edilmiş bir anahtarın otomatik 10 puan kesinti olduğunu
 
 ## Depo kuralları
 
-- **Haftada en az üç kez, haftaya yayılmış olarak commit edin.** Cumartesi gecesi tek bir push yapıp başka bir şey yapmazsanız, bu size commit disiplini puanına mal olur.
+- **Her derste birkaç kez push edin** (en az üç), her seferinde yeni işle; ders dışında da **çalıştıkça birkaç kez commit edin**; her birinde biraz yeni iş olsun, bitmiş bir parça olması gerekmez. Cumartesi gecesi tek bir push yapıp başka bir şey yapmazsanız, bu size commit disiplini puanına mal olur.
 - O haftanın `ai_log_NN.md` dosyasını doldurun. Her haftanın bir tane vardır ve onu bir insan okur.
 - `.venv/`, `__pycache__/` ya da API anahtarlarını **commit etmeyin**.
 - Commit'ten önce `ruff check .` çalıştırın (`ruff`, Python kodundaki yaygın hataları bildiren bir araçtır). Yapay zekânın geride bırakma eğilimindeki kullanılmayan import'ları yakalar.

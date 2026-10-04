@@ -78,9 +78,11 @@ that depends on what you own.
 
 Two facts are hidden in the table:
 
-- **You do not need an Android phone to publish to an Android store.** The emulator in
-  Android Studio is enough to develop and test, and the store accepts the package either
-  way.
+- **You do not need your own Android phone to publish to an Android store.** The
+  emulator in Android Studio is enough to develop and test, and the store accepts the
+  package either way. One exception: Google Play asks a new personal account to confirm
+  once, in the Play Console app, on a real Android phone (Android 10 or later; an emulator
+  is not accepted). A classmate's phone, borrowed for one minute, is enough.
 - **You do need a Mac to build native iOS.** Windows users who want the App Store go
   through Expo EAS or Codemagic, which build the iOS binary in the cloud, but the Apple
   membership is still yours to pay.
@@ -90,7 +92,7 @@ Two facts are hidden in the table:
 | | Google Play | Huawei AppGallery | Samsung Galaxy Store | Apple App Store |
 |---|---|---|---|---|
 | Developer fee | one-time (≈ 25 $) | free | free | yearly (≈ 99 $) |
-| Registration | a Google account and an identity check | a Huawei ID, an identity document and a few days' approval | a Samsung account and seller approval | an Apple ID, an identity check and payment |
+| Registration | a Google account, an identity check and, once, a real Android phone | a Huawei ID, an identity document and a few days' approval | a Samsung account and seller approval | an Apple ID, an identity check and payment |
 | Build from | Mac or Windows | Mac or Windows | Mac or Windows | Mac (or a hosted build) |
 | Before release | new personal accounts must run a closed test (a test open only to named testers) with 12 testers for 14 days | review, which takes a few days | review, which takes a few days | review, which typically takes days and can end in a rejection |
 | Reach in this class | almost every Android phone | Huawei phones; other Android users can install the AppGallery app | Samsung phones; other Android users can install Galaxy Store | every iPhone |
