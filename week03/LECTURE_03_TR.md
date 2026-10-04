@@ -24,12 +24,10 @@
 
 | | İngilizce | Türkçe |
 |---|---|---|
-| Kayıtlı | 79 | 33 |
-| Derste push yapan | 63 | 26 |
-| Ders slotu 5 / 5 | — | — |
-| Cumartesi: tüm kontroller yeşil | — | — |
-
-<!-- Son iki satırı pazar günü week02.xlsx'ten doldur. -->
+| Kayıtlı | 78 | 33 |
+| Derste push yapan | 62 | 26 |
+| Ders slotu 5 / 5 | 32 | 21 |
+| Cumartesi: tüm kontroller yeşil | 57 | 21 |
 
 Notlar ve denetleyicinin yorumları pazar günü **kendi reponuzda bir issue** olarak geldi.
 Notla ilgili sorular oraya, yorum olarak — e-postayla değil.

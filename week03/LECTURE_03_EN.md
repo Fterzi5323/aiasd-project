@@ -25,12 +25,10 @@ the editor view if you prefer a cleaner page). Timings in the notes. Total ≈ 3
 
 | | English | Turkish |
 |---|---|---|
-| Registered | 79 | 33 |
-| Pushed during the lecture | 63 | 26 |
-| Lecture slot 5 / 5 | — | — |
-| Saturday: checks all green | — | — |
-
-<!-- Fill the last two rows on Sunday from week02.xlsx before pushing the deck. -->
+| Registered | 78 | 33 |
+| Pushed during the lecture | 62 | 26 |
+| Lecture slot 5 / 5 | 32 | 21 |
+| Saturday: checks all green | 57 | 21 |
 
 Marks and the checker's remarks reached you as an **issue in your own repository** on
 Sunday. Questions about a mark go there, as a comment — not by e-mail.
