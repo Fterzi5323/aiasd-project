@@ -226,6 +226,9 @@ Bu hafta asistan, **hayır** demek isteyen yatırımcıyı oynar.
 
 "Yararlı geri bildirim verdi" puan getirmez. İyi itirazı kötüsünden ayırmak beceridir.
 
+**Günlüğü kendiniz yazın.** Kanıt bloğu dışında asistan yok, dil için bile. Diliniz
+notlanmaz; asistanın yazdığı bir günlük en çok 1 alır.
+
 ---
 
 ## 3. hafta nasıl notlanıyor — 10 puan
@@ -235,7 +238,7 @@ Bu hafta asistan, **hayır** demek isteyen yatırımcıyı oynar.
 | Ders sonu, 11:50 push'u | 5 | sunum tam, üç değerlendiren gerçek cümlelerle, değişiklik günlüğü başlamış |
 | Cumartesi denetleyici | 2 | §8–§12 dolu, mağaza adlandırılmış, üç itirazlı ai_log |
 | İnsan katkısı | 2 | ai_log ve kanıtı; arkasında gerçek kararlar olan incelemeler |
-| Commit disiplini | 1 | **5. haftadaki toplu değerlendirmede**, tüm push geçmişinize bakılarak |
+| Commit disiplini | 1 | haftaya yayılmış, aralarında gerçek ilerleme olan commit'ler |
 
 Katkı bonusu: adını yazdığınız her değerlendiren haftalık notunuzun %10'unu kazanır; siz de
 verdiğiniz incelemeler için aynısını.

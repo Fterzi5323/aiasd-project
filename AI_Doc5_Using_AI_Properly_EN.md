@@ -242,8 +242,8 @@ including the lines you did not ask to change. Commit each accepted change on it
 
 **Why.** "Refactor this file" returns a file in which three things you did not request have
 changed, one of them silently. A diff you can read in two minutes is a diff you can take
-responsibility for. This is also what makes your commit history readable in the Week 5
-review.
+responsibility for. This is also what makes your commit history readable when the
+week's commit-discipline point is given.
 
 **Untrained user.** *"I asked Copilot to clean up `app.py`, accepted the result, and
 pushed."*
@@ -256,8 +256,8 @@ result; commit `e41c…` contains the import changes only."*
 **In the log.** Record the change you asked for, the change you received, and what you
 refused.
 
-**In this course.** This is what the Week 5, Week 10 and end-of-term reviews of your whole
-push history look for: commits spread across the week, each one a change you can name in
+**In this course.** This is what the weekly commit-discipline point looks for: commits
+spread across the week, each one a change you can name in
 its message (for example `week05: OTP expiry check, test added`), and no single
 Saturday-night dump that could have been pasted in whole. Run `ruff check .` before every
 commit. A key in a commit costs ten points and a revoked key, as described in the workflow
@@ -396,7 +396,12 @@ The log also carries two further rules:
   last time the problem happened to you, the five people who will test your product, and
   the sentences your reviewers wrote and what you decided about them are all written by
   you alone. They concern your life and your people; an assistant cannot know them, and I
-  will ask about them.
+  will ask about them. **The AI log itself is on this list.** Everything in
+  `ai_log_NN.md` outside the Evidence block is written by you, in your own words, and
+  the assistant is not used even to improve the language. Your English or Turkish is
+  not graded; a log in plain, imperfect sentences earns full marks, a log written by an
+  assistant about itself earns at most 1. The Evidence block is the one place where the
+  assistant's words belong, pasted exactly as it wrote them.
 
 ---
 
@@ -444,7 +449,7 @@ one of the four people in §0 is separated from the others.
    it, and your own chatbot can show the passage it used (§5, Weeks 6 and 10).
 7. You can accept the change you asked for and refuse the one you did not, within the same
    diff, and your history shows a week of named changes rather than one dump (§6, the
-   Week 5 and Week 10 reviews).
+   weekly commit-discipline point).
 8. You can find where three generated tiers disagree with each other, verify what the
    assistant found, and catch what it missed (§7, Week 8).
 9. You can write down what will go wrong before five real people test your product, and

@@ -156,14 +156,13 @@ değerindedir.
 Bir öğrenci bir bilgisayarda, bir GitHub hesabıyla çalışır. Bir sınıf arkadaşınızın
 bilgisayarında ya da onun GitHub oturumunda yapılan iş, ders için hiçbir puan getirmez.
 
-**Commit disiplini (haftada 1 puan) hafta hafta değerlendirilmez.** 5. Hafta'da, 10.
-Hafta'da ve dönem sonunda tüm push geçmişinize bakar ve o puanları tek seferde veririm.
-Üç soru sorarım: iş zamana yayılarak mı büyümüş, bir push'tan diğerine gerçek bir
-ilerleme var mı, metin üzerinde çalışılmış mı yoksa bitmiş hâlde mi yapıştırılmış? Her
-dersin sonunda tek bir push ya da tek parça hâlinde gelen metin, kaç hafta tekrarlanırsa
-tekrarlansın orada puan getirmez. Ayrıca herhangi bir derste size projeniz hakkında iki
-dakikalık bir soru sorabilirim. Her hafta çalıştıkça push edin; gerisi kendiliğinden
-hallolur.
+**Commit disiplini (haftada 1 puan) her hafta o haftanın commit'lerine bakılarak
+değerlendirilir.** Üç soru sorarım: iş zamana yayılarak mı büyümüş, bir commit'ten
+diğerine gerçek bir ilerleme var mı, metin üzerinde çalışılmış mı yoksa bitmiş hâlde mi
+yapıştırılmış? Hafta sonunda tek bir commit ya da tek parça hâlinde gelen metin puan
+getirmez. Bir haftada şüpheli bir durum görürsem karar vermeden önce önceki haftalarınıza
+da bakarım. Ayrıca herhangi bir derste size projeniz hakkında iki dakikalık bir soru
+sorabilirim. Her hafta çalıştıkça commit edin; gerisi kendiliğinden hallolur.
 
 ### Devam, ve burada olmazsanız ne olur
 
@@ -195,7 +194,10 @@ görüntü alırım ve teslim anındaki durumunuz diğer 5 puanı belirler.
 Haftada bir dosya yazarsınız ve dosya o haftanın klasöründe durur; yani 1. Hafta'nın
 dosyası `week01/ai_log_01.md` olur ve böyle devam eder. Dosya, hafta klasöründeki diğer
 belgelerle birlikte gelir ve siz doldurursunuz. Hangi asistanı kullandığınızı, neyi doğru
-yaptığını, neyi düzeltmek zorunda kaldığınızı ve ne öğrendiğinizi yazarsınız.
+yaptığını, neyi düzeltmek zorunda kaldığınızı ve ne öğrendiğinizi yazarsınız. **Kendiniz,
+kendi cümlelerinizle yazarsınız**: Kanıt bloğu dışında asistan kullanılmaz, dili düzeltmek
+için bile. İngilizceniz ya da Türkçeniz notlanmaz; asistanın yazdığı bir günlük, ne kadar
+düzgün olursa olsun 2 puanın en çok 1'ini alır.
 
 **Evidence bloğu zorunludur.** Gerçek yazışmayı iddianızın altına, kod bloğunun (üçer
 ters tırnaktan oluşan iki satır arasındaki blok) içine yapıştırın: gönderdiğiniz istemi

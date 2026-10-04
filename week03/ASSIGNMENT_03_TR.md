@@ -173,7 +173,7 @@ Değişiklik günlüğü başlamış — 11:50 push'undaki reponuzdan okunur.
 
 **Cumartesi 23:59 — 5 puan.** Son durumda kontroller yeşil: **2**. İnsan katkısı: **2** —
 kanıtıyla `ai_log_03.md` ve arkasında gerçek cümleler, gerçek kararlar olan incelemeler.
-Commit disiplini: **1** (5. haftadaki toplu değerlendirmede verilir).
+Commit disiplini: **1** — haftaya yayılmış, aralarında gerçek ilerleme olan commit'ler.
 
 **Katkı bonusu.** Adını yazdığınız her değerlendiren haftalık notunuzun %10'unu kazanır;
 siz de verdiğiniz incelemeler için aynısını kazanırsınız. 4. Hafta'dan itibaren isimler grubunuzdur.

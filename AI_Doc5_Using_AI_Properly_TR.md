@@ -245,8 +245,8 @@ kendi başına commit edin.
 
 **Neden.** "Bu dosyayı yeniden düzenle" istemediğiniz üç şeyin değiştiği, birinin sessizce
 değiştiği bir dosya döndürür. İki dakikada okuyabildiğiniz bir diff, sorumluluğunu
-alabildiğiniz bir diff'tir. 5. Hafta incelemesinde commit geçmişinizi okunur kılan da
-budur.
+alabildiğiniz bir diff'tir. Haftanın commit disiplini puanı verilirken commit geçmişinizi
+okunur kılan da budur.
 
 **Eğitimsiz kullanıcı.** *"Copilot'tan `app.py` dosyasını temizlemesini istedim, sonucu
 kabul ettim ve push ettim."*
@@ -258,8 +258,8 @@ doğruluyor; `e41c…` commit'i yalnızca import değişikliklerini içeriyor."*
 
 **Günlükte.** İstediğiniz değişikliği, aldığınız değişikliği ve reddettiğinizi kaydedin.
 
-**Bu derste.** 5. Hafta, 10. Hafta ve dönem sonunda bütün push geçmişinizin incelemeleri
-tam olarak şuna bakar: haftaya yayılmış commit'ler, her biri mesajında adlandırabildiğiniz
+**Bu derste.** Haftalık commit disiplini puanı tam olarak şuna bakar: haftaya yayılmış
+commit'ler, her biri mesajında adlandırabildiğiniz
 bir değişiklik (örneğin `week05: OTP expiry check, test added`) ve bütünüyle yapıştırılmış
 olabilecek tek bir Cumartesi gecesi yığınının bulunmaması. Her commit'ten önce
 `ruff check .` çalıştırın. Commit'e giren bir anahtar, iş akışı belgesinde anlatıldığı gibi,
@@ -397,7 +397,12 @@ Günlük iki kural daha taşır:
   başınıza geldiği an, ürününüzü test edecek beş kişi ve gözden geçirenlerinizin yazdığı
   cümleler ile onlar hakkında verdiğiniz kararlar yalnızca sizin tarafınızdan yazılır.
   Bunlar sizin hayatınız ve sizin insanlarınızla ilgilidir; bir asistan bunları bilemez ve
-  ben bunları soracağım.
+  ben bunları soracağım. **Yapay zekâ günlüğünün kendisi de bu listededir.**
+  `ai_log_NN.md` içinde Kanıt bloğu dışındaki her şey sizin tarafınızdan, kendi
+  cümlelerinizle yazılır; asistan dili düzeltmek için bile kullanılmaz. İngilizceniz ya
+  da Türkçeniz notlanmaz; düz, kusurlu cümlelerle yazılmış bir günlük tam puan alır,
+  asistanın kendisi hakkında yazdığı bir günlük en çok 1 alır. Kanıt bloğu, asistanın
+  sözlerinin ait olduğu tek yerdir ve oraya aynen yazdığı gibi yapıştırılır.
 
 ---
 

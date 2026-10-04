@@ -2,7 +2,9 @@
 
 > **Worth 2 points, and a person reads it.** Not graded on how much you used AI — on
 > whether you could tell a good objection from a bad one. The Evidence block is not
-> optional. Delete these quoted instructions before you commit.
+> optional. **Write this file yourself, in your own words; outside the Evidence block no
+> assistant is used, not even for the language. A log written by an assistant earns at
+> most 1.** Delete these quoted instructions before you commit.
 
 <!--
 THIS WEEK'S TASK — the assistant is the investor who wants to say no.

@@ -171,8 +171,8 @@ sentences, Change log started — read from your repository as it stands at the 
 
 **Saturday 23:59 — 5 points.** Checks green on your final state: **2**. Human
 involvement: **2** — your `ai_log_03.md` with its evidence, and reviews with real
-sentences and real decisions behind them. Commit discipline: **1** (awarded at the
-Week 5 review of your whole history).
+sentences and real decisions behind them. Commit discipline: **1** — commits spread
+over the week, with real progress between them.
 
 **Contributors' bonus.** Each reviewer you name earns 10% of your week's mark; you earn
 the same for the reviews you give. From Week 4 the names are your group.

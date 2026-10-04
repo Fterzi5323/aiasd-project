@@ -229,6 +229,9 @@ This week the assistant plays the investor who wants to say **no**.
 "It gave useful feedback" earns nothing. Telling a good objection from a bad one is the
 skill.
 
+**Write the log yourself.** Outside the Evidence block, no assistant, not even for the
+English. Your language is not graded; a log written by an assistant earns at most 1.
+
 ---
 
 ## How Week 3 is graded — 10 points
@@ -238,7 +241,7 @@ skill.
 | End of lecture, 11:50 push | 5 | pitch complete, three reviewers with real sentences, change log started |
 | Saturday checker | 2 | §8–§12 filled, store named, ai_log with three objections |
 | Human involvement | 2 | the ai_log and its evidence; reviews with real decisions behind them |
-| Commit discipline | 1 | **awarded at the Week 5 review** of your whole push history |
+| Commit discipline | 1 | commits spread over the week, real progress between them |
 
 Contributors' bonus: each reviewer you name earns 10 % of your week's mark; so do you,
 for the reviews you give.
