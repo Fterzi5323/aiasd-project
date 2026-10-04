@@ -113,8 +113,9 @@ bir slaytı sorabilirim.
 
 ## İnceleme turu — dörtlü gruplar
 
-**Gruplar şimdi projeksiyonda. Takma adınızı bulun.** Reponuz henüz yok mu? Yakınınızdaki
-üç kişilik bir gruba katılın, turdan sonra bana gelin.
+**Dört kişilik grubunuzu şimdi kendiniz kurun.** Reponuz henüz yok mu? Yakınınızdaki üç
+kişilik bir gruba katılın, turdan sonra bana gelin. Bu grup dönem boyunca sizinle kalacak;
+haftada bir çevrimiçi buluşabileceğiniz kişileri seçin.
 
 Herkes: kendi bilgisayarından **5 dakika** sunum. Diğer üçü dinler, sonra üç sorunun her
 biri için birer cümle **yazar** ve verir — kâğıt ya da metin dosyası. Sonra sıradaki. Dört
@@ -253,7 +254,7 @@ zaman gider, ne push edilmiş olursa olsun.
 
 ## Şimdi
 
-Gruplar ekranda. Bilgisayarlar açık, `PITCH_03.md` önizlemede.
+Gruplar kuruldu. Bilgisayarlar açık, `PITCH_03.md` önizlemede.
 
 **Her grupta ilk sunan: başlayın.**
 

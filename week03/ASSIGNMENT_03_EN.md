@@ -62,7 +62,7 @@ cheap week to do it.
 
 ### 1. Review round — groups of four, first hour
 
-You will be put in a group of four. Each person presents for five minutes from their own
+You form a group of four yourselves, at the start of the lecture; a student with no repository yet joins a group of three. Each person presents for five minutes from their own
 laptop; the other three listen, then **write** one sentence for each of the three
 questions on slide 7 — on paper or in a text file, handed to the presenter. Four rounds,
 about 45 minutes. Say what you think; a polite "it is good" helps nobody and earns nobody

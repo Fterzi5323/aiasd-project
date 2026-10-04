@@ -115,8 +115,9 @@ plain preview. 2 minutes. -->
 
 ## The review round — groups of four
 
-**Groups are on the projector now. Find your nickname.** No repository yet? Join a
-group of three near you and see me after the round.
+**Form your group of four now, yourselves.** No repository yet? Join a group of three
+near you and see me after the round. This group stays with you for the term, so choose
+people you can meet online once a week.
 
 Each person: **5 minutes** presenting, from your own laptop. The other three listen,
 then **write** one sentence for each of the three questions and hand it over — paper or a
@@ -124,7 +125,7 @@ text file. Then the next person. Four rounds, about **45 minutes**.
 
 Reviewers: say what you think. "It's good" helps nobody and earns nobody anything.
 
-<!-- Project grades/out/week03-groups-en.html. Walk around. Ring at 12-minute marks. -->
+<!-- Give them three minutes to form groups; nudge the leftovers together. Walk around. Ring at 12-minute marks. -->
 
 ---
 
@@ -256,7 +257,7 @@ then gone, whatever was pushed.
 
 ## Now
 
-Groups are on the screen. Laptops open, `PITCH_03.md` in the preview.
+Groups formed. Laptops open, `PITCH_03.md` in the preview.
 
 **First presenter in each group: start.**
 

@@ -64,7 +64,7 @@ olduğu son hafta bu.
 
 ### 1. İnceleme turu — dörtlü gruplar, ilk saat
 
-Dört kişilik bir gruba alınacaksınız. Herkes kendi bilgisayarından beş dakika sunar;
+Dört kişilik grubunuzu dersin başında kendiniz kurarsınız; reposu henüz olmayan bir öğrenci üç kişilik bir gruba katılır. Herkes kendi bilgisayarından beş dakika sunar;
 diğer üçü dinler, sonra 7. slayttaki üç sorunun her biri için birer cümle **yazar** —
 kâğıda ya da bir metin dosyasına — ve sunana verir. Dört tur, yaklaşık 45 dakika. Ne
 düşünüyorsanız söyleyin; nazik bir "iyi olmuş" kimseye yardım etmez, kimseye puan

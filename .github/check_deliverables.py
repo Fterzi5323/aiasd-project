@@ -329,10 +329,17 @@ def check_contributors(week: int, role: str, slot: str = SESSION) -> None:
     if items is None:
         check(week, f"{path} valid JSON", False, "missing or does not parse", slot)
         return
-    ids = [str(i.get("student_id", "")).strip() for i in items if isinstance(i, dict)]
+    # Contributors are optional: none, one or two classmates (decided 4 Oct 2026). What
+    # is listed must be real - a valid, distinct student number, the right role and a
+    # sentence - but an empty list is a legitimate "I worked alone this week".
+    # an untouched scaffold entry (no number, no sentence) is the same as no entry
+    items = [i for i in items if isinstance(i, dict)
+             and (str(i.get("student_id", "")).strip() or str(i.get("what", "")).strip())]
+    ids = [str(i.get("student_id", "")).strip() for i in items]
     good_ids = [i for i in ids if re.fullmatch(r"\d{9}(-\d+)?", i)]
-    check(week, f"{path} names two students", len(good_ids) == 2 and len(set(good_ids)) == 2,
-          f"{len(good_ids)} valid 9-digit numbers — need exactly two, different", slot)
+    check(week, f"{path} lists 0-2 classmates with valid numbers",
+          len(ids) <= 2 and len(good_ids) == len(ids) and len(set(good_ids)) == len(good_ids),
+          f"{len(ids)} entries, {len(good_ids)} valid 9-digit numbers — at most two, different, no placeholders", slot)
     me = ""
     try:
         me = str(json.loads(read("student.json") or "{}").get("student_id", "")).strip()
@@ -341,9 +348,9 @@ def check_contributors(week: int, role: str, slot: str = SESSION) -> None:
     check(week, f"{path} does not list yourself", me == "" or me.split("-")[0] not in [g.split("-")[0] for g in good_ids],
           "your own number is in it", slot)
     roles_ok = all(str(i.get("role", "")).strip() == role for i in items if isinstance(i, dict))
-    check(week, f"{path} role is '{role}'", bool(items) and roles_ok, "wrong or empty role", slot)
+    check(week, f"{path} role is '{role}' for everyone listed", roles_ok, "wrong or empty role", slot)
     thin = [i for i in items if isinstance(i, dict) and len(str(i.get("what", "")).strip()) < 20]
-    check(week, f"{path} says what each one did", bool(items) and not thin,
+    check(week, f"{path} says what each one did", not thin,
           f"{len(thin)} entries with no real sentence in 'what'", slot)
 
 
@@ -632,6 +639,12 @@ def maybe_update() -> None:
         with urllib.request.urlopen(CHECKER_URL, timeout=6) as response:
             published = response.read().decode("utf-8")
     except (urllib.error.URLError, OSError, TimeoutError, UnicodeDecodeError):
+        # Offline, or GitHub unreachable from this network. The copy in the
+        # repository may be weeks old and look for files the course no longer
+        # asks for - say so loudly rather than let a stale list pass for the truth.
+        print("  WARNING: could not reach the course on GitHub, so this run uses the")
+        print("  checker copy stored in your repository, which may be out of date.")
+        print("  Connect to the network and run it again before trusting the list.\n")
         return
 
     mine = Path(__file__).read_text(encoding="utf-8", errors="replace")
@@ -643,6 +656,14 @@ def maybe_update() -> None:
         compile(published, "check_deliverables.py", "exec")
     except SyntaxError:
         return
+
+    # Keep the repository's own copy current too, so that an offline run later
+    # falls back to a recent checker instead of the one from the week the
+    # repository was created. Best effort: a read-only file is not an error.
+    try:
+        Path(__file__).write_text(published, encoding="utf-8")
+    except OSError:
+        pass
 
     tmp = Path(tempfile.gettempdir()) / "aiasd_check_deliverables.py"
     try:

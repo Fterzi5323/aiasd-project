@@ -4,36 +4,44 @@
 
 *Türkçesi: [`AI_SKELETON_TR.md`](AI_SKELETON_TR.md)*
 
-This is the whole term on two pages: what each week teaches, what you do in the room, what
-you finish by Saturday, and what arrives in your repository. It is shown in the first lecture
-and lives in your repository. It may change during the term; every change is logged at the
-end of this file, the way you log changes to your own proposal.
+This document is the whole term on two pages: it says what each week teaches, what you do
+in the room, what you finish by Saturday, and what arrives in your repository. It is shown
+in the first lecture and it lives in your repository. It may change during the term, and
+every change is logged at the end of this file, in the same way that you log changes to
+your own proposal.
 
 ## What holds every week
 
-- You build **one project, alone, for the whole term**: a mobile client, a web client and a
-  server, with login by e-mail code and/or OTP, **published on a public app store** by the
-  end — which store, and native or hybrid, is your choice (`AI_PLATFORMS_AND_STORES_EN/TR.md`). The defence
-  in Weeks 13–14 is run from the store-installed app.
-- **Your project includes a chatbot about itself**, built in Weeks 6–7 with open-weight
-  models you run yourself — BGE-M3 for embeddings, Qwen via Ollama for answers — over your
-  own documents and data, reachable from both clients. No cloud model APIs for this feature.
-- **10 points a week**: 5 read from your repository at the end of the lecture, 5 at Saturday
-  23:59. Week 1 is worth 5, all read on Saturday. Term grade: weekly projects 60 · store
-  bonus 15 · presentation (the defence, Weeks 13–14) 15 · final exam 40.
-- **Two people help you every week** from Week 2, in the role that week names, and you record
-  them in `weekNN/contributors_NN.json`. They earn a bonus from your mark; you earn one from
-  theirs. Rotate: at least one new name each week.
-- **You prove the human work**: yours in `weekNN/ai_log_NN.md`, theirs beside their names.
-  Two of the Saturday points depend on that proof.
-- **`PROPOSAL.md` lives at the root** and may change in any week — with a dated line in its
-  change log. A silent change costs; a logged one is engineering.
-- **Publishing is graded step by step** (S0–S6 in the plan), in the week each step is due.
-  Nothing about the store can be done in the last week.
-- **Every diagram is Mermaid**, inside the markdown file. GitHub draws it; the checker reads it.
+- You build **one project, alone, for the whole term**. The project is a mobile client, a
+  web client and a server, with login by e-mail code and/or OTP (a one-time password, a
+  short code that is valid only once), and it is **published on a public app store** by
+  the end of the term. Which store you use, and whether the app is native or hybrid, is
+  your choice (`AI_PLATFORMS_AND_STORES_EN/TR.md`). The defence in Weeks 13–14 is run from
+  the store-installed app.
+- **Your project includes a chatbot about itself.** You build it in Weeks 6–7 with
+  open-weight models that you run yourself (BGE-M3 for embeddings, which are numeric
+  representations of text used to find similar passages, and Qwen via Ollama for the
+  answers), over your own documents and data, and it is reachable from both clients. No
+  cloud model APIs may be used for this feature.
+- You earn **10 points a week**: 5 are read from your repository at the end of the lecture,
+  and 5 at Saturday 23:59. Week 1 is worth 5, and all of them are read on Saturday. The
+  term grade is made up of weekly projects 60 · store bonus 15 · presentation (the
+  defence, Weeks 13–14) 15 · final exam 40.
+- **Two people help you every week** from Week 2, in the role that the week names, and you
+  record them in `weekNN/contributors_NN.json`. They earn a bonus from your mark, and you
+  earn one from theirs. Rotate them: at least one new name must appear each week.
+- **You prove the human work**: you prove yours in `weekNN/ai_log_NN.md`, and your helpers
+  prove theirs beside their names. Two of the Saturday points depend on that proof.
+- **`PROPOSAL.md` lives at the root** and may change in any week, provided that you add a
+  dated line to its change log. A silent change costs points; a logged change is
+  engineering.
+- **Publishing is graded step by step** (the steps S0–S6 in the plan), in the week in
+  which each step is due. Nothing about the store can be done in the last week.
+- **Every diagram is Mermaid** (a text notation for diagrams), written inside the markdown
+  file. GitHub draws it, and the checker reads it.
 
-How the points are computed, what the checker looks for, and the fine print of the bonus are
-in `AI_WEEKLY_WORKFLOW_STUDENT_EN.md` / `_TR.md`.
+How the points are computed, what the checker looks for, and the fine print of the bonus
+are in `AI_WEEKLY_WORKFLOW_STUDENT_EN.md` / `_TR.md`.
 
 ## Weekly plan
 
@@ -41,37 +49,37 @@ in `AI_WEEKLY_WORKFLOW_STUDENT_EN.md` / `_TR.md`.
 
 | Week | Content | In class | After class | Notes |
 |---|---|---|---|---|
-| 1 | Course intro; tools; Git; first contact with LLMs | • The assignment is explained step by step<br>• nothing is built yet | Install tools, create the private repo from the template, add the Collaborator, fill in student.json, write hello.py, explore two LLMs | • Worth 5 pts, all on Saturday (3 auto · 1 commits · 1 AI log)<br>• No contributors this week |
-| 2 | Proposal Part A + Requirements (SRS) | • Write problem and solution<br>• interview two stakeholders<br>• start the requirement list | • Finish proposal Part A<br>• write the SRS with its diagrams | • Proposal lives at the root, revisable any week with a change-log line<br>• Role: stakeholder |
-| 3 | Design + Proposal Part B | • Architecture<br>• market and competitors<br>• design reviewed by two | • Design document with its diagrams and the data model<br>• commercial potential<br>• technical risks incl. store choice | • S0: proposal §12 names store, fee, lead time<br>• Role: design-reviewer |
-| 4 | Clickable prototype | • Build the main flow<br>• two testers walk it | • Complete the screen flow<br>• register the developer account | • S1: register today, verification takes days<br>• Role: prototype-tester |
-| 5 | Prototype revision; development starts | • Revise the prototype on feedback<br>• server skeleton runs locally | Login by e-mail code / OTP working end to end | Role: prototype-tester (revision) |
-| 6 | Chatbot I — the engine | • Ollama + Qwen running<br>• BGE-M3 embeddings over the project's own documents<br>• a chat endpoint on the server answers a question about the project | • Retrieval tuned (chunking, top-k)<br>• model notes: models tried, what they got wrong<br>• create the app record in the store | • S2: app record / bundle id<br>• Role: code-reviewer |
-| 7 | Chatbot II — in the clients | Chat screen in the web client talking to the server | • Chat screen in the mobile client<br>• tests<br>• CI | • First feature live on all three tiers<br>• Role: chat-tester |
-| 8 | Development — the project's own feature | The project's core feature on all three clients | • Feature complete<br>• upload the first build to a test track | • S3 starts the store's mandatory test period<br>• Role: test-user |
-| 9 | Beta test | • Enrol testers on the track<br>• open the bug list | • Fix bugs<br>• write the test report | • Beta testers must match the store's testers<br>• Role: beta-tester |
-| 10 | UAT + submission | Run the UAT session with participants | • UAT report<br>• deployment diagram<br>• submit for review | • S5 leaves a week for rejection and resubmit<br>• Role: uat-participant |
-| 11 | Release + hardening | • Apply review fixes<br>• release-tester installs from the store | • Go live<br>• final README | • S6: live<br>• Role: release-tester |
-| 12 | Closure | • Poster draft reviewed<br>• defence rehearsal | Final poster | • The defence itself is in Weeks 13–14, run from the store install<br>• Role: poster-reviewer |
+| 1 | Course intro; tools; Git; first contact with LLMs (large language models) | • The assignment is explained step by step<br>• nothing is built yet | Install the tools, create the private repo from the template, add the Collaborator, fill in student.json, write hello.py and explore two LLMs | • The week is worth 5 pts, all read on Saturday (3 auto · 1 commits · 1 AI log)<br>• There are no contributors this week |
+| 2 | Proposal Part A + Requirements (SRS, the document that lists what the system must do) | • Write the problem and the solution<br>• interview two stakeholders<br>• start the requirement list | • Finish proposal Part A<br>• write the SRS with its diagrams | • The proposal lives at the root, and you may revise it in any week with a change-log line<br>• Role: stakeholder |
+| 3 | Design + Proposal Part B | • Draw the architecture<br>• describe the market and the competitors<br>• two classmates review the design | • Write the design document with its diagrams and the data model<br>• write the commercial potential<br>• write the technical risks, including the store choice | • S0: §12 of the proposal names the store, the fee and the lead time<br>• Role: design-reviewer |
+| 4 | Clickable prototype | • Build the main flow<br>• two testers walk through it | • Complete the screen flow<br>• register the developer account | • S1: register today, because the verification takes days<br>• Role: prototype-tester |
+| 5 | Prototype revision; development starts | • Revise the prototype on the feedback<br>• the server skeleton runs locally | The login by e-mail code / OTP works end to end | Role: prototype-tester (revision) |
+| 6 | Chatbot I — the engine | • Ollama + Qwen are running<br>• BGE-M3 embeddings are built over the project's own documents<br>• a chat endpoint on the server answers a question about the project | • Tune the retrieval (chunking, which is how the documents are cut into pieces, and top-k, which is how many pieces are given to the model)<br>• write the model notes: which models you tried and what they got wrong<br>• create the app record in the store | • S2: the app record / bundle id (the unique name under which the store knows your app)<br>• Role: code-reviewer |
+| 7 | Chatbot II — in the clients | The chat screen in the web client talks to the server | • Build the chat screen in the mobile client<br>• write the tests<br>• set up CI (continuous integration, the checks that run on every push) | • The first feature is live on all three tiers<br>• Role: chat-tester |
+| 8 | Development — the project's own feature | The project's core feature runs on all three clients | • Complete the feature<br>• upload the first build to a test track | • S3 starts the store's mandatory test period<br>• Role: test-user |
+| 9 | Beta test | • Enrol the testers on the track<br>• open the bug list | • Fix the bugs<br>• write the test report | • The beta testers must be the same people as the store's testers<br>• Role: beta-tester |
+| 10 | UAT (User Acceptance Test, a session in which real users try the product) + submission | Run the UAT session with the participants | • Write the UAT report<br>• draw the deployment diagram<br>• submit the app for review | • S5 leaves a week for a rejection and a resubmission<br>• Role: uat-participant |
+| 11 | Release + hardening | • Apply the review fixes<br>• the release-tester installs the app from the store | • Go live<br>• write the final README | • S6: the app is live<br>• Role: release-tester |
+| 12 | Closure | • The poster draft is reviewed<br>• defence rehearsal | Finish the final poster | • The defence itself is in Weeks 13–14, and it is run from the store install<br>• Role: poster-reviewer |
 
 ### File flow — what the student receives and what she pushes
 
-Assignments come as `_EN` and `_TR`; the suffix is omitted below. Readings (`AI_DocN`) are English. The lecture deck is not a file in the repository.
+Assignments come as `_EN` and `_TR`, and the suffix is omitted below. The readings (`AI_DocN`) are in English. The lecture deck is not a file in the repository.
 
 | Week | Handed out (arrives in `weekNN/`, or root) | Pushed by end of lecture (5) | Pushed by Saturday (5) |
 |---|---|---|---|
-| 1 | • `AI_Doc1`–`AI_Doc4` pre-reading (root)<br>• `week01/ASSIGNMENT_01`<br>• scaffolds `llm_notes.md`, `ai_log_01.md`<br>• root: `student.json`, `README`, `SETUP_CARD`, `WEEKLY_WORKFLOW_STUDENT` | — | • `student.json`<br>• `week01/setup_proof.md`<br>• `hello.py`<br>• `llm_notes.md`<br>• `ai_log_01.md` (all 5 pts) |
+| 1 | • `AI_Doc1`–`AI_Doc4` pre-reading (root)<br>• `week01/ASSIGNMENT_01`<br>• the scaffolds (files that arrive with headings but no content) `llm_notes.md`, `ai_log_01.md`<br>• root: `student.json`, `README`, `SETUP_CARD`, `WEEKLY_WORKFLOW_STUDENT` | — | • `student.json`<br>• `week01/setup_proof.md`<br>• `hello.py`<br>• `llm_notes.md`<br>• `ai_log_01.md` (all 5 pts) |
 | 2 | • `week02/ASSIGNMENT_02`<br>• root `PROPOSAL.md` scaffold<br>• `week02/SRS.md` scaffold<br>• `requirements.json` scaffold<br>• `contributors_02.json`<br>• `ai_log_02.md`<br>| • `PROPOSAL.md` §1–§4<br>• `week02/requirements.json` first list<br>• `contributors_02.json` | • `PROPOSAL.md` §5–§7<br>• `week02/SRS.md` + diagrams<br>• `requirements.json` final<br>• `ai_log_02.md` |
 | 3 | • `week03/ASSIGNMENT_03`<br>• `DESIGN.md` scaffold<br>• `contributors_03.json`<br>• `ai_log_03.md` | • `week03/DESIGN.md` architecture + diagram<br>• `PROPOSAL.md` §8–§10<br>• `contributors_03.json` | • `week03/DESIGN.md` diagrams + data model<br>• `PROPOSAL.md` §11–§12 + change log<br>• `ai_log_03.md` |
-| 4 | • `week04/ASSIGNMENT_04`<br>• `store/store.json` scaffold<br>• `contributors_04.json`<br>• `ai_log_04.md` | • prototype link/file<br>• `contributors_04.json` | • full screen flow<br>• tester feedback log<br>• `week04/store/store.json` S1<br>• `ai_log_04.md` |
-| 5 | • `week05/ASSIGNMENT_05`<br>• `contributors_05.json`<br>• `ai_log_05.md` | • revised prototype<br>• server skeleton<br>• `contributors_05.json` | • login working<br>• revision log<br>• `ai_log_05.md` |
-| 6 | • `week06/ASSIGNMENT_06`<br>• `week06/requirements.txt` (Ollama client, sentence-transformers)<br>• `embedder.py`/`chat` scaffolds<br>• `model_notes.md` scaffold<br>• `contributors_06.json`<br>• `ai_log_06.md` | • `embedder.py`<br>• `chat` endpoint answering one question<br>• `contributors_06.json` | • retrieval over all project docs<br>• `week06/model_notes.md`<br>• `store.json` S2<br>• `ai_log_06.md` |
-| 7 | • `week07/ASSIGNMENT_07`<br>• test + CI scaffold<br>• `contributors_07.json`<br>• `ai_log_07.md` | • chat screen in the web client<br>• `contributors_07.json` | • chat screen in the mobile client<br>• tests + CI green<br>• `ai_log_07.md` |
-| 8 | • `week08/ASSIGNMENT_08`<br>• `contributors_08.json`<br>• `ai_log_08.md` | • core feature on all three clients<br>• `contributors_08.json` | • feature complete<br>• `store.json` S3 (first build, track)<br>• `ai_log_08.md` |
-| 9 | • `week09/ASSIGNMENT_09`<br>• test report scaffold<br>• `contributors_09.json`<br>• `ai_log_09.md` | • testers enrolled (= `contributors_09.json`)<br>• bug list | • fixes<br>• test report<br>• `store.json` S4<br>• `ai_log_09.md` |
-| 10 | • `week10/ASSIGNMENT_10`<br>• UAT report scaffold<br>• `contributors_10.json`<br>• `ai_log_10.md` | • UAT findings<br>• `contributors_10.json` | • UAT report<br>• deployment diagram<br>• `store.json` S5<br>• `ai_log_10.md` |
-| 11 | • `week11/ASSIGNMENT_11`<br>• final README scaffold<br>• `contributors_11.json`<br>• `ai_log_11.md` | • review fixes<br>• `contributors_11.json` | • `store.json` S6 (store URL + web URL)<br>• final README<br>• `ai_log_11.md` |
-| 12 | • `week12/ASSIGNMENT_12`<br>• poster spec<br>• `contributors_12.json`<br>• `ai_log_12.md` | • poster draft<br>• `contributors_12.json` | • final poster<br>• `ai_log_12.md`<br>• defence from the store install |
+| 4 | • `week04/ASSIGNMENT_04`<br>• `store/store.json` scaffold<br>• `contributors_04.json`<br>• `ai_log_04.md` | • the prototype link/file<br>• `contributors_04.json` | • the full screen flow<br>• the tester feedback log<br>• `week04/store/store.json` S1<br>• `ai_log_04.md` |
+| 5 | • `week05/ASSIGNMENT_05`<br>• `contributors_05.json`<br>• `ai_log_05.md` | • the revised prototype<br>• the server skeleton<br>• `contributors_05.json` | • the login working<br>• the revision log<br>• `ai_log_05.md` |
+| 6 | • `week06/ASSIGNMENT_06`<br>• `week06/requirements.txt` (Ollama client, sentence-transformers)<br>• `embedder.py`/`chat` scaffolds<br>• `model_notes.md` scaffold<br>• `contributors_06.json`<br>• `ai_log_06.md` | • `embedder.py`<br>• the `chat` endpoint answering one question<br>• `contributors_06.json` | • retrieval working over all project docs<br>• `week06/model_notes.md`<br>• `store.json` S2<br>• `ai_log_06.md` |
+| 7 | • `week07/ASSIGNMENT_07`<br>• test + CI scaffold<br>• `contributors_07.json`<br>• `ai_log_07.md` | • the chat screen in the web client<br>• `contributors_07.json` | • the chat screen in the mobile client<br>• tests + CI green<br>• `ai_log_07.md` |
+| 8 | • `week08/ASSIGNMENT_08`<br>• `contributors_08.json`<br>• `ai_log_08.md` | • the core feature on all three clients<br>• `contributors_08.json` | • the feature complete<br>• `store.json` S3 (first build, track)<br>• `ai_log_08.md` |
+| 9 | • `week09/ASSIGNMENT_09`<br>• test report scaffold<br>• `contributors_09.json`<br>• `ai_log_09.md` | • the testers enrolled (= `contributors_09.json`)<br>• the bug list | • the fixes<br>• the test report<br>• `store.json` S4<br>• `ai_log_09.md` |
+| 10 | • `week10/ASSIGNMENT_10`<br>• UAT report scaffold<br>• `contributors_10.json`<br>• `ai_log_10.md` | • the UAT findings<br>• `contributors_10.json` | • the UAT report<br>• the deployment diagram<br>• `store.json` S5<br>• `ai_log_10.md` |
+| 11 | • `week11/ASSIGNMENT_11`<br>• final README scaffold<br>• `contributors_11.json`<br>• `ai_log_11.md` | • the review fixes<br>• `contributors_11.json` | • `store.json` S6 (store URL + web URL)<br>• the final README<br>• `ai_log_11.md` |
+| 12 | • `week12/ASSIGNMENT_12`<br>• poster spec<br>• `contributors_12.json`<br>• `ai_log_12.md` | • the poster draft<br>• `contributors_12.json` | • the final poster<br>• `ai_log_12.md`<br>• the defence from the store install |
 
 ## Change log
 
