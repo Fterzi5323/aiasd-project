@@ -22,7 +22,7 @@ The course grades the evaluation, not the generation: it does not grade what the
 On completing the course the student can:
 
 1. **Write a project proposal.** The student starts from a real problem of their own and writes Part A, which describes the problem and the solution, names the stakeholders and gives the use cases, and Part B, which analyses the market and the competitors, judges the commercial potential and lists the technical risks, and pitches it in five minutes (Weeks 2–3).
-2. **Engineer requirements.** The student manages the functional and non-functional requirements as an SRS (Software Requirements Specification, the document that lists what the system must do). Every requirement carries an identifier of the form REQ-NNN, is traceable and is frozen at a set point, and the student makes every later change visible with a dated change log (Weeks 2–3).
+2. **Engineer requirements.** The student manages the functional and non-functional requirements as an SRS (Software Requirements Specification, the document that lists what the system must do). Every requirement carries an identifier of the form REQ-NNN, is traceable, keeps its meaning once given, and enters a baseline after the prototype review, and the student makes every later change visible with a dated change log (Weeks 2–3).
 3. **Design and prototype.** The student draws the architecture, the data model, the system-context diagram and the deployment diagram in Mermaid (a text notation for diagrams that GitHub draws inside a markdown file) in the repository, builds a clickable prototype and revises it after peer review (Weeks 4–5).
 4. **Develop a full-stack application.** The student builds a server with login by e-mail code or OTP, a web client and a mobile client, and the same feature runs on all three tiers (Weeks 5, 8).
 5. **Develop a mobile application.** The student builds the mobile client with Flutter, React Native–Expo, Kotlin or Swift, and the client runs on a phone and is ready for a store (Weeks 7–8).
@@ -65,9 +65,9 @@ The tools are Python 3.12, Git/GitHub, VS Code, Streamlit, Ollama with an open-w
 |---|---|---|
 | 1 | 22/09 · 23/09 | Foundations: the students set up the tools, learn Git/GitHub and meet LLMs (large language models) and transformers for the first time |
 | 2 | 29/09 · 30/09 | Proposal Part A and Requirements (SRS): the students describe the problem and the solution, name the stakeholders and write the use cases |
-| 3 | 06/10 · 07/10 | Pitch and review in groups of four; Proposal Part B, in which the students analyse the market and competitors, judge the commercial potential and list the risks; the store is chosen (S0); the requirements are frozen |
-| 4 | 13/10 · 14/10 | Design: the students draw the architecture, the data model and the system context, build the clickable prototype and register the developer account (S1) |
-| 5 | 20/10 · 21/10 | Prototype revision; development starts with the server skeleton and the login by e-mail code / OTP |
+| 3 | 06/10 · 07/10 | Pitch and review in groups of four; Proposal Part B, in which the students analyse the market and competitors, judge the commercial potential and list the risks; the store is chosen (S0); from here a requirement id never changes its meaning |
+| 4 | 13/10 · 14/10 | Clickable prototype and test cases: the students write test cases from their acceptance criteria, walk through them on the prototype and update the requirements; the developer account is registered (S1) |
+| 5 | 20/10 · 21/10 | Design and API contract; development starts with the server skeleton and the login by e-mail code / OTP; requirements and test cases become the baseline |
 | 6 | 27/10 · 28/10 | Chatbot I, the engine: the students run Ollama + Qwen, build BGE-M3 embeddings and write the chat endpoint; the app record is created (S2) |
 | 7 | 03/11 · 04/11 | Chatbot II: the chatbot goes into the web and mobile clients; tests; CI |
 | 8 | 10/11 · 11/11 | The project's own core feature runs on all three tiers; the first build goes onto a test track (S3) |

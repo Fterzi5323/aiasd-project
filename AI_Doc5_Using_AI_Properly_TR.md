@@ -107,8 +107,8 @@ rezervasyonu olur. Elle düzelttim; son model `docs/data_model.md` dosyasındad�
 **Günlükte.** Önce yazdığınız ölçütleri, cevabın onlara göre ölçülmüş durumunu ve neyin
 başarısız olduğunu kaydedin.
 
-**Bu derste.** Ölçütleriniz zaten vardır: bunlar, 3. Hafta'dan beri donmuş olan
-`requirements.json` dosyasındaki kimliklerdir. Tasarımın ya da kodun karşılaması gereken
+**Bu derste.** Ölçütleriniz zaten vardır: bunlar, anlamı 3. Hafta'dan beri sabit olan ve 5. Hafta sonundan itibaren taban çizginizi oluşturan
+`requirements.json` kimlikleridir. Tasarımın ya da kodun karşılaması gereken
 REQ satırlarını istemin içine yapıştırın. Bir REQ'i bozan cevap haftanın hatasıdır.
 Elinizde olmayan bir REQ'e ihtiyaç duyan cevap ise sessizce eklenmez; Değişiklik günlüğüne
 tarihli bir satır olarak kaydedilir.

@@ -171,16 +171,17 @@ Nobody can write that for someone who was not there. First meeting: this week, i
 
 ---
 
-## Requirements — last week to move them
+## Requirements — ids stay, the list stays open
 
-`requirements.json` may still change today: add, reword, drop (keep the id, set
-`"dropped": true`).
+`requirements.json` may still change: add, reword, drop (the id stays, `"dropped": true`).
 
-**From Saturday the ids are frozen** for the rest of the term. Design, tests and the
-traceability matrix will point at `REQ-004`; it has to mean the same thing in December.
+**From Saturday an id never changes its meaning.** `REQ-004` must mean the same thing in December.
 
-REQ-001 (e-mail-code login) and REQ-006 (390 px phone screen) stay as they are for
-everyone — three of you changed them last week and have an issue about it.
+**The list stays open until the end of Week 5.** In Week 4 you walk through test cases from your acceptance criteria on the clickable prototype; what is missing goes in, with a change-log line.
+
+**End of Week 5: requirements + test cases = your baseline.** After that, changes go through a change request.
+
+REQ-001 (e-mail-code login) and REQ-006 (390 px phone screen) stay as they are for everyone.
 
 ---
 

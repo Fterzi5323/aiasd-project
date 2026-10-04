@@ -95,7 +95,9 @@ WhatsApp'ın yanında kimsenin kullanmayacağını söyledi". Teklif değişebil
 değişemez.
 
 `requirements.json` bu hafta da değişebilir — ekleyin, çıkarın (id kalır, `"dropped":
-true`), yeniden yazın. **Cumartesiden itibaren id'ler dönem boyunca donar.**
+true`), yeniden yazın. **Cumartesiden itibaren bir id'nin anlamı hiç değişmez**; listenin
+kendisi 5. Hafta sonuna kadar açık kalır ve prototip incelemesinden sonra taban çizginiz
+(baseline) olur.
 
 ### 4. Push
 
@@ -154,7 +156,7 @@ her şey aşağıda.
 **Cumartesiye kadar**
 - [ ] `PROPOSAL.md` §8–§12 dolu; §12 mağazayı, ücretini ve inceleme süresini adlandırıyor
 - [ ] `week03/ai_log_03.md` — üç itiraz, biri teklifte cevaplanmış, birinin yanlışlığı gösterilmiş, yazışma yapıştırılmış
-- [ ] `requirements.json` son hâli — id'ler buradan sonra donuk
+- [ ] `requirements.json` güncel — bundan sonra bir id'nin anlamı değişmez
 - [ ] GitHub'da kontroller yeşil; 1. ve 2. hafta hâlâ geçiyor
 
 ---

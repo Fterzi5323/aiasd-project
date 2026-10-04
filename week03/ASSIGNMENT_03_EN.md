@@ -93,7 +93,9 @@ reviewers said nobody would use it next to WhatsApp". A proposal is allowed to c
 it is not allowed to change silently.
 
 `requirements.json` may change this week too — add, drop (keep the id, set
-`"dropped": true`), reword. **From Saturday the ids are frozen** for the rest of the term.
+`"dropped": true`), reword. **From Saturday an id never changes its meaning**; the list
+itself stays open until the end of Week 5, when it becomes your baseline after the
+prototype review.
 
 ### 4. Push
 
@@ -152,7 +154,7 @@ asks for is listed below.
 **By Saturday**
 - [ ] `PROPOSAL.md` §8–§12 filled; §12 names the store, its fee and its review time
 - [ ] `week03/ai_log_03.md` — three objections, one answered in the proposal, one shown wrong, exchange pasted
-- [ ] `requirements.json` final — ids frozen from here
+- [ ] `requirements.json` updated — from here an id never changes its meaning
 - [ ] Checks green on GitHub; Weeks 1–2 still pass
 
 ---

@@ -169,16 +169,17 @@ Orada olmayan biri için bunu kimse yazamaz. İlk toplantı: isterseniz bu hafta
 
 ---
 
-## Gereksinimler — oynatmak için son hafta
+## Gereksinimler — id'ler kalıcı, liste açık
 
-`requirements.json` bugün hâlâ değişebilir: ekleyin, yeniden yazın, çıkarın (id kalır,
-`"dropped": true`).
+`requirements.json` hâlâ değişebilir: ekleyin, yeniden yazın, çıkarın (id kalır, `"dropped": true`).
 
-**Cumartesiden itibaren id'ler dönem boyunca donar.** Tasarım, testler ve izlenebilirlik
-matrisi `REQ-004`'ü gösterecek; Aralık'ta da aynı şeyi ifade etmeli.
+**Cumartesiden itibaren bir id'nin anlamı hiç değişmez.** `REQ-004` Aralık'ta da aynı şeyi ifade etmeli.
 
-REQ-001 (e-posta koduyla giriş) ve REQ-006 (390 px telefon ekranı) herkeste olduğu gibi
-kalır — geçen hafta üçünüz değiştirmişti, issue'ları var.
+**Liste 5. Hafta sonuna kadar açık kalır.** 4. Hafta'da kabul ölçütlerinizden test case'ler yazıp tıklanabilir prototip üzerinde yürütürsünüz; eksik çıkan, değişiklik günlüğüne bir satırla listeye girer.
+
+**5. Hafta sonu: gereksinimler + test case'ler = taban çizginiz (baseline).** Ondan sonra değişiklikler bir değişiklik talebiyle yapılır.
+
+REQ-001 (e-posta koduyla giriş) ve REQ-006 (390 px telefon ekranı) herkeste olduğu gibi kalır.
 
 ---
 

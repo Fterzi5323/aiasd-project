@@ -109,7 +109,7 @@ wrong because one user has many reservations. I fixed it by hand; the final mode
 what failed.
 
 **In this course.** Your criteria already exist: they are the ids in `requirements.json`,
-which have been frozen since Week 3. Paste into the prompt the REQ lines that the design
+whose meaning has been fixed since Week 3 and which form your baseline from the end of Week 5. Paste into the prompt the REQ lines that the design
 or the code must satisfy. An answer that breaks a REQ is the error of the week. An answer
 that needs a REQ you do not have is recorded as a dated line in the Change log, not added
 silently.
