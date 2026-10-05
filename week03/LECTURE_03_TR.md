@@ -4,18 +4,18 @@
 *Bu sayfadan sunulur. Bölüm bölüm kaydırın; her `---` bir slayttır.*
 
 <!-- Hoca: tarayıcıyı %150 yakınlaştır. Süreler notlarda. Toplam ≈ 3 s:
-10 dk giriş · 50 dk inceleme turu · turdan sonra 10 dk · 11:50'ye kadar çalışma · 11:50 push'unun hemen ardından dondurma. -->
+10 dk giriş · 50 dk inceleme turu · projeyi kesinleştirmeye en az 30 dk (başlık, §3–§4) · 20 dk ekranlar · 11:50'ye kadar çalışma · 11:50 push'unun hemen ardından dondurma. -->
 
 ---
 
 ## Bugün
 
-1. 2. hafta nasıl geçti
+1. Geçen hafta nasıl geçti
 2. Dönem boyunca kalacak iki kural
-3. Pitch nedir, neden yazdınız
-4. İnceleme turu — dörtlü gruplar, ilk saat
-5. Turdan sonra: üç değerlendiren, gözden geçirilmiş teklif, değişiklik günlüğü, ana akışın ekranları
-6. Projeniz 11:50'de kesinleşir
+3. **Bugün projeniz kesinleşiyor: başlığı ve içeriği**
+4. Pitch nedir, neden yazdınız
+5. İnceleme turu — dörtlü gruplar, ilk saat
+6. Turdan sonra: üç değerlendiren, gözden geçirilmiş teklif, değişiklik günlüğü, ana akışın ekranları
 7. Cumartesiye kadar: Bölüm B, mağaza, düşman gözüyle okutma
 8. Hafta nasıl notlanıyor
 
@@ -48,6 +48,18 @@ Onları bugün adlandırıyorsunuz.
 
 Son seferi ya da beş kişiyi söyleyemiyorsanız sorun slaytta değil projededir. **Projeyi bu
 derste değiştirin:** 11:50'de kesinleşiyor.
+
+---
+
+## Bugün projeniz kesinleşiyor
+
+**11:50 push'uyla: başlığı ve içeriği.** Dönem sonuna kadar aynı başlık, aynı problem ve aynı ürün.
+
+Ayrıntıları değişmeye devam edebilir: özellikler, gereksinimler, kapsam. Her değişiklik Değişiklik günlüğünde bir satır alır. Projenin kendisi değişemez.
+
+**Bu, dönemin en önemli kararıdır. Ona zaman ayırın.** Projeyi inceleme turunda sınayın; sonra grubunuzun cevapları önünüzdeyken §1'i (başlık) ve §3–§4'ü (problem ve ürün) kesinleştirmek için en az yarım saat ayırın.
+
+Bugünden sonra yalnızca teknik olarak imkânsız çıkan bir proje değişebilir; o da ancak benim bir issue'da yazılı onayımla.
 
 ---
 
@@ -112,18 +124,15 @@ bir slaytı sorabilirim.
 
 ## İnceleme turu — dörtlü gruplar
 
-**Dört kişilik grubunuzu şimdi kendiniz kurun.** Reponuz henüz yok mu? Yakınınızdaki üç
-kişilik bir gruba katılın, turdan sonra bana gelin. Bu grup dönem boyunca sizinle kalacak;
-haftada bir çevrimiçi buluşabileceğiniz kişileri seçin.
+**Dört kişilik grubunuzu şimdi kendiniz kurun.** Grup dönem boyunca sizinle kalacak; haftada bir çevrim içi buluşabileceğiniz kişileri seçin. Sınıf dörde bölünmüyor ve arta mı kaldınız? Bir gruba katılın, o grup beş kişi olur. Üç kişilik grup yok.
 
-Herkes: kendi bilgisayarından **5 dakika** sunum. Diğer üçü dinler, sonra üç sorunun her
-biri için birer cümle **yazar** ve verir — kâğıt ya da metin dosyası. Sonra sıradaki. Dört
-tur, yaklaşık **45 dakika**.
+**Grubunuzu `week03/group_03.json` dosyasına yazın:** kendi numaranız dahil bütün üyelerin numaraları. Her üye aynı listeyi yazar. Listeler farklıysa grubun her üyesi bir puan kaybeder.
 
-Değerlendirenler: ne düşünüyorsanız söyleyin. "İyi olmuş" kimseye yardım etmez, kimseye
-puan getirmez.
+Herkes: kendi bilgisayarından **5 dakika** sunum. Diğer üçü dinler, sonra üç sorunun her biri için birer cümle **yazar** ve verir — kâğıt ya da metin dosyası. Sonra sıradaki. Dört tur, yaklaşık **45 dakika**.
 
-<!-- grades/out/week03-groups-tr.html'yi yansıt. Dolaş. 12 dakikada bir uyar. -->
+Değerlendirenler: ne düşünüyorsanız söyleyin. "İyi olmuş" kimseye yardım etmez, kimseye puan getirmez.
+
+<!-- Grupları kurmaları için üç dakika verin; artanları gruplara yönlendirin. Dolaşın. 12 dakikada bir uyarın. -->
 
 ---
 
@@ -142,31 +151,16 @@ ve onlar için katkı bonusu kazanırsınız.
 
 ## Turdan sonra — 11:50'ye kadar
 
-**`week03/contributors_03.json`** — üç değerlendireniniz, rol `reviewer`, öğrenci
-numaraları ve her biri için **yazdığı en yararlı cümle, alıntı olarak**. Sonra
-`accepted: true/false` ve `why`. Gerekçeyle reddetmek olur; arkasında hiçbir şey olmayan
-"dedi, değiştirdim" olmaz.
+**`week03/contributors_03.json`** — üç değerlendireniniz, rol `reviewer`, öğrenci numaraları ve her biri için **yazdığı en yararlı cümle, alıntı olarak**. Sonra `accepted: true/false` ve `why`. Gerekçeyle reddetmek olur; arkasında hiçbir şey olmayan "dedi, değiştirdim" olmaz.
 
-**`PROPOSAL.md`** — üç cevap önünüzdeyken §1–§7'yi gözden geçirin. Her değişiklik dosyanın
-sonundaki Değişiklik günlüğüne **tarihli bir satır**:
+**`PROPOSAL.md`** — üç cevap önünüzdeyken §1–§7'yi gözden geçirin. Her değişiklik dosyanın sonundaki Değişiklik günlüğüne **tarihli bir satır**:
 
 `2026-10-07 — §4: grup sohbeti çıkarıldı; iki değerlendiren WhatsApp'ın yanında kimsenin kullanmayacağını söyledi.`
 
-Teklif değişebilir. Sessizce değişemez.
+Teklif değişebilir. Sessizce değişemez. **§1'i (başlık) ve §3–§4'ü şimdi kesinleştirin: 11:50'de değişmez hâle geliyorlar.**
 
 ---
 
-## Projeniz 11:50'de kesinleşir
-
-**11:50 push'uyla projeniz kesinleşir:** dönem sonuna kadar aynı problem ve aynı ürün.
-
-Ayrıntıları değişmeye devam edebilir: özellikler, gereksinimler, kapsam. Her değişiklik Değişiklik günlüğünde bir satır alır.
-
-Projenin kendisi değişemez. Bugünden sonra yalnızca teknik olarak imkânsız çıkan bir proje değişebilir; o da ancak benim bir issue'da yazılı onayımla.
-
-**Kararı inceleme turunda verin.** Grubunuza sorun: problem gerçek mi, 11. haftaya kadar bitirilebilir mi?
-
----
 
 ## Ana akışınızın ekranları — `week03/screens_03.md`
 
@@ -304,6 +298,8 @@ zaman gider, ne push edilmiş olursa olsun.
 Gruplar kuruldu. Bilgisayarlar açık, `PITCH_03.md` önizlemede.
 
 **Her grupta ilk sunan: başlayın.**
+
+**11:50'de projenizin başlığı ve içeriği kesinleşiyor.** Gereken zamanı ayırın.
 
 <!-- Saati başlat. Dolaş. Turdan sonra "Turdan sonra" slaydı 12:00'ye kadar projeksiyonda
 kalsın; 11:40'tan sonra "Push". 11:50'nin hemen ardından dondur: push.md blok 3. -->

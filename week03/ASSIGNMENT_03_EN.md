@@ -5,6 +5,11 @@
 > **Before the lecture:** your `PITCH_03.md` must be written and pushed. The first hour
 > of the lecture is spent presenting it — there is no time to write it then. Bring your
 > laptop charged; you present from it.
+>
+> **In this lecture your project becomes final: its title and its content.** You work on
+> it for the rest of the term, so give this decision the time it needs, today, with your
+> group. Come with your project ready to be questioned, not with a project you are still
+> looking for.
 
 Last week you decided what to build. This week three classmates tell you what they
 think of it, you decide what to change, and you write the second half of the proposal —
@@ -20,8 +25,8 @@ Run the checker once:
 python .github/check_deliverables.py
 ```
 
-It brings `week03/PITCH_03.md`, `week03/contributors_03.json`, `week03/screens_03.md` and
-`week03/ai_log_03.md`.
+It brings `week03/PITCH_03.md`, `week03/group_03.json`, `week03/contributors_03.json`,
+`week03/screens_03.md` and `week03/ai_log_03.md`.
 `PROPOSAL.md` you already have; Part B (§8–§12) and the Change log are in it, waiting.
 
 ---
@@ -56,10 +61,13 @@ a club — because in Week 9 those people test it, and you will need them. If yo
 name the last time the problem happened, or five people who would use the product, the
 problem is with the project, not the slide: change the project in this lecture.
 
-**At the 11:50 push your project becomes fixed for the term**: the same problem and the
-same product until the end. Its details (features, requirements, scope) may still change,
-each with a line in the Change log; the project itself may not. Use the review round to
-decide: ask your group whether the project is real and whether it can be finished. Only a
+**At the 11:50 push your project becomes final for the term: its title and its content.**
+The same title, the same problem and the same product until the end. Its details (features,
+requirements, scope) may still change, each with a line in the Change log; the project
+itself may not. This is the most important decision of the term, so give it time: use the
+review round to test the project, then take at least half an hour after the round to
+settle §1 (the title) and §3–§4 (the problem and the product) with your group's answers in
+front of you. Ask them whether the project is real and whether it can be finished. Only a
 project that turns out to be technically impossible can change after today, and only with
 my written approval in an issue.
 
@@ -69,7 +77,12 @@ my written approval in an issue.
 
 ### 1. Review round — groups of four, first hour
 
-You form a group of four yourselves, at the start of the lecture; a student with no repository yet joins a group of three. Each person presents for five minutes from their own
+You form a group of four yourselves, at the start of the lecture. If the class does not
+divide into fours, the students left over join a group, which then has five members; do not
+form a group of three. **Then every member writes the group into `week03/group_03.json`**:
+the student numbers of all members, your own included. Every member writes exactly the same
+list. After the lecture I compare the lists, and if they are not the same, every member of
+the group loses one point of the end-of-lecture mark. Each person presents for five minutes from their own
 laptop; the other three listen, then **write** one sentence for each of the three
 questions on slide 7 — on paper or in a text file, handed to the presenter. Four rounds,
 about 45 minutes. Say what you think; a polite "it is good" helps nobody and earns nobody
@@ -86,7 +99,8 @@ already.
 
 ### 2. `week03/contributors_03.json` — three reviewers
 
-Your three reviewers, role `reviewer`, student numbers, and for each **the most useful
+Your three reviewers are the three other members of your group (in a group of five,
+three of the four). Role `reviewer`, student numbers, and for each **the most useful
 sentence they wrote** — quoted, not summarised. Then `accepted: true` or `false`, and
 `why`. Rejecting advice with a reason is fine; accepting everything without a trace of
 what changed is not. Each reviewer you name earns the contributors' bonus, as last week.
@@ -183,11 +197,12 @@ asks for is listed below.
 - [ ] `week03/PITCH_03.md` — six slides filled, written by you, pushed
 
 **In the lab, by 11:50**
-- [ ] `week03/contributors_03.json` — three reviewers, a quoted sentence each, accepted/why
+- [ ] `week03/group_03.json` — the numbers of all members of your group, the same list as theirs
+- [ ] `week03/contributors_03.json` — three reviewers from your group, a quoted sentence each, accepted/why
 - [ ] `PROPOSAL.md` §1–§7 revised where the review changed them
 - [ ] `PROPOSAL.md` Change log — at least one dated line
 - [ ] `week03/screens_03.md` — at least five screens of the main flow, each with what the user does there and its REQ ids
-- [ ] Your project is final: from this push on, only its details may change
+- [ ] Your project's title and content are final: from this push on, only its details may change
 
 **By Saturday**
 - [ ] `PROPOSAL.md` §8–§12 filled; §12 names the store, its fee and its review time
@@ -207,9 +222,10 @@ optional this week and marked in Week 4.
 
 ## How this week is graded
 
-**End of the lecture — 5 points.** Pitch pushed and complete, three reviewers with real
-sentences, Change log started, the screens of the main flow listed — read from your
-repository as it stands at the 11:50 push.
+**End of the lecture — 5 points.** Pitch pushed and complete, the group listed, three
+reviewers with real sentences, Change log started, the screens of the main flow listed —
+read from your repository as it stands at the 11:50 push. A group whose members did not
+write the same list loses one point, every member.
 
 **Saturday 23:59 — 5 points.** Checks green on your final state: **2**. Human
 involvement: **2** — your `ai_log_03.md` with its evidence, and reviews with real

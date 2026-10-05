@@ -492,6 +492,24 @@ def week3() -> None:
     log = re.sub(r"<!--.*?-->", "", text[m.end():], flags=re.DOTALL) if m else ""
     dated = re.findall(r"20\d\d-\d\d-\d\d", log)
     check(3, "PROPOSAL.md change log has a dated line", len(dated) >= 1, "no '2026-10-07 — §N: …' line after the review")
+    # --- the group: the same list in every member's repository (added 5 Oct 2026). Whether
+    # the lists of the members agree can only be seen across repositories, so that part is
+    # the instructor's (grade.py groups); here: a list that can be right, and reviewers in it.
+    gdata = load_json("week03/group_03.json")
+    glist = gdata.get("group") if isinstance(gdata, dict) else None
+    if not isinstance(glist, list):
+        check(3, "week03/group_03.json valid JSON", False, "missing or does not parse — run the checker to fetch it")
+    else:
+        nums = [str(x).strip().split("-")[0] for x in glist if str(x).strip()]
+        valid = [n for n in nums if re.fullmatch(r"\d{9}", n)]
+        me = my_number()
+        check(3, "group_03.json lists your group: 4 or 5 different numbers, yours included",
+              len(valid) == len(nums) and len(set(valid)) == len(valid) and len(valid) in (4, 5) and (me == "" or me in valid),
+              f"{len(valid)} valid numbers of {len(nums)}" + ("" if me in valid else " — your own number is missing"))
+        reviewers = [str(i.get("student_id", "")).strip().split("-")[0] for i in (contributors(3) or []) if isinstance(i, dict)]
+        outside = [r for r in reviewers if r and r not in valid]
+        check(3, "your reviewers are members of your group", bool(reviewers) and not outside,
+              f"not in group_03.json: {outside[:3]}" if outside else "no reviewers in contributors_03.json")
     # --- the main flow: the screens the Week 4 prototype is built from (added 5 Oct 2026;
     # the project is fixed at this push, and a project that cannot name its screens is not)
     sc = read("week03/screens_03.md")

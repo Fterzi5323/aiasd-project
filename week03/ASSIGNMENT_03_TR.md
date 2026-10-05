@@ -5,6 +5,10 @@
 > **Dersten önce:** `PITCH_03.md` dosyanız yazılmış ve push edilmiş olmalı. Dersin ilk
 > saati onu sunmakla geçer — o sırada yazacak zaman yok. Bilgisayarınızı şarjı dolu
 > getirin; sunumu ondan yapacaksınız.
+>
+> **Bu derste projeniz kesinleşir: başlığı ve içeriği.** Dönemin geri kalanında onun
+> üzerinde çalışacaksınız; bu karara bugün, grubunuzla, gereken zamanı ayırın. Derse
+> sorgulanmaya hazır bir projeyle gelin, hâlâ aradığınız bir projeyle değil.
 
 Geçen hafta ne yapacağınıza karar verdiniz. Bu hafta üç sınıf arkadaşınız bu karar
 hakkında ne düşündüğünü söyler, siz neyi değiştireceğinize karar verirsiniz ve teklifin
@@ -21,8 +25,8 @@ Denetleyiciyi bir kez çalıştırın:
 python .github/check_deliverables.py
 ```
 
-`week03/PITCH_03.md`, `week03/contributors_03.json`, `week03/screens_03.md` ve
-`week03/ai_log_03.md` gelir.
+`week03/PITCH_03.md`, `week03/group_03.json`, `week03/contributors_03.json`,
+`week03/screens_03.md` ve `week03/ai_log_03.md` gelir.
 `PROPOSAL.md` zaten sizde; Bölüm B (§8–§12) ve Değişiklik günlüğü onun içinde, sizi
 bekliyor.
 
@@ -58,10 +62,13 @@ kulüpte — çünkü 9. haftada o kişiler test edecek ve onlara ihtiyacınız 
 son ne zaman olduğunu ya da ürünü kullanacak beş kişiyi
 söyleyemiyorsanız sorun slaytta değil projededir: projeyi bu derste değiştirin.
 
-**11:50 push'uyla projeniz dönem için kesinleşir**: dönem sonuna kadar aynı problem ve aynı
-ürün. Ayrıntıları (özellikler, gereksinimler, kapsam) her biri Değişiklik günlüğünde bir
-satırla değişmeye devam edebilir; projenin kendisi değişemez. Karar için inceleme turunu
-kullanın: grubunuza projenin gerçek olup olmadığını ve bitirilip bitirilemeyeceğini sorun.
+**11:50 push'uyla projeniz dönem için kesinleşir: başlığı ve içeriği.** Dönem sonuna kadar
+aynı başlık, aynı problem ve aynı ürün. Ayrıntıları (özellikler, gereksinimler, kapsam) her
+biri Değişiklik günlüğünde bir satırla değişmeye devam edebilir; projenin kendisi
+değişemez. Bu, dönemin en önemli kararıdır; ona zaman ayırın: projeyi inceleme turunda
+sınayın, sonra grubunuzun cevapları önünüzdeyken §1'i (başlık) ve §3–§4'ü (problem ve
+ürün) kesinleştirmek için turdan sonra en az yarım saat ayırın. Grubunuza projenin gerçek
+olup olmadığını ve bitirilip bitirilemeyeceğini sorun.
 Bugünden sonra yalnızca teknik olarak imkânsız çıkan bir proje değişebilir; o da ancak
 benim bir issue'da yazılı onayımla.
 
@@ -71,7 +78,11 @@ benim bir issue'da yazılı onayımla.
 
 ### 1. İnceleme turu — dörtlü gruplar, ilk saat
 
-Dört kişilik grubunuzu dersin başında kendiniz kurarsınız; reposu henüz olmayan bir öğrenci üç kişilik bir gruba katılır. Herkes kendi bilgisayarından beş dakika sunar;
+Dört kişilik grubunuzu dersin başında kendiniz kurarsınız. Sınıf dörde bölünmüyorsa artan
+öğrenciler bir gruba katılır ve o grup beş kişi olur; üç kişilik grup kurmayın. **Sonra her
+üye grubu `week03/group_03.json` dosyasına yazar**: kendi numarası dahil bütün üyelerin
+öğrenci numaraları. Her üye tam olarak aynı listeyi yazar. Dersten sonra listeleri
+karşılaştırırım; aynı değilse grubun her üyesi ders sonu notundan bir puan kaybeder. Herkes kendi bilgisayarından beş dakika sunar;
 diğer üçü dinler, sonra 7. slayttaki üç sorunun her biri için birer cümle **yazar** —
 kâğıda ya da bir metin dosyasına — ve sunana verir. Dört tur, yaklaşık 45 dakika. Ne
 düşünüyorsanız söyleyin; nazik bir "iyi olmuş" kimseye yardım etmez, kimseye puan
@@ -87,7 +98,8 @@ görünür. İlkini bu hafta yapabilirsiniz.
 
 ### 2. `week03/contributors_03.json` — üç değerlendiren
 
-Üç değerlendireniniz, rol `reviewer`, öğrenci numaraları ve her biri için **yazdığı en
+Üç değerlendireniniz grubunuzun diğer üç üyesidir (beş kişilik grupta dördünden üçü). Rol
+`reviewer`, öğrenci numaraları ve her biri için **yazdığı en
 yararlı cümle** — özetlenmiş değil, alıntılanmış. Sonra `accepted: true` ya da `false`
 ve `why`. Bir öneriyi gerekçeyle reddetmek olur; her şeyi kabul edip neyin değiştiğinin
 izi olmaması olmaz. Adını yazdığınız her değerlendiren geçen haftaki gibi katkı bonusu
@@ -184,11 +196,12 @@ her şey aşağıda.
 - [ ] `week03/PITCH_03.md` — altı slayt dolu, sizin yazdığınız, push edilmiş
 
 **Derste, 11:50'ye kadar**
-- [ ] `week03/contributors_03.json` — üç değerlendiren, her birinden alıntı bir cümle, accepted/why
+- [ ] `week03/group_03.json` — grubunuzun bütün üyelerinin numaraları, onlarınkiyle aynı liste
+- [ ] `week03/contributors_03.json` — grubunuzdan üç değerlendiren, her birinden alıntı bir cümle, accepted/why
 - [ ] `PROPOSAL.md` §1–§7 incelemenin değiştirdiği yerlerde gözden geçirilmiş
 - [ ] `PROPOSAL.md` Değişiklik günlüğü — en az bir tarihli satır
 - [ ] `week03/screens_03.md` — ana akışın en az beş ekranı, her birinde kullanıcının orada ne yaptığı ve REQ kimlikleri
-- [ ] Projeniz kesin: bu push'tan sonra yalnızca ayrıntıları değişebilir
+- [ ] Projenizin başlığı ve içeriği kesin: bu push'tan sonra yalnızca ayrıntıları değişebilir
 
 **Cumartesiye kadar**
 - [ ] `PROPOSAL.md` §8–§12 dolu; §12 mağazayı, ücretini ve inceleme süresini adlandırıyor
@@ -208,9 +221,9 @@ isteğe bağlıdır ve 4. haftada notlanır.
 
 ## Bu hafta nasıl notlanıyor
 
-**Ders sonu — 5 puan.** Sunum push edilmiş ve tam, üç değerlendiren gerçek cümlelerle,
-Değişiklik günlüğü başlamış, ana akışın ekranları yazılmış — 11:50 push'undaki reponuzdan
-okunur.
+**Ders sonu — 5 puan.** Sunum push edilmiş ve tam, grup yazılmış, üç değerlendiren gerçek
+cümlelerle, Değişiklik günlüğü başlamış, ana akışın ekranları yazılmış — 11:50 push'undaki
+reponuzdan okunur. Üyeleri aynı listeyi yazmayan bir grubun her üyesi bir puan kaybeder.
 
 **Cumartesi 23:59 — 5 puan.** Son durumda kontroller yeşil: **2**. İnsan katkısı: **2** —
 kanıtıyla `ai_log_03.md` ve arkasında gerçek cümleler, gerçek kararlar olan incelemeler.

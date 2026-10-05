@@ -5,7 +5,7 @@
 
 <!-- Instructor: zoom the browser to 150 % and collapse the GitHub header (press "." for
 the editor view if you prefer a cleaner page). Timings in the notes. Total ≈ 3 h:
-10 min intro · 50 min review round · 10 min after the round · work until 11:50 · freeze right after the 11:50 push. -->
+10 min intro · 50 min review round · at least 30 min settling the project (title, §3–§4) · 20 min screens · work until 11:50 · freeze right after the 11:50 push. -->
 
 ---
 
@@ -13,10 +13,10 @@ the editor view if you prefer a cleaner page). Timings in the notes. Total ≈ 3
 
 1. Week 2 — how it went
 2. Two rules that stay for the whole term
-3. What a pitch is, and why you wrote one
-4. The review round — groups of four, first hour
-5. After the round: three reviewers, a revised proposal, a change log, the screens of your main flow
-6. Your project becomes fixed at 11:50
+3. **Today your project becomes final: its title and its content**
+4. What a pitch is, and why you wrote one
+5. The review round — groups of four, first hour
+6. After the round: three reviewers, a revised proposal, a change log, the screens of your main flow
 7. By Saturday: Part B, the store, the hostile reviewer
 8. How the week is graded
 
@@ -49,6 +49,18 @@ Acceptance Test. You name them today.
 
 If you cannot name the last time, or the five people: the problem is the project, not
 the slide. **Change the project in this lecture:** at 11:50 it becomes fixed.
+
+---
+
+## Today your project becomes final
+
+**At the 11:50 push: its title and its content.** The same title, the same problem and the same product until the end of the term.
+
+Its details may still change: features, requirements, scope. Each change gets a line in the Change log. The project itself may not change.
+
+**This is the most important decision of the term. Give it time.** Test the project in the review round; then take at least half an hour to settle §1 (the title) and §3–§4 (the problem and the product), with your group's answers in front of you.
+
+Only a project that turns out to be technically impossible can change after today, and only with my written approval in an issue.
 
 ---
 
@@ -114,9 +126,9 @@ plain preview. 2 minutes. -->
 
 ## The review round — groups of four
 
-**Form your group of four now, yourselves.** No repository yet? Join a group of three
-near you and see me after the round. This group stays with you for the term, so choose
-people you can meet online once a week.
+**Form your group of four now, yourselves.** It stays with you for the term, so choose people you can meet online once a week. Left over when the class does not divide into fours? Join a group: it becomes five. No groups of three.
+
+**Write your group in `week03/group_03.json`:** the numbers of all members, yours included. Every member writes the same list. If the lists differ, every member of the group loses one point.
 
 Each person: **5 minutes** presenting, from your own laptop. The other three listen,
 then **write** one sentence for each of the three questions and hand it over — paper or a
@@ -144,31 +156,16 @@ goes next to them, and you earn the contributors' bonus for them.
 
 ## After the round — by 11:50
 
-**`week03/contributors_03.json`** — your three reviewers, role `reviewer`, student
-numbers, and for each **the most useful sentence they wrote, quoted**. Then
-`accepted: true/false` and `why`. Rejecting with a reason is fine; "they said, I changed"
-with nothing behind it is not.
+**`week03/contributors_03.json`** — your three reviewers, role `reviewer`, student numbers, and for each **the most useful sentence they wrote, quoted**. Then `accepted: true/false` and `why`. Rejecting with a reason is fine; "they said, I changed" with nothing behind it is not.
 
-**`PROPOSAL.md`** — go over §1–§7 with the three answers in front of you. Every change
-gets **one dated line in the Change log** at the end of the file:
+**`PROPOSAL.md`** — go over §1–§7 with the three answers in front of you. Every change gets **one dated line in the Change log** at the end of the file:
 
 `2026-10-06 — §4: dropped group chat; two reviewers said nobody would use it next to WhatsApp.`
 
-A proposal may change. It may not change silently.
+A proposal may change. It may not change silently. **Settle §1 (the title) and §3–§4 now: at 11:50 they become final.**
 
 ---
 
-## Your project becomes fixed at 11:50
-
-**At the 11:50 push, your project is final:** the same problem and the same product until the end of the term.
-
-Its details may still change: features, requirements, scope. Each change gets a line in the Change log.
-
-The project itself may not change. Only a project that turns out to be technically impossible can change after today, and only with my written approval in an issue.
-
-**Use the review round to decide.** Ask your group: is the problem real, and can it be finished by Week 11?
-
----
 
 ## The screens of your main flow — `week03/screens_03.md`
 
@@ -307,6 +304,8 @@ then gone, whatever was pushed.
 Groups formed. Laptops open, `PITCH_03.md` in the preview.
 
 **First presenter in each group: start.**
+
+**At 11:50 your project's title and content become final.** Take the time it needs.
 
 <!-- Start the clock. Walk around. After the round: slide "After the round" stays on the
 projector until 11:40; "Push" from 11:40. Freeze right after 11:50: push.md block 3. -->
