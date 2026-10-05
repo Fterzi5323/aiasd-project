@@ -26,7 +26,7 @@
 |---|---|---|
 | Kayıtlı | 78 | 33 |
 | Derste push yapan | 62 | 26 |
-| Ders slotu 5 / 5 | 32 | 21 |
+| Ders slotu 5 / 5 | 42 | 21 |
 | Cumartesi: tüm kontroller yeşil | 57 | 21 |
 
 Notlar ve denetleyicinin yorumları pazar günü **kendi reponuzda bir issue** olarak geldi.
