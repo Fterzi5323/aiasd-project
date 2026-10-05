@@ -15,9 +15,10 @@ the editor view if you prefer a cleaner page). Timings in the notes. Total ≈ 3
 2. Two rules that stay for the whole term
 3. What a pitch is, and why you wrote one
 4. The review round — groups of four, first hour
-5. After the round: three reviewers, a revised proposal, a change log
-6. By Saturday: Part B, the store, the hostile reviewer
-7. How the week is graded
+5. After the round: three reviewers, a revised proposal, a change log, the screens of your main flow
+6. Your project becomes fixed at 11:50
+7. By Saturday: Part B, the store, the hostile reviewer
+8. How the week is graded
 
 ---
 
@@ -47,7 +48,7 @@ At Atlas, in your family, in a club. In Week 9 five of them test it — the User
 Acceptance Test. You name them today.
 
 If you cannot name the last time, or the five people: the problem is the project, not
-the slide. **Change the project this week.** It is the last cheap week to do it.
+the slide. **Change the project in this lecture:** at 11:50 it becomes fixed.
 
 ---
 
@@ -157,6 +158,41 @@ A proposal may change. It may not change silently.
 
 ---
 
+## Your project becomes fixed at 11:50
+
+**At the 11:50 push, your project is final:** the same problem and the same product until the end of the term.
+
+Its details may still change: features, requirements, scope. Each change gets a line in the Change log.
+
+The project itself may not change. Only a project that turns out to be technically impossible can change after today, and only with my written approval in an issue.
+
+**Use the review round to decide.** Ask your group: is the problem real, and can it be finished by Week 11?
+
+---
+
+## The screens of your main flow — `week03/screens_03.md`
+
+The path a user takes, from logging in to the one thing your app exists for.
+
+| # | Screen | What the user does there | Requirements |
+|---|---|---|---|
+| 1 | Log in | enters the e-mail address and the 4-digit code | REQ-001, REQ-006 |
+| 2 | Today's rooms | sees which rooms are free, hour by hour | REQ-002, REQ-003 |
+| 3 | Book a slot | picks a free slot and confirms it | REQ-002 |
+
+**At least five screens**, the login included. If you cannot name five screens and the requirements behind them, the project is not ready yet: find that out today. In Week 4, each row becomes one screen of your prototype.
+
+---
+
+## If you have time left
+
+- Read the acceptance criteria of each other's `must` requirements. Mark every one that a tester could not check, such as "users are satisfied".
+- Agree on the day and the tool of your weekly one-hour online meeting.
+- Start Part B: §8, and the store choice in §12, while I am here to answer.
+- Your store choice is firm? You may already open the developer account (S1). The identity check takes days; S1 is marked in Week 4.
+
+---
+
 ## This group stays — every week, one hour online
 
 From **Week 4**: the four of you meet **online, one hour, between the lecture and
@@ -190,7 +226,7 @@ REQ-001 (e-mail-code login) and REQ-006 (390 px phone screen) stay as they are f
 ```bash
 python .github/check_deliverables.py
 git add .
-git commit -m "week03: pitch, review, proposal revised"
+git commit -m "week03: pitch, review, proposal revised, main flow"
 git push
 ```
 
@@ -237,7 +273,7 @@ English. Your language is not graded; a log written by an assistant earns at mos
 
 | | Points | What |
 |---|---|---|
-| End of lecture, 11:50 push | 5 | pitch complete, three reviewers with real sentences, change log started |
+| End of lecture, 11:50 push | 5 | pitch complete, three reviewers with real sentences, change log started, five screens listed |
 | Saturday checker | 2 | §8–§12 filled, store named, ai_log with three objections |
 | Human involvement | 2 | the ai_log and its evidence; reviews with real decisions behind them |
 | Commit discipline | 1 | several lecture pushes (at least 3); several commits as you work |

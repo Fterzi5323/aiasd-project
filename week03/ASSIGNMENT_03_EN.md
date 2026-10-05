@@ -20,7 +20,8 @@ Run the checker once:
 python .github/check_deliverables.py
 ```
 
-It brings `week03/PITCH_03.md`, `week03/contributors_03.json` and `week03/ai_log_03.md`.
+It brings `week03/PITCH_03.md`, `week03/contributors_03.json`, `week03/screens_03.md` and
+`week03/ai_log_03.md`.
 `PROPOSAL.md` you already have; Part B (§8–§12) and the Change log are in it, waiting.
 
 ---
@@ -53,8 +54,14 @@ a problem of yours — your own, your friends' at the university, or your social
 circle's**, and **it is usable by real people around you** — at Atlas, in your family, in
 a club — because in Week 9 those people test it, and you will need them. If you cannot
 name the last time the problem happened, or five people who would use the product, the
-problem is with the project, not the slide: change the project now, this is the last
-cheap week to do it.
+problem is with the project, not the slide: change the project in this lecture.
+
+**At the 11:50 push your project becomes fixed for the term**: the same problem and the
+same product until the end. Its details (features, requirements, scope) may still change,
+each with a line in the Change log; the project itself may not. Use the review round to
+decide: ask your group whether the project is real and whether it can be finished. Only a
+project that turns out to be technically impossible can change after today, and only with
+my written approval in an issue.
 
 ---
 
@@ -97,12 +104,31 @@ it is not allowed to change silently.
 itself stays open until the end of Week 5, when it becomes your baseline after the
 prototype review.
 
-### 4. Push
+### 4. `week03/screens_03.md` — the screens of your main flow
+
+Your main flow is the path a user takes, from logging in to the one thing your app exists
+for. List its screens in order, at least five with the login included. For each screen,
+write in a few words what the user does there, and name the requirements that the screen
+serves. For StudyRoom: Log in · Today's rooms · Book a slot · My bookings · Check in.
+
+This is where the project becomes concrete. If you cannot name five screens and the
+requirements behind them, the project is not ready yet, and it is better to find that out
+today, with your group next to you. In Week 4 each row becomes one screen of your
+clickable prototype.
+
+**If you have time left** after the screens, use it in your group:
+
+- read the acceptance criteria of each other's `must` requirements, and mark every one
+  that a tester could not check (item 8 below);
+- agree on the day and the tool of your weekly one-hour online meeting;
+- start Part B, especially §8 and the store choice in §12, while I am in the room to answer.
+
+### 5. Push
 
 ```bash
 python .github/check_deliverables.py
 git add .
-git commit -m "week03: pitch, review, proposal revised"
+git commit -m "week03: pitch, review, proposal revised, main flow"
 git push
 ```
 
@@ -112,7 +138,7 @@ Push after the review round, and again at the last push of the lecture, **11:50*
 
 ## By Saturday 23:59
 
-### 5. `PROPOSAL.md` — Part B, §8–§12
+### 6. `PROPOSAL.md` — Part B, §8–§12
 
 The half that says why it is worth building. Each section has a WHY, a WHAT and a
 weak/strong pair inside the file; the StudyRoom examples continue.
@@ -125,16 +151,18 @@ weak/strong pair inside the file; the StudyRoom examples continue.
   is X" is an honest answer if you argue it.
 - **§12 Technical risks** — three things most likely to stop you by Week 11, with a plan
   and a fallback each. **The store you choose (S0)** is named here, with its fee and its
-  review or test-track time: read `AI_PLATFORMS_AND_STORES_EN.md` before you decide.
+  review or test-track time: read `AI_PLATFORMS_AND_STORES_EN.md` before you decide. If
+  your choice is firm, you may already open the developer account this week (S1, marked
+  in Week 4), because the identity check takes from one day to a week.
 
-### 6. Use AI as a hostile reviewer — `week03/ai_log_03.md`
+### 7. Use AI as a hostile reviewer — `week03/ai_log_03.md`
 
 This week the assistant plays the investor who wants to say no. Give it your Part B and
 ask for the three strongest objections. Then **answer one of them in the proposal** and
 **show one objection to be wrong** — with evidence: a number, a source, a thing you
 checked. Paste the exchange. A log that says "it gave useful feedback" earns nothing.
 
-### 7. Get your acceptance criteria ready for Week 4
+### 8. Get your acceptance criteria ready for Week 4
 
 In Week 4 every acceptance criterion in `requirements.json` becomes a test case, and the
 members of your group run those test cases on your clickable prototype. A criterion that
@@ -142,7 +170,7 @@ nobody can check, such as "users are satisfied", cannot become a test case. Read
 criteria again this week and rewrite the ones that do not say what a tester should see.
 This is not marked this week; next week it is the starting point.
 
-### 8. Push again, checks green
+### 9. Push again, checks green
 
 Several commits as you work, each with some new work in it and a message that says what changed; a commit does not need to be a finished part. Everything the checker
 asks for is listed below.
@@ -158,6 +186,8 @@ asks for is listed below.
 - [ ] `week03/contributors_03.json` — three reviewers, a quoted sentence each, accepted/why
 - [ ] `PROPOSAL.md` §1–§7 revised where the review changed them
 - [ ] `PROPOSAL.md` Change log — at least one dated line
+- [ ] `week03/screens_03.md` — at least five screens of the main flow, each with what the user does there and its REQ ids
+- [ ] Your project is final: from this push on, only its details may change
 
 **By Saturday**
 - [ ] `PROPOSAL.md` §8–§12 filled; §12 names the store, its fee and its review time
@@ -170,14 +200,16 @@ asks for is listed below.
 ## Not this week
 
 No code, no prototype yet (Week 4), no design documents yet (Week 5), no environment
-set-up. Do not start the store account; naming the store in §12 is enough.
+set-up. Naming the store in §12 is enough; opening the developer account (S1) is
+optional this week and marked in Week 4.
 
 ---
 
 ## How this week is graded
 
 **End of the lecture — 5 points.** Pitch pushed and complete, three reviewers with real
-sentences, Change log started — read from your repository as it stands at the 11:50 push.
+sentences, Change log started, the screens of the main flow listed — read from your
+repository as it stands at the 11:50 push.
 
 **Saturday 23:59 — 5 points.** Checks green on your final state: **2**. Human
 involvement: **2** — your `ai_log_03.md` with its evidence, and reviews with real

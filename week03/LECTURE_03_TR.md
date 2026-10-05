@@ -14,9 +14,10 @@
 2. Dönem boyunca kalacak iki kural
 3. Pitch nedir, neden yazdınız
 4. İnceleme turu — dörtlü gruplar, ilk saat
-5. Turdan sonra: üç değerlendiren, gözden geçirilmiş teklif, değişiklik günlüğü
-6. Cumartesiye kadar: Bölüm B, mağaza, düşman gözüyle okutma
-7. Hafta nasıl notlanıyor
+5. Turdan sonra: üç değerlendiren, gözden geçirilmiş teklif, değişiklik günlüğü, ana akışın ekranları
+6. Projeniz 11:50'de kesinleşir
+7. Cumartesiye kadar: Bölüm B, mağaza, düşman gözüyle okutma
+8. Hafta nasıl notlanıyor
 
 ---
 
@@ -46,7 +47,7 @@ Atlas'ta, ailenizde, bir kulüpte. 9. haftada beşi test edecek — Kullanıcı 
 Onları bugün adlandırıyorsunuz.
 
 Son seferi ya da beş kişiyi söyleyemiyorsanız sorun slaytta değil projededir. **Projeyi bu
-hafta değiştirin.** Bunun ucuz olduğu son hafta.
+derste değiştirin:** 11:50'de kesinleşiyor.
 
 ---
 
@@ -155,6 +156,41 @@ Teklif değişebilir. Sessizce değişemez.
 
 ---
 
+## Projeniz 11:50'de kesinleşir
+
+**11:50 push'uyla projeniz kesinleşir:** dönem sonuna kadar aynı problem ve aynı ürün.
+
+Ayrıntıları değişmeye devam edebilir: özellikler, gereksinimler, kapsam. Her değişiklik Değişiklik günlüğünde bir satır alır.
+
+Projenin kendisi değişemez. Bugünden sonra yalnızca teknik olarak imkânsız çıkan bir proje değişebilir; o da ancak benim bir issue'da yazılı onayımla.
+
+**Kararı inceleme turunda verin.** Grubunuza sorun: problem gerçek mi, 11. haftaya kadar bitirilebilir mi?
+
+---
+
+## Ana akışınızın ekranları — `week03/screens_03.md`
+
+Kullanıcının giriş yapmaktan uygulamanızın var olma nedeni olan tek işe kadar izlediği yol.
+
+| # | Ekran | Kullanıcı orada ne yapar | Gereksinimler |
+|---|---|---|---|
+| 1 | Giriş | e-posta adresini ve 4 haneli kodu girer | REQ-001, REQ-006 |
+| 2 | Bugünün odaları | hangi odaların saat saat boş olduğunu görür | REQ-002, REQ-003 |
+| 3 | Dilim ayırma | boş bir dilim seçer ve onaylar | REQ-002 |
+
+**Giriş dahil en az beş ekran.** Beş ekranı ve arkalarındaki gereksinimleri söyleyemiyorsanız proje henüz hazır değildir; bunu bugün öğrenin. 4. haftada her satır prototipinizin bir ekranı olur.
+
+---
+
+## Vaktiniz kalırsa
+
+- Birbirinizin `must` gereksinimlerinin kabul ölçütlerini okuyun. Test edenin kontrol edemeyeceği her birini işaretleyin; örneğin "kullanıcılar memnun kalır".
+- Haftalık bir saatlik çevrim içi toplantınızın gününü ve aracını kararlaştırın.
+- Bölüm B'ye başlayın: §8'e ve §12'deki mağaza seçimine, ben buradayken.
+- Mağaza seçiminiz kesin mi? Geliştirici hesabınızı (S1) şimdiden açabilirsiniz. Kimlik kontrolü günler sürer; S1 4. haftada notlanır.
+
+---
+
 ## Bu grup kalıyor — her hafta bir saat çevrimiçi
 
 **4. Hafta'dan** itibaren dördünüz **ders ile Cumartesi arasında, çevrimiçi, bir saat**
@@ -188,7 +224,7 @@ REQ-001 (e-posta koduyla giriş) ve REQ-006 (390 px telefon ekranı) herkeste ol
 ```bash
 python .github/check_deliverables.py
 git add .
-git commit -m "week03: pitch, review, proposal revised"
+git commit -m "week03: pitch, review, proposal revised, main flow"
 git push
 ```
 
@@ -234,7 +270,7 @@ notlanmaz; asistanın yazdığı bir günlük en çok 1 alır.
 
 | | Puan | Ne |
 |---|---|---|
-| Ders sonu, 11:50 push'u | 5 | sunum tam, üç değerlendiren gerçek cümlelerle, değişiklik günlüğü başlamış |
+| Ders sonu, 11:50 push'u | 5 | sunum tam, üç değerlendiren gerçek cümlelerle, değişiklik günlüğü başlamış, beş ekran yazılmış |
 | Cumartesi denetleyici | 2 | §8–§12 dolu, mağaza adlandırılmış, üç itirazlı ai_log |
 | İnsan katkısı | 2 | ai_log ve kanıtı; arkasında gerçek kararlar olan incelemeler |
 | Commit disiplini | 1 | derste birkaç push (en az 3); çalıştıkça birkaç commit |

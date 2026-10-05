@@ -492,6 +492,21 @@ def week3() -> None:
     log = re.sub(r"<!--.*?-->", "", text[m.end():], flags=re.DOTALL) if m else ""
     dated = re.findall(r"20\d\d-\d\d-\d\d", log)
     check(3, "PROPOSAL.md change log has a dated line", len(dated) >= 1, "no '2026-10-07 — §N: …' line after the review")
+    # --- the main flow: the screens the Week 4 prototype is built from (added 5 Oct 2026;
+    # the project is fixed at this push, and a project that cannot name its screens is not)
+    sc = read("week03/screens_03.md")
+    if sc is None:
+        check(3, "week03/screens_03.md present", False, "file missing — run the checker to fetch it, then fill it in")
+    else:
+        body = re.sub(r"<!--.*?-->", "", sc, flags=re.DOTALL)
+        rows = re.findall(r"^\|\s*\d+\s*\|([^|\n]*)\|([^|\n]*)\|([^|\n]*)\|\s*$", body, re.M)
+        filled = [r for r in rows if "[" not in "".join(r) and r[0].strip()
+                  and len(r[1].strip()) >= 5 and re.search(r"REQ-\d{3}", r[2])]
+        check(3, "screens_03.md lists at least five screens of the main flow", len(filled) >= 5,
+              f"{len(filled)} rows filled — each with a name, what the user does there and REQ ids")
+        unknown = sorted({rid for r in filled for rid in re.findall(r"REQ-\d{3}", r[2])} - set(requirement_index()))
+        check(3, "screens_03.md names only requirements that exist", bool(filled) and not unknown,
+              f"not in week02/requirements.json: {unknown[:4]}")
     # --- Saturday: Part B, the store, the log ---------------------------------------
     check_proposal(3, range(8, 13), DEADLINE)
     s12 = (proposal_sections().get(12) or {}).get("text", "").lower()

@@ -243,7 +243,9 @@ integration). A green tick on your Saturday state is worth **2 points**.
 from the requirements and the design that you wrote in previous weeks, and does your
 commit history show the work growing step by step rather than one last-minute dump? If you
 changed your plan, did the change get a dated line in the change log of `PROPOSAL.md`?
-Changing your mind is normal and healthy, but the change must be visible. A requirement
+Changing your mind is normal and healthy, but the change must be visible. The project
+itself (its problem and its product) is fixed at the 11:50 push of the Week 3 lecture;
+after that, only its details change. A requirement
 that is silently abandoned costs the mark; a requirement that is dropped with a one-line
 justification in `ai_log_NN.md` costs nothing. That is what engineering looks like.
 

@@ -238,7 +238,8 @@ yazdığınız gereksinimlerden ve tasarımdan gerçekten türüyor mu; commit g
 dakikada gelen tek bir yığın yerine adım adım büyüyen bir çalışma gösteriyor mu? Planınızı
 değiştirdiyseniz, değişiklik `PROPOSAL.md` dosyasının değişiklik günlüğüne tarihli bir
 satır olarak girdi mi? Fikir değiştirmek normal ve sağlıklıdır, ama değişiklik görünür
-olmalıdır. Sessizce terk edilen bir gereksinim puana mal olur; `ai_log_NN.md` içinde tek
+olmalıdır. Projenin kendisi (problemi ve ürünü) 3. Hafta dersinin 11:50 push'uyla
+kesinleşir; ondan sonra yalnızca ayrıntıları değişir. Sessizce terk edilen bir gereksinim puana mal olur; `ai_log_NN.md` içinde tek
 satırlık bir gerekçeyle bırakılan bir gereksinim hiçbir şeye mal olmaz. Mühendislik
 böyle görünür.
 
