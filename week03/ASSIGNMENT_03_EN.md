@@ -1,6 +1,6 @@
 # Week 3 Assignment — Pitch, Review, Proposal Part B
 
-**Due:** lab part pushed by the last push of the lecture (11:50) · the rest Saturday 23:59 · Commit to your project repository
+**Due:** lab part pushed by the end of the lecture (11:45) · the rest Saturday 23:59 · Commit to your project repository
 
 > **Before the lecture:** your `PITCH_03.md` must be written and pushed. The first hour
 > of the lecture is spent presenting it — there is no time to write it then. Bring your
@@ -61,7 +61,7 @@ a club — because in Week 9 those people test it, and you will need them. If yo
 name the last time the problem happened, or five people who would use the product, the
 problem is with the project, not the slide: change the project in this lecture.
 
-**At the 11:50 push your project becomes final for the term: its title and its content.**
+**At the end of the lecture (11:45) your project becomes final for the term: its title and its content.**
 The same title, the same problem and the same product until the end. Its details (features,
 requirements, scope) may still change, each with a line in the Change log; the project
 itself may not. This is the most important decision of the term, so give it time: use the
@@ -73,7 +73,7 @@ my written approval in an issue.
 
 ---
 
-## In the lab — pushed by 11:50
+## In the lab — pushed by the end of the lecture (11:45)
 
 ### 1. Review round — groups of four, first hour
 
@@ -146,7 +146,7 @@ git commit -m "week03: pitch, review, proposal revised, main flow"
 git push
 ```
 
-Push after the review round, and again at the last push of the lecture, **11:50** — the usual 10:00 / 11:00 / 11:50. Right after it I freeze every repository. What is not pushed does not exist.
+Push after the review round, and again at the end of the lecture, **11:45** — the usual 10:00 / 11:00 / end of the lecture (11:45). Right after it I freeze every repository. What is not pushed does not exist.
 
 ---
 
@@ -196,7 +196,7 @@ asks for is listed below.
 **Before the lecture**
 - [ ] `week03/PITCH_03.md` — six slides filled, written by you, pushed
 
-**In the lab, by 11:50**
+**In the lab, by the end of the lecture (11:45)**
 - [ ] `week03/group_03.json` — the numbers of all members of your group, the same list as theirs
 - [ ] `week03/contributors_03.json` — three reviewers from your group, a quoted sentence each, accepted/why
 - [ ] `PROPOSAL.md` §1–§7 revised where the review changed them
@@ -224,7 +224,7 @@ optional this week and marked in Week 4.
 
 **End of the lecture — 5 points.** Pitch pushed and complete, the group listed, three
 reviewers with real sentences, Change log started, the screens of the main flow listed —
-read from your repository as it stands at the 11:50 push. A group whose members did not
+read from your repository as it stands at the end of the lecture (11:45). A group whose members did not
 write the same list loses one point, every member.
 
 **Saturday 23:59 — 5 points.** Checks green on your final state: **2**. Human

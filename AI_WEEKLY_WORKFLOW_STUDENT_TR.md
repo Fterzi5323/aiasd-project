@@ -124,10 +124,10 @@ git push
 böyle mesajlar size commit hijyeni puanına (§3'te anlatılan commit disiplini puanı) mal
 olur.
 
-**10:00'da, 11:00'de ve 11:50'de push edin**; bu, iş hangi durumda olursa olsun her
+**10:00'da, 11:00'de ve dersin sonunda (11:45) push edin**; bu, iş hangi durumda olursa olsun her
 derste en az üç push demektir. 10:00'da ve 11:00'de sınıf tablosuna (her öğrencinin deposunun
 ne durumda olduğunu gösteren, perdeye yansıtılan tablo) bakıp herkesin nerede olduğunu
-görürüm; dersin puanını belirleyen push 11:50'deki push'tur. Push etmek hiçbir şeye mal
+görürüm; dersin puanını belirleyen push, dersin sonundaki (11:45) push'tur. Push etmek hiçbir şeye mal
 olmaz ve push edilmiş yarım bir bölüm, push edilmemiş bitmiş bir bölümden daha değerlidir.
 
 ### Kontrolleri kendiniz çalıştırın
@@ -143,7 +143,7 @@ listeler. Bir not değil, yapılacaklar listesidir ve çalıştırmanın maliyet
 
 ### Ders bitmeden bir kez daha push edin
 
-Son push 11:50'dedir. Hemen ardından her depoyu olduğu gibi dondururum (bir anlık görüntü,
+Son push dersin sonundadır (11:45). Hemen ardından her depoyu olduğu gibi dondururum (bir anlık görüntü,
 yani deponun o andaki hâlinin birebir kopyasını alırım) ve kontrolleri o anlık görüntü
 üzerinde çalıştırırım. Push etmediğiniz iş görünmezdir: bilgisayarınızda durur ve
 sayılmaz.
@@ -238,8 +238,7 @@ yazdığınız gereksinimlerden ve tasarımdan gerçekten türüyor mu; commit g
 dakikada gelen tek bir yığın yerine adım adım büyüyen bir çalışma gösteriyor mu? Planınızı
 değiştirdiyseniz, değişiklik `PROPOSAL.md` dosyasının değişiklik günlüğüne tarihli bir
 satır olarak girdi mi? Fikir değiştirmek normal ve sağlıklıdır, ama değişiklik görünür
-olmalıdır. Projenin kendisi (problemi ve ürünü) 3. Hafta dersinin 11:50 push'uyla
-kesinleşir; ondan sonra yalnızca ayrıntıları değişir. Sessizce terk edilen bir gereksinim puana mal olur; `ai_log_NN.md` içinde tek
+olmalıdır. Projenin kendisi (problemi ve ürünü) 3. Hafta dersinin sonunda (11:45) kesinleşir; ondan sonra yalnızca ayrıntıları değişir. Sessizce terk edilen bir gereksinim puana mal olur; `ai_log_NN.md` içinde tek
 satırlık bir gerekçeyle bırakılan bir gereksinim hiçbir şeye mal olmaz. Mühendislik
 böyle görünür.
 

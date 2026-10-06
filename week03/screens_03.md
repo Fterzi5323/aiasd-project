@@ -1,6 +1,6 @@
 # Week 3 — The screens of your main flow
 
-> **Written in the lecture, after the review round, and read at the 11:50 push.** Your
+> **Written in the lecture, after the review round, and read at the end of the lecture (11:45).** Your
 > main flow is the path a user takes, from logging in to the one thing your app exists
 > for. List its screens in order: at least five, the login included. For each screen,
 > write in a few words what the user does there, and name the requirements from

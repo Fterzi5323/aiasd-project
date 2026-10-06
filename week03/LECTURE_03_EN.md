@@ -5,7 +5,7 @@
 
 <!-- Instructor: zoom the browser to 150 % and collapse the GitHub header (press "." for
 the editor view if you prefer a cleaner page). Timings in the notes. Total ≈ 3 h:
-10 min intro · 50 min review round · at least 30 min settling the project (title, §3–§4) · 20 min screens · work until 11:50 · freeze right after the 11:50 push. -->
+10 min intro · 50 min review round · at least 30 min settling the project (title, §3–§4) · 20 min screens · work until 11:45 · freeze right after 11:45. -->
 
 ---
 
@@ -48,13 +48,13 @@ At Atlas, in your family, in a club. In Week 9 five of them test it — the User
 Acceptance Test. You name them today.
 
 If you cannot name the last time, or the five people: the problem is the project, not
-the slide. **Change the project in this lecture:** at 11:50 it becomes fixed.
+the slide. **Change the project in this lecture:** at the end of the lecture (11:45) it becomes fixed.
 
 ---
 
 ## Today your project becomes final
 
-**At the 11:50 push: its title and its content.** The same title, the same problem and the same product until the end of the term.
+**At the end of the lecture (11:45): its title and its content.** The same title, the same problem and the same product until the end of the term.
 
 Its details may still change: features, requirements, scope. Each change gets a line in the Change log. The project itself may not change.
 
@@ -154,7 +154,7 @@ goes next to them, and you earn the contributors' bonus for them.
 
 ---
 
-## After the round — by 11:50
+## After the round — by the end of the lecture (11:45)
 
 **`week03/contributors_03.json`** — your three reviewers, role `reviewer`, student numbers, and for each **the most useful sentence they wrote, quoted**. Then `accepted: true/false` and `why`. Rejecting with a reason is fine; "they said, I changed" with nothing behind it is not.
 
@@ -162,7 +162,7 @@ goes next to them, and you earn the contributors' bonus for them.
 
 `2026-10-06 — §4: dropped group chat; two reviewers said nobody would use it next to WhatsApp.`
 
-A proposal may change. It may not change silently. **Settle §1 (the title) and §3–§4 now: at 11:50 they become final.**
+A proposal may change. It may not change silently. **Settle §1 (the title) and §3–§4 now: at the end of the lecture (11:45) they become final.**
 
 ---
 
@@ -227,10 +227,10 @@ git commit -m "week03: pitch, review, proposal revised, main flow"
 git push
 ```
 
-Push after the round, and at the last push of the lecture, **11:50**. Right after it I
+Push after the round, and at the end of the lecture, **11:45**. Right after it I
 freeze every repository. What is not pushed does not exist.
 
-Push times this term: **10:00, 11:00, 11:50** — and whenever you finish something.
+Push times this term: **10:00, 11:00 and the end of the lecture (11:45)** — and whenever you finish something.
 
 ---
 
@@ -270,7 +270,7 @@ English. Your language is not graded; a log written by an assistant earns at mos
 
 | | Points | What |
 |---|---|---|
-| End of lecture, 11:50 push | 5 | pitch complete, three reviewers with real sentences, change log started, five screens listed |
+| End of lecture (11:45) | 5 | pitch complete, three reviewers with real sentences, change log started, five screens listed |
 | Saturday checker | 2 | §8–§12 filled, store named, ai_log with three objections |
 | Human involvement | 2 | the ai_log and its evidence; reviews with real decisions behind them |
 | Commit discipline | 1 | several lecture pushes (at least 3); several commits as you work |
@@ -305,7 +305,7 @@ Groups formed. Laptops open, `PITCH_03.md` in the preview.
 
 **First presenter in each group: start.**
 
-**At 11:50 your project's title and content become final.** Take the time it needs.
+**At the end of the lecture (11:45) your project's title and content become final.** Take the time it needs.
 
 <!-- Start the clock. Walk around. After the round: slide "After the round" stays on the
-projector until 11:40; "Push" from 11:40. Freeze right after 11:50: push.md block 3. -->
+projector until 11:35; "Push" from 11:35. Freeze right after 11:45: push.md block 3. -->

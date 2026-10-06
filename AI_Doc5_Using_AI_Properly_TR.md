@@ -54,7 +54,7 @@ tablo bütün dönemi gösterir. Tekniklerden herhangi birini herhangi bir hafta
 kullanabilirsiniz, ama her hafta bunlardan biri zorunludur.
 
 Teknikler zaten bildiğiniz haftalık rutinin içinde işler: her push'tan önce checker; 10:00,
-11:00 ve 11:50 push'ları ve ardından gelen dondurma; Cumartesi 23:59 son teslim saati;
+11:00 ve ders sonu (11:45) push'ları ve ardından gelen dondurma; Cumartesi 23:59 son teslim saati;
 `requirements.json` dosyanızdaki kimlikler; `PROPOSAL.md`'nin sonundaki Değişiklik günlüğü;
 dörtlü grubunuz ve onun ders ile Cumartesi arasındaki bir saatlik çevrimiçi toplantısı; ve
 `weekNN/contributors_NN.json`. Tekniklerin hiçbiri yeni bir dosya ya da yeni bir alışkanlık
@@ -135,7 +135,7 @@ kontrolüyle düzelttim ve bir test ekledim."*
 kaydedin.
 
 **Bu derste.** İlk çalıştırma her zaman `python .github/check_deliverables.py` komutudur;
-10:00, 11:00 ve 11:50 push'larından önce ve Cumartesi 23:59'dan önce çalıştırılır. Kırmızı
+10:00, 11:00 ve ders sonu (11:45) push'larından önce ve Cumartesi 23:59'dan önce çalıştırılır. Kırmızı
 bir kontrol kanıttır, bu yüzden yapıştırın. İkinci çalıştırma kendi telefonunuzdadır:
 uygulamanın telefon genişliğine daraltılmış hâli her haftanın gereksinimidir, 10. Hafta'ya
 bırakılmış bir iş değil.

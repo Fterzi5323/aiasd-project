@@ -55,7 +55,7 @@ table in §10 shows the whole term. You may use any of the techniques in any wee
 of them is compulsory each week.
 
 The techniques operate inside the weekly routine you already know: the checker before
-every push; the pushes at 10:00, 11:00 and 11:50 and the freeze that follows; the Saturday
+every push; the pushes at 10:00, 11:00 and at the end of the lecture (11:45), and the freeze that follows; the Saturday
 23:59 deadline; the ids in your `requirements.json`; the Change log at the end of
 `PROPOSAL.md`; your group of four and its one-hour online meeting between the lecture and
 Saturday; and `weekNN/contributors_NN.json`. None of the techniques asks for a new file or
@@ -136,7 +136,7 @@ I fixed it with a timestamp check and added a test."*
 **In the log.** Record the command you ran, the output (pasted and trimmed), and the fix.
 
 **In this course.** The first run is always `python .github/check_deliverables.py`, before
-the 10:00, 11:00 and 11:50 pushes and before Saturday 23:59. A red check is evidence, so
+the pushes at 10:00, 11:00 and at the end of the lecture (11:45) and before Saturday 23:59. A red check is evidence, so
 paste it. The second run is on your own phone: the application narrowed to a phone width
 is a requirement in every week, not a task left for Week 10.
 

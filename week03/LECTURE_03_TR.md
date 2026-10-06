@@ -4,7 +4,7 @@
 *Bu sayfadan sunulur. Bölüm bölüm kaydırın; her `---` bir slayttır.*
 
 <!-- Hoca: tarayıcıyı %150 yakınlaştır. Süreler notlarda. Toplam ≈ 3 s:
-10 dk giriş · 50 dk inceleme turu · projeyi kesinleştirmeye en az 30 dk (başlık, §3–§4) · 20 dk ekranlar · 11:50'ye kadar çalışma · 11:50 push'unun hemen ardından dondurma. -->
+10 dk giriş · 50 dk inceleme turu · projeyi kesinleştirmeye en az 30 dk (başlık, §3–§4) · 20 dk ekranlar · 11:45'e kadar çalışma · 11:45'in hemen ardından dondurma. -->
 
 ---
 
@@ -47,13 +47,13 @@ Atlas'ta, ailenizde, bir kulüpte. 9. haftada beşi test edecek — Kullanıcı 
 Onları bugün adlandırıyorsunuz.
 
 Son seferi ya da beş kişiyi söyleyemiyorsanız sorun slaytta değil projededir. **Projeyi bu
-derste değiştirin:** 11:50'de kesinleşiyor.
+derste değiştirin:** dersin sonunda (11:45) kesinleşiyor.
 
 ---
 
 ## Bugün projeniz kesinleşiyor
 
-**11:50 push'uyla: başlığı ve içeriği.** Dönem sonuna kadar aynı başlık, aynı problem ve aynı ürün.
+**Dersin sonunda (11:45): başlığı ve içeriği.** Dönem sonuna kadar aynı başlık, aynı problem ve aynı ürün.
 
 Ayrıntıları değişmeye devam edebilir: özellikler, gereksinimler, kapsam. Her değişiklik Değişiklik günlüğünde bir satır alır. Projenin kendisi değişemez.
 
@@ -149,7 +149,7 @@ ve onlar için katkı bonusu kazanırsınız.
 
 ---
 
-## Turdan sonra — 11:50'ye kadar
+## Turdan sonra — dersin sonuna (11:45) kadar
 
 **`week03/contributors_03.json`** — üç değerlendireniniz, rol `reviewer`, öğrenci numaraları ve her biri için **yazdığı en yararlı cümle, alıntı olarak**. Sonra `accepted: true/false` ve `why`. Gerekçeyle reddetmek olur; arkasında hiçbir şey olmayan "dedi, değiştirdim" olmaz.
 
@@ -157,7 +157,7 @@ ve onlar için katkı bonusu kazanırsınız.
 
 `2026-10-07 — §4: grup sohbeti çıkarıldı; iki değerlendiren WhatsApp'ın yanında kimsenin kullanmayacağını söyledi.`
 
-Teklif değişebilir. Sessizce değişemez. **§1'i (başlık) ve §3–§4'ü şimdi kesinleştirin: 11:50'de değişmez hâle geliyorlar.**
+Teklif değişebilir. Sessizce değişemez. **§1'i (başlık) ve §3–§4'ü şimdi kesinleştirin: dersin sonunda (11:45) değişmez hâle geliyorlar.**
 
 ---
 
@@ -222,10 +222,10 @@ git commit -m "week03: pitch, review, proposal revised, main flow"
 git push
 ```
 
-Turdan sonra ve dersin son push'unda, **11:50**'de bir kez daha push. Hemen ardından her
+Turdan sonra ve dersin sonunda, **11:45**'te bir kez daha push. Hemen ardından her
 repoyu donduruyorum. Push edilmeyen yoktur.
 
-Bu dönem push saatleri: **10:00, 11:00, 11:50** — ve bir şeyi her bitirdiğinizde.
+Bu dönem push saatleri: **10:00, 11:00 ve ders sonu (11:45)** — ve bir şeyi her bitirdiğinizde.
 
 ---
 
@@ -264,7 +264,7 @@ notlanmaz; asistanın yazdığı bir günlük en çok 1 alır.
 
 | | Puan | Ne |
 |---|---|---|
-| Ders sonu, 11:50 push'u | 5 | sunum tam, üç değerlendiren gerçek cümlelerle, değişiklik günlüğü başlamış, beş ekran yazılmış |
+| Ders sonu (11:45) | 5 | sunum tam, üç değerlendiren gerçek cümlelerle, değişiklik günlüğü başlamış, beş ekran yazılmış |
 | Cumartesi denetleyici | 2 | §8–§12 dolu, mağaza adlandırılmış, üç itirazlı ai_log |
 | İnsan katkısı | 2 | ai_log ve kanıtı; arkasında gerçek kararlar olan incelemeler |
 | Commit disiplini | 1 | derste birkaç push (en az 3); çalıştıkça birkaç commit |
@@ -299,7 +299,6 @@ Gruplar kuruldu. Bilgisayarlar açık, `PITCH_03.md` önizlemede.
 
 **Her grupta ilk sunan: başlayın.**
 
-**11:50'de projenizin başlığı ve içeriği kesinleşiyor.** Gereken zamanı ayırın.
+**Dersin sonunda (11:45) projenizin başlığı ve içeriği kesinleşiyor.** Gereken zamanı ayırın.
 
-<!-- Saati başlat. Dolaş. Turdan sonra "Turdan sonra" slaydı 12:00'ye kadar projeksiyonda
-kalsın; 11:40'tan sonra "Push". 11:50'nin hemen ardından dondur: push.md blok 3. -->
+<!-- Saati başlat. Dolaş. Turdan sonra "Turdan sonra" slaydı 11:35'e kadar projeksiyonda kalsın; 11:35'ten sonra "Push". 11:45'in hemen ardından dondur: push.md blok 3. -->

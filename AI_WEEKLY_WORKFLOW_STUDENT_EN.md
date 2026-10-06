@@ -127,10 +127,10 @@ A message such as "update", "fix" or "asdf" says nothing about what happened, an
 messages like these cost you the commit-hygiene point (the point for commit discipline
 that §3 describes).
 
-**Push at 10:00, at 11:00 and at 11:50**, which means at least three pushes in every lecture,
+**Push at 10:00, at 11:00 and at the end of the lecture (11:45)**, which means at least three pushes in every lecture,
 whatever state the work is in. At 10:00 and at 11:00 I look at the class board (the
 projected table that shows where every student's repository stands) to see where
-everyone is; the 11:50 push is the one that counts for the lecture's points. A push
+everyone is; the push at the end of the lecture (11:45) is the one that counts for the lecture's points. A push
 costs nothing, and a half-finished section that is pushed is worth more than a finished
 one that is not.
 
@@ -147,7 +147,7 @@ at a time. It is not a grade; it is a to-do list, and running it costs nothing.
 
 ### Push once more before the lecture ends
 
-The last push is at 11:50. Right after it, I freeze every repository as it stands (I
+The last push is at the end of the lecture (11:45). Right after it, I freeze every repository as it stands (I
 take a snapshot, a copy of the repository exactly as it is at that moment) and I run the
 checks on that snapshot. Work that you have not pushed is invisible: it sits on your
 laptop and does not count.
@@ -244,7 +244,7 @@ from the requirements and the design that you wrote in previous weeks, and does 
 commit history show the work growing step by step rather than one last-minute dump? If you
 changed your plan, did the change get a dated line in the change log of `PROPOSAL.md`?
 Changing your mind is normal and healthy, but the change must be visible. The project
-itself (its problem and its product) is fixed at the 11:50 push of the Week 3 lecture;
+itself (its problem and its product) is fixed at the end of the Week 3 lecture (11:45);
 after that, only its details change. A requirement
 that is silently abandoned costs the mark; a requirement that is dropped with a one-line
 justification in `ai_log_NN.md` costs nothing. That is what engineering looks like.
